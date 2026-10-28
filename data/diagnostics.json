@@ -1,0 +1,81 @@
+{
+ "symptoms": [
+  {
+   "id": "non-raffredda",
+   "label": "La cantina non raffredda",
+   "icon": "snowflake"
+  },
+  {
+   "id": "temp-non-scende",
+   "label": "La temperatura non scende",
+   "icon": "thermometer"
+  },
+  {
+   "id": "compressore",
+   "label": "Il compressore non parte",
+   "icon": "cpu"
+  },
+  {
+   "id": "rumore",
+   "label": "Rumorosità anomala",
+   "icon": "volume"
+  },
+  {
+   "id": "condensa",
+   "label": "Formazione di condensa",
+   "icon": "droplet"
+  },
+  {
+   "id": "ventole",
+   "label": "Ventole non funzionanti",
+   "icon": "fan"
+  },
+  {
+   "id": "display",
+   "label": "Display spento",
+   "icon": "monitor"
+  },
+  {
+   "id": "led",
+   "label": "Illuminazione LED non funzionante",
+   "icon": "lightbulb"
+  },
+  {
+   "id": "allarme",
+   "label": "Allarme temperatura",
+   "icon": "bell"
+  },
+  {
+   "id": "errore",
+   "label": "Codice errore sul display",
+   "icon": "alert"
+  }
+ ],
+ "entries": [
+  {
+   "symptom": "non-raffredda",
+   "models": [
+    "demo-inc-01"
+   ],
+   "demo": true,
+   "description": "[DEMO] Esempio di struttura di una scheda diagnostica.",
+   "causes": [
+    "[DEMO] Cause documentate: da fornire da Nevada"
+   ],
+   "prechecks": [
+    "[DEMO] Controlli preliminari: da fornire"
+   ],
+   "procedure": [
+    "[DEMO] Procedura verificata: da fornire"
+   ],
+   "components": [
+    "[DEMO] Componenti coinvolti: da fornire"
+   ],
+   "documents": [
+    "manuale"
+   ],
+   "contactNevada": "[DEMO] Criteri di escalation: da fornire",
+   "qualifiedOnly": true
+  }
+ ]
+}

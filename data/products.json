@@ -1,0 +1,234 @@
+{
+ "meta": {
+  "categories": [
+   "Cantine da incasso",
+   "Cantine sottotop",
+   "Cantine a libera installazione",
+   "Cantine integrabili",
+   "Gamma VINUMdesign",
+   "Frigoriferi quattro porte con cantinetta"
+  ],
+  "installations": {
+   "incasso": "Incasso",
+   "sottotop": "Sottotop",
+   "libera": "Libera installazione",
+   "integrabile": "Integrabile"
+  },
+  "statuses": {
+   "attuale": "Attuale",
+   "fuori produzione": "Fuori produzione"
+  }
+ },
+ "products": [
+  {
+   "id": "nnw82-20s-bfg-nh",
+   "code": "NNW82-20S-BFG-NH",
+   "demo": false,
+   "verified": false,
+   "series": null,
+   "category": null,
+   "installation": null,
+   "bottles": null,
+   "zones": null,
+   "dimensions": null,
+   "status": null,
+   "image": null,
+   "revisions": [],
+   "source": "Codice indicato dal committente come presente a catalogo. Specifiche e foto da importare da nevadaeurope.com."
+  },
+  {
+   "id": "nnw82-30s-bfg-nh",
+   "code": "NNW82-30S-BFG-NH",
+   "demo": false,
+   "verified": false,
+   "series": null,
+   "category": null,
+   "installation": null,
+   "bottles": null,
+   "zones": null,
+   "dimensions": null,
+   "status": null,
+   "image": null,
+   "revisions": [],
+   "source": "Codice indicato dal committente come presente a catalogo. Specifiche e foto da importare da nevadaeurope.com."
+  },
+  {
+   "id": "nw24s-bfg-h",
+   "code": "NW24S-BFG-H",
+   "demo": false,
+   "verified": false,
+   "series": null,
+   "category": null,
+   "installation": null,
+   "bottles": null,
+   "zones": null,
+   "dimensions": null,
+   "status": null,
+   "image": null,
+   "revisions": [],
+   "source": "Codice indicato dal committente come presente a catalogo. Specifiche e foto da importare da nevadaeurope.com."
+  },
+  {
+   "id": "nnw72-29da-bfg-pl",
+   "code": "NNW72-29DA-BFG-PL",
+   "demo": false,
+   "verified": false,
+   "series": null,
+   "category": null,
+   "installation": null,
+   "bottles": null,
+   "zones": null,
+   "dimensions": null,
+   "status": null,
+   "image": null,
+   "revisions": [],
+   "source": "Codice indicato dal committente come presente a catalogo. Specifiche e foto da importare da nevadaeurope.com."
+  },
+  {
+   "id": "demo-inc-01",
+   "code": "DEMO-INC-01",
+   "demo": true,
+   "verified": false,
+   "series": "Gamma DEMO",
+   "category": "Cantine da incasso",
+   "installation": "incasso",
+   "bottles": 24,
+   "zones": 1,
+   "dimensions": {
+    "h": 595,
+    "l": 450,
+    "p": 550
+   },
+   "status": "attuale",
+   "image": null,
+   "revisions": [],
+   "source": "DATO DIMOSTRATIVO: modello e valori inventati per provare filtri e layout."
+  },
+  {
+   "id": "demo-inc-02",
+   "code": "DEMO-INC-02",
+   "demo": true,
+   "verified": false,
+   "series": "Gamma DEMO",
+   "category": "Cantine da incasso",
+   "installation": "incasso",
+   "bottles": 46,
+   "zones": 2,
+   "dimensions": {
+    "h": 820,
+    "l": 595,
+    "p": 570
+   },
+   "status": "attuale",
+   "image": null,
+   "revisions": [
+    {
+     "rev": "A",
+     "note": "Revisione dimostrativa",
+     "serial": "intervallo da fornire"
+    }
+   ],
+   "source": "DATO DIMOSTRATIVO: modello e valori inventati per provare filtri e layout."
+  },
+  {
+   "id": "demo-sot-01",
+   "code": "DEMO-SOT-01",
+   "demo": true,
+   "verified": false,
+   "series": "Gamma DEMO",
+   "category": "Cantine sottotop",
+   "installation": "sottotop",
+   "bottles": 18,
+   "zones": 1,
+   "dimensions": {
+    "h": 820,
+    "l": 300,
+    "p": 570
+   },
+   "status": "fuori produzione",
+   "image": null,
+   "revisions": [],
+   "source": "DATO DIMOSTRATIVO: modello e valori inventati per provare filtri e layout."
+  },
+  {
+   "id": "demo-lib-01",
+   "code": "DEMO-LIB-01",
+   "demo": true,
+   "verified": false,
+   "series": "Gamma DEMO",
+   "category": "Cantine a libera installazione",
+   "installation": "libera",
+   "bottles": 60,
+   "zones": 3,
+   "dimensions": {
+    "h": 1300,
+    "l": 595,
+    "p": 640
+   },
+   "status": "attuale",
+   "image": null,
+   "revisions": [],
+   "source": "DATO DIMOSTRATIVO: modello e valori inventati per provare filtri e layout."
+  },
+  {
+   "id": "demo-int-01",
+   "code": "DEMO-INT-01",
+   "demo": true,
+   "verified": false,
+   "series": "Gamma DEMO",
+   "category": "Cantine integrabili",
+   "installation": "integrabile",
+   "bottles": 30,
+   "zones": 2,
+   "dimensions": {
+    "h": 880,
+    "l": 595,
+    "p": 550
+   },
+   "status": "attuale",
+   "image": null,
+   "revisions": [],
+   "source": "DATO DIMOSTRATIVO: modello e valori inventati per provare filtri e layout."
+  },
+  {
+   "id": "demo-vin-01",
+   "code": "DEMO-VIN-01",
+   "demo": true,
+   "verified": false,
+   "series": "VINUMdesign (DEMO)",
+   "category": "Gamma VINUMdesign",
+   "installation": "libera",
+   "bottles": 90,
+   "zones": 2,
+   "dimensions": {
+    "h": 1800,
+    "l": 600,
+    "p": 650
+   },
+   "status": "attuale",
+   "image": null,
+   "revisions": [],
+   "source": "DATO DIMOSTRATIVO: modello e valori inventati per provare filtri e layout."
+  },
+  {
+   "id": "demo-4p-01",
+   "code": "DEMO-4P-01",
+   "demo": true,
+   "verified": false,
+   "series": "Gamma DEMO",
+   "category": "Frigoriferi quattro porte con cantinetta",
+   "installation": "libera",
+   "bottles": 18,
+   "zones": 2,
+   "dimensions": {
+    "h": 1850,
+    "l": 900,
+    "p": 700
+   },
+   "status": "attuale",
+   "image": null,
+   "revisions": [],
+   "source": "DATO DIMOSTRATIVO: modello e valori inventati per provare filtri e layout."
+  }
+ ]
+}

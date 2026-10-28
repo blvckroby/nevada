@@ -1,0 +1,20 @@
+[
+ {
+  "model": "demo-inc-01",
+  "type": "manuale",
+  "title": "Manuale d'uso (DEMO)",
+  "file": "docs/demo/documento-demo.pdf",
+  "revision": "A",
+  "serial": null,
+  "demo": true
+ },
+ {
+  "model": "demo-inc-02",
+  "type": "manuale",
+  "title": "Manuale d'uso (DEMO)",
+  "file": "docs/demo/documento-demo.pdf",
+  "revision": "A",
+  "serial": null,
+  "demo": true
+ }
+]

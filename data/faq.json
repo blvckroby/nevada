@@ -1,0 +1,14 @@
+[
+ {
+  "q": "Questi dati sono ufficiali?",
+  "a": "No. Nel prototipo solo i codici modello indicati dal committente sono reali, e vanno ancora verificati. Tutto ciò che riporta il badge DEMO è inventato per provare l'interfaccia."
+ },
+ {
+  "q": "Dove vengono salvati preferiti, cronologia e note?",
+  "a": "Solo nel browser di questo dispositivo (localStorage). Non vengono sincronizzati né inviati a Nevada. Con il backend verranno associati all'utente."
+ },
+ {
+  "q": "Posso inviare una richiesta a Nevada?",
+  "a": "Il modulo salva una bozza locale. L'invio si attiva solo quando in data/config.json viene configurato un servizio ticket reale."
+ }
+]
