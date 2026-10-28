@@ -54,7 +54,7 @@ function searchAll(raw) {
   const push = (type, s, o) => s > 0 && out.push({ type, s, ...o });
   DB.products.forEach(p => push("Modelli", Math.max(score(q, p.code), ...(p.variants || []).map(v => score(q, v)), score(q, p.series) * .5, score(q, p.category) * .5, score(q, p.title) * .45), { p, title: p.code, sub: [p.title, p.category].filter(Boolean).join(" · "), href: `#/modello/${p.id}` }));
   DB.documents.forEach(d => { const p = byId(d.model); push("Documenti", score(q, d.title), { title: d.title, sub: p?.code, href: `#/modello/${d.model}/doc/${d.type}`, demo: d.demo }); });
-  DB.parts.forEach(x => x.parts.forEach(pt => push("Ricambi", Math.max(score(q, pt.name), score(q, pt.code)), { title: pt.name, sub: `Rif. ${pt.ref} · ${x.title}`, href: `#/esplosi/${x.id}?ref=${pt.ref}`, demo: x.demo })));
+  DB.parts.forEach(x => x.parts.forEach((pt, i) => push("Ricambi", Math.max(score(q, pt.name), score(q, pt.code)), { title: pt.name, sub: `${pt.code || "—"} · ${x.title}`, href: `#/esplosi/${x.id}?i=${i}` })));
   DB.errors.forEach(e => push("Codici errore", Math.max(score(q, e.code), score(q, e.title)), { title: e.code, sub: e.title, href: `#/errori?q=${encodeURIComponent(e.code)}` }));
   DB.diagnostics.symptoms.forEach(s => push("Diagnostica", score(q, s.label), { title: s.label, sub: "Diagnostica per sintomo", href: `#/diagnostica/${s.id}` }));
   DB.faq.forEach(f => push("Articoli", score(q, f.q), { title: f.q, sub: "FAQ", href: "#/faq" }));
@@ -187,6 +187,8 @@ routes.modello = ([id, sub, key]) => {
   if (tab === "scheda") body = p.spec?.length ? `<div class="card" style="overflow:hidden"><table class="spec">${p.spec.map(([k, v]) => `<tr><th scope="row">${esc(k)}</th><td>${esc(v) || TBD}</td></tr>`).join("")}</table></div><p class="small muted" style="margin:10px 4px">Fonte: ${esc(p.source)}, pag. ${p.catalogPage}. Valori riportati come da catalogo, non rielaborati.</p>` : empty("file", "Scheda tecnica non disponibile");
   if (tab === "documenti") body = `<div class="docs">${DOC_TYPES.map(([t, l, i, act]) => {
     const d = docs.find(x => x.type === t);
+    const ex = t === "esploso" && DB.parts.find(e => e.models.includes(p.id));
+    if (ex) return `<div class="card doc"><span class="ico">${ic(i)}</span><div class="grow"><b>Disegno esploso</b><div class="small muted">${esc(ex.title)} · rev. ${esc(ex.revision || "—")} · ${ex.parts.length} ricambi</div></div><div class="row"><a class="btn sm primary" href="#/esplosi/${ex.id}?model=${p.id}">${ic("eye", "sm")} Visualizza</a></div></div>`;
     return d?.file ? `<div class="card doc"><span class="ico">${ic(i)}</span><div class="grow"><b>${d.title}</b><div class="small muted">${esc(d.revision || "—")}${d.pdfPage ? ` · pag. ${d.pdfPage}` : ""} · Seriali: ${esc(d.serial || "non specificati")}</div></div>
       <div class="row"><button class="btn sm primary" data-view="${t}">${ic("eye", "sm")} ${act}</button><a class="btn sm" href="${esc(d.file)}" download>${ic("download", "sm")} Scarica</a><button class="btn sm" data-save="${esc(d.file)}" title="Salva per uso offline" aria-label="Salva per uso offline">${ic("wifioff", "sm")}</button></div></div>`
       : `<div class="card doc na"><span class="ico">${ic(i)}</span><div class="grow"><b>${l}</b><div class="small muted">Documento non disponibile</div></div></div>`;
@@ -249,18 +251,18 @@ routes.documentazione = () => {
 
 /* ---------- ESPLOSI ---------- */
 routes.esplosi = ([id], qp) => {
-  if (!id) return `<h1>Esplosi e ricambi</h1><p class="muted">Disegni esplosi con riferimenti cliccabili e tabella ricambi collegata.</p><div class="sec">${DB.parts.length ? `<div class="card list">${DB.parts.map(x => `<a class="li" href="#/esplosi/${x.id}"><span class="ico">${ic("layers")}</span><div class="grow"><b>${esc(x.title)}</b><span class="small muted">Modelli: ${x.models.map(m => byId(m)?.code).join(", ")}</span></div>${ic("chev")}</a>`).join("")}</div>` : empty("layers", "Nessun esploso caricato")}</div>`;
+  if (!id) return `<h1>Esplosi e ricambi</h1><p class="muted">Disegni esplosi con elenco ricambi collegato, dagli elenchi ufficiali Nevada.</p><div class="sec">${DB.parts.length ? `<div class="card list">${DB.parts.map(x => `<a class="li" href="#/esplosi/${x.id}"><span class="ico">${ic("layers")}</span><div class="grow"><b>${esc(x.title)}</b><span class="small muted">${x.parts.length} ricambi · rev. ${esc(x.revision || "—")} · ${esc(x.date || "")}</span></div>${ic("chev")}</a>`).join("")}</div>` : empty("layers", "Nessun esploso caricato")}</div>`;
   const x = DB.parts.find(e => e.id === id); if (!x) return notFound();
-  const model = qp.get("model"); let sel = +qp.get("ref") || null, scale = 1, tx = 0, ty = 0;
+  const model = qp.get("model"); let sel = qp.get("i") != null ? +qp.get("i") : null, scale = 1, tx = 0, ty = 0;
+  const codes = x.models.map(m => byId(m)?.code).filter(Boolean);
   after(() => {
     const cv = $("#xc"), st = $("#xs"), img = $("#xi");
     const paint = () => { st.style.transform = `translate(${tx}px,${ty}px) scale(${scale})`; st.style.setProperty("--inv", 1 / scale); };
-    const fit = () => { const w = cv.clientWidth, iw = img.naturalWidth || 600, ih = img.naturalHeight || 460; scale = Math.min(w / iw, cv.clientHeight / ih); tx = (w - iw * scale) / 2; ty = (cv.clientHeight - ih * scale) / 2; paint(); };
+    const fit = () => { const w = cv.clientWidth, h = cv.clientHeight, iw = img.naturalWidth || 600, ih = img.naturalHeight || 460; scale = Math.min(w / iw, h / ih); tx = (w - iw * scale) / 2; ty = (h - ih * scale) / 2; paint(); };
     const zoomAt = (f, cx = cv.clientWidth / 2, cy = cv.clientHeight / 2) => { const ns = Math.min(8, Math.max(.3, scale * f)); tx = cx - (cx - tx) * ns / scale; ty = cy - (cy - ty) * ns / scale; scale = ns; paint(); };
     img.complete ? fit() : img.onload = fit;
     $("#zin").onclick = () => zoomAt(1.4); $("#zout").onclick = () => zoomAt(1 / 1.4); $("#zfit").onclick = fit;
     cv.addEventListener("wheel", e => { e.preventDefault(); const r = cv.getBoundingClientRect(); zoomAt(e.deltaY < 0 ? 1.15 : 1 / 1.15, e.clientX - r.left, e.clientY - r.top); }, { passive: false });
-    // pan + pinch con pointer events
     const ptrs = new Map(); let d0 = 0;
     cv.addEventListener("pointerdown", e => { ptrs.set(e.pointerId, e); if (ptrs.size === 2) { const [p1, p2] = [...ptrs.values()]; d0 = Math.hypot(p1.clientX - p2.clientX, p1.clientY - p2.clientY); } });
     cv.addEventListener("pointermove", e => {
@@ -269,27 +271,31 @@ routes.esplosi = ([id], qp) => {
       else if (ptrs.size === 2) { const [a, b] = [...ptrs.values()], d = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY); if (d0) { const r = cv.getBoundingClientRect(); zoomAt(d / d0, (a.clientX + b.clientX) / 2 - r.left, (a.clientY + b.clientY) / 2 - r.top); } d0 = d; }
     });
     ["pointerup", "pointercancel", "pointerleave"].forEach(ev => cv.addEventListener(ev, e => { ptrs.delete(e.pointerId); d0 = 0; }));
-    const select = (ref, focus) => {
-      sel = ref; $$(".hot").forEach(h => h.classList.toggle("sel", +h.dataset.ref === ref)); $$("tr[data-ref]").forEach(r => r.classList.toggle("sel", +r.dataset.ref === ref));
-      const pt = x.parts.find(p => p.ref === ref), box = $("#pdet");
-      if (!pt) { box.innerHTML = `<p class="muted small">Seleziona un riferimento sul disegno o nella tabella.</p>`; return; }
+    const select = (i, scroll) => {
+      sel = i; $$(".hot").forEach(h => h.classList.toggle("sel", +h.dataset.ref === x.parts[i]?.ref)); $$("tr[data-i]").forEach(r => r.classList.toggle("sel", +r.dataset.i === i));
+      const pt = x.parts[i], box = $("#pdet");
+      if (!pt) { box.innerHTML = `<p class="muted small">Seleziona una riga della tabella${x.hotspots.length ? " o un riferimento sul disegno" : ""}. Il numero di riferimento corrisponde al numero nel disegno.</p>`; return; }
       const comp = pt.compatible?.map(m => byId(m)?.code).filter(Boolean);
-      box.innerHTML = `<h3>Rif. ${pt.ref} — ${esc(pt.name)}</h3><div class="kv" style="grid-template-columns:1fr;margin:10px 0"><div><small>Codice ricambio originale Nevada</small><b>${pt.code ? esc(pt.code) : TBD}</b></div><div><small>Modelli compatibili</small><b>${comp?.length ? esc(comp.join(", ")) : TBD}</b></div><div><small>Note tecniche</small><b style="font-weight:400">${pt.note ? esc(pt.note) : TBD}</b></div></div>
-        <a class="btn wine" href="#/supporto?model=${esc(model || x.models[0])}&part=${encodeURIComponent(`Rif. ${pt.ref} ${pt.name}${pt.code ? " (" + pt.code + ")" : ""}`)}">${ic("send", "sm")} Richiedi questo ricambio</a>`;
-      const h = x.hotspots.find(h => h.ref === ref); if (focus && h) { tx = cv.clientWidth / 2 - h.x * scale; ty = cv.clientHeight / 2 - h.y * scale; paint(); }
+      box.innerHTML = `<h3>${pt.ref ? `Rif. ${pt.ref} — ` : ""}${esc(pt.name)}</h3><div class="kv" style="grid-template-columns:1fr 1fr;margin:10px 0"><div><small>Codice ricambio originale Nevada</small><b>${pt.code ? esc(pt.code) : TBD}</b></div><div><small>Quantità</small><b>${pt.qty ?? TBD}</b></div><div style="grid-column:1/-1"><small>Modelli compatibili</small><b>${comp?.length ? esc(comp.join(", ")) : TBD}</b></div><div style="grid-column:1/-1"><small>Note</small><b style="font-weight:400">${pt.note ? esc(pt.note) : "—"}</b></div></div>
+        <button class="btn" id="cpcode" ${pt.code ? "" : "disabled"}>${ic("copy", "sm")} Copia codice</button>
+        <a class="btn wine" href="#/supporto?model=${esc(model || x.models[0])}&part=${encodeURIComponent(`${pt.ref ? "Rif. " + pt.ref + " " : ""}${pt.name}${pt.code ? " (" + pt.code + ")" : ""}`)}">${ic("send", "sm")} Richiedi questo ricambio</a>`;
+      $("#cpcode")?.addEventListener("click", () => navigator.clipboard?.writeText(pt.code).then(() => toast("Codice copiato")));
+      if (scroll) $(`tr[data-i="${i}"]`)?.scrollIntoView({ block: "nearest" });
     };
-    $$(".hot").forEach(h => h.addEventListener("click", () => select(+h.dataset.ref)));
-    $$("tr[data-ref]").forEach(r => r.addEventListener("click", () => select(+r.dataset.ref, true)));
-    $("#pq").addEventListener("input", e => { const q = norm(e.target.value); $$("tr[data-ref]").forEach(r => r.hidden = q && !norm(r.textContent).includes(q)); });
-    select(sel);
+    $$(".hot").forEach(h => h.addEventListener("click", () => select(x.parts.findIndex(p => p.ref === +h.dataset.ref), true)));
+    $$("tr[data-i]").forEach(r => r.addEventListener("click", () => select(+r.dataset.i)));
+    $("#pq").addEventListener("input", e => { const q = norm(e.target.value); $$("tr[data-i]").forEach(r => r.hidden = q && !norm(r.textContent).includes(q)); });
+    select(sel, true);
   });
-  return `${crumbs(["Esplosi", "#/esplosi"], [esc(x.title)])}<h1>${esc(x.title)} ${x.demo ? '<span class="badge demo">DEMO</span>' : ""}</h1>
+  return `${crumbs(["Esplosi", "#/esplosi"], [esc(x.title)])}<h1 style="font-size:clamp(1.5rem,4vw,2.3rem)">${esc(x.title)}</h1>
+  <p class="muted">Elenco ricambi rev. ${esc(x.revision || "—")} del ${esc(x.date || "—")} · valido per: ${esc((x.productNames || codes).join(", "))}</p>
+  <div class="row" style="margin:10px 0"><a class="btn sm" href="${esc(x.source)}" target="_blank" rel="noopener">${ic("file", "sm")} Elenco ufficiale PDF</a>${codes.map(c => `<a class="btn sm" href="#/modello/${x.models[codes.indexOf(c)]}">${esc(c)}</a>`).join("")}</div>
   <div class="xv" style="margin-top:14px"><div><div class="xcanvas" id="xc"><div class="xtools"><button class="icon-btn" id="zin" aria-label="Ingrandisci">${ic("plus")}</button><button class="icon-btn" id="zout" aria-label="Riduci">${ic("minus")}</button><button class="icon-btn" id="zfit" aria-label="Adatta">${ic("max")}</button></div>
     <div class="xstage" id="xs"><img id="xi" src="${esc(x.image)}" alt="${esc(x.title)}" draggable="false">${x.hotspots.map(h => `<button class="hot" data-ref="${h.ref}" style="left:${h.x}px;top:${h.y}px" aria-label="Riferimento ${h.ref}">${h.ref}</button>`).join("")}</div></div>
-    <p class="small muted">Trascina per spostarti, rotellina o pizzico per ingrandire.</p></div>
+    <p class="small muted">Trascina per spostarti, rotellina o pizzico per ingrandire. I riferimenti numerici del disegno corrispondono alla colonna «Rif.».</p></div>
   <div class="grid"><div class="card pad" id="pdet"></div>
-  <div class="card"><div class="pad" style="padding-bottom:0"><input id="pq" type="search" class="fld" placeholder="Cerca ricambio per codice o descrizione" aria-label="Cerca ricambio"></div>
-  <div class="tscroll"><table><tr><th>Rif.</th><th>Componente</th><th>Codice</th></tr>${x.parts.map(p => `<tr data-ref="${p.ref}"><td>${p.ref}</td><td>${esc(p.name)}</td><td>${p.code ? esc(p.code) : TBD}</td></tr>`).join("")}</table></div></div></div></div>`;
+  <div class="card"><div class="pad" style="padding-bottom:0"><input id="pq" type="search" class="fld" placeholder="Cerca per codice o descrizione" aria-label="Cerca ricambio"></div>
+  <div class="tscroll" style="max-height:52dvh;overflow-y:auto"><table><tr><th>Rif.</th><th>Descrizione</th><th>Codice</th><th>Q.tà</th></tr>${x.parts.map((p, i) => `<tr data-i="${i}"><td>${p.ref ?? "—"}</td><td>${esc(p.name)}${p.note ? `<div class="small muted">${esc(p.note)}</div>` : ""}</td><td style="white-space:nowrap">${p.code ? esc(p.code) : TBD}</td><td>${p.qty ?? ""}</td></tr>`).join("")}</table></div></div></div></div>`;
 };
 
 /* ---------- DIAGNOSTICA ---------- */

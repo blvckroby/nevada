@@ -68,7 +68,7 @@ for pn, page in enumerate(pdf.pages, 1):
         lines = {}
         for w in head: lines.setdefault(round(w["top"] / 3), []).append(w)
         hl = [" ".join(x["text"] for x in sorted(v, key=lambda z: z["x0"])) for k, v in sorted(lines.items())]
-        title = next((l for l in hl if re.match(r"(CANTINA|FRIGO|TECA|QUADRO|VORTEX|THRILL|SANIFICA|COUNTERTOP|\d+ )", l, re.I)), hl[0] if hl else "")
+        title = next((l for l in hl if re.match(r"(CANTINA|FRIGO|COUNTERTOP|\d+ )", l, re.I)), hl[0] if hl else "")
         inst_line = next((l for l in hl if l.startswith("Installazione")), "")
         codes_lines = [l for l in hl if l != title and not l.startswith("Installazione") and not l.startswith("NEW")]
         codes = [c.strip() for l in codes_lines for c in l.split("|") if re.search(r"\d", c) and re.match(r"^[A-Z0-9][A-Z0-9\-]+(\s+(SX|DX))?$", c.strip())]

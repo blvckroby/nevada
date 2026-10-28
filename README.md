@@ -20,10 +20,16 @@ Il router è a hash (`#/catalogo`, `#/modello/<id>/documenti`, `#/esplosi/<id>`,
 `python3 tools/extract_catalog.py <catalogo.pdf>` rigenera da PDF: `data/products.json` (59 modelli: codice, varianti SX/DX, gamma, categoria, installazione, capacità, zone, dimensioni, classe energetica, rumorosità, EAN, tabella tecnica completa, pagina catalogo), le foto in `assets/img/products/` e una pagina PDF per modello in `docs/catalogo/` (richiede `pdfplumber`, `Pillow`, `pdfseparate`).
 Il prezzo di listino è estratto in `listPrice` ma **non viene mostrato** nell'interfaccia.
 
+## Importare un elenco ricambi / esploso
+```bash
+python3 tools/import_parts.py docs/ricambi/<file>.pdf <id-esploso> "<titolo>" <id-modello>[,<id-modello>] --rev v03
+```
+Estrae il disegno (ruotato in verticale) e la tabella ricambi in `data/parts.json`. I numeri di riferimento si assegnano solo dove non ambigui; le voci di gruppo/variante restano senza numero e il PDF ufficiale è sempre la fonte. I punti cliccabili sul disegno (`hotspots`) non sono estraibili in automatico: vanno aggiunti a mano.
+
 ## Cosa NON è ancora reale
-- Pochi modelli senza foto (NNW180-600T-B, NW93T-BFG-H, 2 Vortex T Rock): placeholder.
+- 1 modello senza foto (NNW180-600T-B): placeholder.
 - Non estratti: configurazioni composte (integrabili in accosto), accessori/optional, schede senza tabella.
-- Manuali d'uso, esplosi, ricambi, schemi, bollettini, codici errore, procedure diagnostiche: **da fornire** (le sezioni mostrano stati vuoti).
+- Esplosi e ricambi disponibili solo per NW24S/45.24B-REV, NNW120-64DA-BFG-H, NW93T-BFG-H (da `tools/import_parts.py`). Manuali d'uso, schemi, bollettini, codici errore, procedure diagnostiche: **da fornire** (stati vuoti).
 - Autenticazione, invio ticket, ricerca per seriale, assistente AI, admin: solo predisposizione. Il modulo supporto salva una bozza locale finché `data/config.json → ticketEndpoint` è `null`.
 - Preferiti, cronologia, note: `localStorage` del browser.
 - Le schede PDF sono pagine del catalogo (contengono anche i prezzi di listino): sostituirle con schede tecniche senza prezzi prima di aprire il portale ai tecnici.

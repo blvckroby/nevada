@@ -57,13 +57,13 @@
  {
   "model": "nnw60-25da-wp-pr",
   "type": "scheda",
-  "title": "Scheda tecnica (catalogo 2026-27)",
-  "file": "docs/catalogo/catalogo-2026-27-p21.pdf",
+  "title": "Scheda prodotto (IT-EN-DE-FR)",
+  "file": "docs/schede/nnw60-25da-wp-pr-pl.pdf",
   "page": null,
-  "revision": "Catalogo 2026-27",
+  "revision": "Scheda prodotto ufficiale",
   "serial": null,
   "demo": false,
-  "pdfPage": 21
+  "pdfPage": null
  },
  {
   "model": "nnw72-30dsa-bfg-hr",
@@ -156,13 +156,13 @@
  {
   "model": "nnw180-94ta-bfg-ko",
   "type": "scheda",
-  "title": "Scheda tecnica (catalogo 2026-27)",
-  "file": "docs/catalogo/catalogo-2026-27-p24.pdf",
+  "title": "Scheda prodotto (IT-EN-DE-FR)",
+  "file": "docs/schede/nnw180-94ta-bfg-ko.pdf",
   "page": null,
-  "revision": "Catalogo 2026-27",
+  "revision": "Scheda prodotto ufficiale",
   "serial": null,
   "demo": false,
-  "pdfPage": 24
+  "pdfPage": null
  },
  {
   "model": "nw93t-bfg-h",
@@ -504,5 +504,49 @@
   "serial": null,
   "demo": false,
   "pdfPage": 72
+ },
+ {
+  "model": "nw24s-bfg-h",
+  "type": "ricambi",
+  "title": "Elenco ricambi (Spare parts list)",
+  "file": "docs/ricambi/nw24s-v03.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "v03 · 07/03/2026",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "45-24b-rev",
+  "type": "ricambi",
+  "title": "Elenco ricambi (Spare parts list)",
+  "file": "docs/ricambi/nw24s-v03.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "v03 · 07/03/2026",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "nnw120-64da-bfg-hr",
+  "type": "ricambi",
+  "title": "Elenco ricambi (Spare parts list)",
+  "file": "docs/ricambi/nnw120-64da-bfg-h-v01.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "v01 · 01/07/2026",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "nw93t-bfg-h",
+  "type": "ricambi",
+  "title": "Elenco ricambi (Spare parts list)",
+  "file": "docs/ricambi/nw93t-100t-v03.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "v03 · 23/07/2025",
+  "serial": null,
+  "demo": false
  }
 ]

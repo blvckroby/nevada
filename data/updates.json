@@ -1,6 +1,13 @@
 [
  {
   "date": "2026-10-28",
+  "title": "Elenchi ricambi ed esplosi pubblicati",
+  "tag": "Ricambi",
+  "text": "NW24S / 45.24B-REV (v03), NNW120-64DA-BFG-H (v01), NW93T-BFG-H (v03). Schede prodotto ufficiali per NNW60-25DA-WP e NNW180-94TA-BFG-KO.",
+  "demo": false
+ },
+ {
+  "date": "2026-10-28",
   "title": "Catalogo e listino Nevada Vinum 2026-27 importato",
   "tag": "Catalogo",
   "text": "Schede, foto e dati tecnici di 46 modelli estratti dal catalogo. Manuali, esplosi e schemi non ancora caricati.",

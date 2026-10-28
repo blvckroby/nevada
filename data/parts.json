@@ -1,1 +1,2361 @@
-[]
+[
+ {
+  "id": "esploso-nw24s",
+  "models": [
+   "nw24s-bfg-h",
+   "45-24b-rev"
+  ],
+  "title": "NW24S-BFG-H · 45.24B-REV",
+  "image": "assets/img/esplosi/esploso-nw24s.jpg",
+  "hotspots": [],
+  "parts": [
+   {
+    "ref": 1,
+    "code": "DG2-2.2",
+    "name": "Power cord_SCHUKO",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 2,
+    "code": "DG22-476",
+    "name": "Support bar of tank water",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 3,
+    "code": "DG13-447",
+    "name": "Water box",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 4,
+    "code": "DG1-108",
+    "name": "Compressor_MG1060Y",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 5,
+    "code": "DG22-479",
+    "name": "Electrical box",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 6,
+    "code": "DG3-310-16-BZ",
+    "name": "PCB Power",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 7,
+    "code": "DG12-91-1",
+    "name": "Condenser",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 8,
+    "code": "DG13-472",
+    "name": "Limiting bar(A)",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 9,
+    "code": "DG13-473",
+    "name": "Limiting bar(B)",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 10,
+    "code": "DG14-206",
+    "name": "Top hinge for NW24S-BFG-H, 45.24B-REV",
+    "qty": 1,
+    "note": "Specifico per: 45.24B-REV, NW24S-BFG-H",
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 10,
+    "code": "DG14-1280-S",
+    "name": "Top hinge for NW24S-SS-H",
+    "qty": 1,
+    "note": "Specifico per: NW24S-SS-H",
+    "compatible": []
+   },
+   {
+    "ref": 10,
+    "code": "DG14-177",
+    "name": "Top hinge for NW24S-SS",
+    "qty": 1,
+    "note": "Specifico per: NW24S-SS",
+    "compatible": []
+   },
+   {
+    "ref": 11,
+    "code": "DG12-44-7",
+    "name": "Evaporator",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 12,
+    "code": "DG7-71-W",
+    "name": "Evaporator fan",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 13,
+    "code": "DG22-480",
+    "name": "Fan mounting plate",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 14,
+    "code": "DG3-250-1",
+    "name": "LED light",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 15,
+    "code": "DG13-3116",
+    "name": "LED light shade",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 16,
+    "code": "DG22-472",
+    "name": "Air duct board",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 17,
+    "code": "DG15-180",
+    "name": "Wooden shelves",
+    "qty": 3,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG23-420-1",
+    "name": "NW24S-BFG-H Door",
+    "qty": 1,
+    "note": "Specifico per: NW24S-BFG-H",
+    "compatible": [
+     "nw24s-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG13-3179",
+    "name": "NW24S-BFG-H Door axis buckle",
+    "qty": 2,
+    "note": "Specifico per: NW24S-BFG-H",
+    "compatible": [
+     "nw24s-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG22-3007",
+    "name": "NW24S-BFG-H Limiting core",
+    "qty": 2,
+    "note": "Specifico per: NW24S-BFG-H",
+    "compatible": [
+     "nw24s-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "M147-003",
+    "name": "NW24S-BFG-H Gasket",
+    "qty": 1,
+    "note": "Specifico per: NW24S-BFG-H",
+    "compatible": [
+     "nw24s-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG22-3934",
+    "name": "NW24S-BFG-H Handle",
+    "qty": 1,
+    "note": "Specifico per: NW24S-BFG-H",
+    "compatible": [
+     "nw24s-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG14-206",
+    "name": "NW24S-BFG-H Top hinge",
+    "qty": 1,
+    "note": "Specifico per: NW24S-BFG-H",
+    "compatible": [
+     "nw24s-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG14-207",
+    "name": "NW24S-BFG-H Lower hinge",
+    "qty": 1,
+    "note": "Specifico per: NW24S-BFG-H",
+    "compatible": [
+     "nw24s-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG22-475",
+    "name": "NW24S-BFG-H Door axis",
+    "qty": 2,
+    "note": "Specifico per: NW24S-BFG-H",
+    "compatible": [
+     "nw24s-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG13-3005",
+    "name": "NW24S-BFG-H Magnet",
+    "qty": 1,
+    "note": "Specifico per: NW24S-BFG-H",
+    "compatible": [
+     "nw24s-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG22-3362",
+    "name": "NW24S-BFG-H Positioning plate",
+    "qty": 1,
+    "note": "Specifico per: NW24S-BFG-H",
+    "compatible": [
+     "nw24s-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG23-420",
+    "name": "NW24S-BFG Door",
+    "qty": 1,
+    "note": "Specifico per: NW24S-BFG",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG22-3007",
+    "name": "NW24S-BFG Limiting core",
+    "qty": 2,
+    "note": "Specifico per: NW24S-BFG",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "M147-003",
+    "name": "NW24S-BFG Gasket",
+    "qty": 1,
+    "note": "Specifico per: NW24S-BFG",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG13-3189",
+    "name": "NW24S-BFG Handle",
+    "qty": 1,
+    "note": "Specifico per: NW24S-BFG",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG13-3179",
+    "name": "NW24S-BFG Door axis buckle",
+    "qty": 2,
+    "note": "Specifico per: NW24S-BFG",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG14-206",
+    "name": "NW24S-BFG Top hinge",
+    "qty": 1,
+    "note": "Specifico per: NW24S-BFG",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG14-207",
+    "name": "NW24S-BFG Lower hinge",
+    "qty": 1,
+    "note": "Specifico per: NW24S-BFG",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG22-475",
+    "name": "NW24S-BFG Door axis",
+    "qty": 2,
+    "note": "Specifico per: NW24S-BFG",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG13-3005",
+    "name": "NW24S-BFG Magnet",
+    "qty": 1,
+    "note": "Specifico per: NW24S-BFG",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG22-3362",
+    "name": "NW24S-BFG Positioning plate",
+    "qty": 1,
+    "note": "Specifico per: NW24S-BFG",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG23-411-6",
+    "name": "NW24S-SS-H Door",
+    "qty": 1,
+    "note": "Specifico per: NW24S-SS-H",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "M147-003",
+    "name": "NW24S-SS-H Gasket",
+    "qty": 1,
+    "note": "Specifico per: NW24S-SS-H",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG22-3934-2",
+    "name": "NW24S-SS-H Handle",
+    "qty": 1,
+    "note": "Specifico per: NW24S-SS-H",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG14-1280-S",
+    "name": "NW24S-SS-H Top hinge",
+    "qty": 1,
+    "note": "Specifico per: NW24S-SS-H",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG14-1281-S",
+    "name": "NW24S-SS-H Lower hinge",
+    "qty": 1,
+    "note": "Specifico per: NW24S-SS-H",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG22-3362",
+    "name": "NW24S-SS-H Positioning plate",
+    "qty": 1,
+    "note": "Specifico per: NW24S-SS-H",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG23-419",
+    "name": "NW24S-SS Door axis",
+    "qty": 1,
+    "note": "Specifico per: NW24S-SS",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "M147-003",
+    "name": "NW24S-SS Gasket",
+    "qty": 1,
+    "note": "Specifico per: NW24S-SS",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG13-3189",
+    "name": "NW24S-SS Handle",
+    "qty": 1,
+    "note": "Specifico per: NW24S-SS",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG13-3180",
+    "name": "NW24S-SS Door axis buckle",
+    "qty": 2,
+    "note": "Specifico per: NW24S-SS",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG14-177",
+    "name": "NW24S-SS Top hinge",
+    "qty": 1,
+    "note": "Specifico per: NW24S-SS",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG14-176",
+    "name": "NW24S-SS Lower hinge",
+    "qty": 1,
+    "note": "Specifico per: NW24S-SS",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG22-475",
+    "name": "NW24S-SS Door axis",
+    "qty": 2,
+    "note": "Specifico per: NW24S-SS",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG22-3362",
+    "name": "NW24S-SS Positioning plate",
+    "qty": 1,
+    "note": "Specifico per: NW24S-SS",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG13-3005",
+    "name": "NW24S-SS Magnet",
+    "qty": 1,
+    "note": "Specifico per: NW24S-SS",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG23-420-2",
+    "name": "45.24B-REV Door",
+    "qty": 1,
+    "note": "Specifico per: 45.24B-REV",
+    "compatible": [
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG22-3007",
+    "name": "45.24B-REV Limiting core",
+    "qty": 2,
+    "note": "Specifico per: 45.24B-REV",
+    "compatible": [
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "M147-003",
+    "name": "45.24B-REV Gasket",
+    "qty": 1,
+    "note": "Specifico per: 45.24B-REV",
+    "compatible": [
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG13-3189-B",
+    "name": "45.24B-REV Handle",
+    "qty": 1,
+    "note": "Specifico per: 45.24B-REV",
+    "compatible": [
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG13-3179",
+    "name": "45.24B-REV Door axis buckle",
+    "qty": 2,
+    "note": "Specifico per: 45.24B-REV",
+    "compatible": [
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG14-206",
+    "name": "45.24B-REV Top hinge",
+    "qty": 1,
+    "note": "Specifico per: 45.24B-REV",
+    "compatible": [
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG14-207",
+    "name": "45.24B-REV Lower hinge",
+    "qty": 1,
+    "note": "Specifico per: 45.24B-REV",
+    "compatible": [
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG22-475",
+    "name": "45.24B-REV Door axis",
+    "qty": 2,
+    "note": "Specifico per: 45.24B-REV",
+    "compatible": [
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG13-3005",
+    "name": "45.24B-REV Magnet",
+    "qty": 1,
+    "note": "Specifico per: 45.24B-REV",
+    "compatible": [
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG22-3362",
+    "name": "45.24B-REV Positioning plate",
+    "qty": 1,
+    "note": "Specifico per: 45.24B-REV",
+    "compatible": [
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 19,
+    "code": "DG22-475",
+    "name": "Door axis",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 20,
+    "code": "DG13-3005",
+    "name": "Magnet",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 21,
+    "code": "DG22-3361",
+    "name": "Door supporter",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 22,
+    "code": "DG20-527",
+    "name": "Display panel",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 23,
+    "code": "DG13-3176",
+    "name": "Display PCB bracket",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 24,
+    "code": "DG3-006-1-BZ",
+    "name": "Display PCB",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 25,
+    "code": "DG8-25-W",
+    "name": "Senser-white",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 26,
+    "code": "DG8-25-R",
+    "name": "Senser-red",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 27,
+    "code": "DG14-207",
+    "name": "Bottom hinge for NW24S-BFG-H, 45.24B-REV",
+    "qty": 1,
+    "note": "Specifico per: 45.24B-REV, NW24S-BFG-H",
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 27,
+    "code": "DG14-1281-S",
+    "name": "Bottom hinge for NW24S-SS-H",
+    "qty": 1,
+    "note": "Specifico per: NW24S-SS-H",
+    "compatible": []
+   },
+   {
+    "ref": 27,
+    "code": "DG14-176",
+    "name": "Bottom hinge for NW24S-SS",
+    "qty": 1,
+    "note": "Specifico per: NW24S-SS",
+    "compatible": []
+   },
+   {
+    "ref": 28,
+    "code": "DG22-3385",
+    "name": "Positioning bar",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 29,
+    "code": "DG9-16-2",
+    "name": "Reed switch",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 30,
+    "code": "DG13-3193",
+    "name": "Door support roller",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 31,
+    "code": "DG22-3362",
+    "name": "Door support plate",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 32,
+    "code": "DG13-1228",
+    "name": "Supporting bar",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 33,
+    "code": "DG14-3.1-1",
+    "name": "Capacitor fixer",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   },
+   {
+    "ref": 34,
+    "code": "DG22-473",
+    "name": "Compressor strengthening board",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw24s-bfg-h",
+     "45-24b-rev"
+    ]
+   }
+  ],
+  "productNames": [
+   "45.24B-REV",
+   "NW24S-BFG",
+   "NW24S-BFG-H",
+   "NW24S-SS",
+   "NW24S-SS-H"
+  ],
+  "date": "07/03/2026",
+  "revision": "v03",
+  "source": "docs/ricambi/nw24s-v03.pdf",
+  "demo": false
+ },
+ {
+  "id": "esploso-nnw120-64da",
+  "models": [
+   "nnw120-64da-bfg-hr"
+  ],
+  "title": "NNW120-64DA-BFG-H",
+  "image": "assets/img/esplosi/esploso-nnw120-64da.jpg",
+  "hotspots": [],
+  "parts": [
+   {
+    "ref": 1,
+    "code": "20245203907002",
+    "name": "Transom Subassembly",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 2,
+    "code": "20245203806001",
+    "name": "Top Plate",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 3,
+    "code": "302453011803",
+    "name": "HIPS",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 4,
+    "code": "20242711606001",
+    "name": "Exhuast Cooling Fan Bracket(Right)",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 5,
+    "code": "20242711606002",
+    "name": "Exhuast Cooling Fan Bracket(Left)",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 6,
+    "code": "222406211009001",
+    "name": "Exhuast Cooling Fan",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 7,
+    "code": "232427078039001",
+    "name": "PVC Protector Strip",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 8,
+    "code": "21241303619001",
+    "name": "Exhuast Cooling Fan Cover",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 9,
+    "code": "20245219306001",
+    "name": "Condenser Bracket",
+    "qty": 6,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 10,
+    "code": "21245200701001",
+    "name": "Condenser",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 11,
+    "code": "20245219507001",
+    "name": "Back Cover",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 12,
+    "code": "222453680001001",
+    "name": "Internal Wire(Dual Zone)",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 13,
+    "code": "222407651026002",
+    "name": "Power Cord",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 14,
+    "code": "232407038001002",
+    "name": "Power Board Box",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 15,
+    "code": "20245203206001",
+    "name": "Power Board Box Cover",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 16,
+    "code": "222426005020004",
+    "name": "Power Board",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 17,
+    "code": "232406112019001",
+    "name": "Wire Ramp",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 18,
+    "code": "232407039001001",
+    "name": "Power Board Cover",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 19,
+    "code": "21242501125001",
+    "name": "Copper Connection Pipe",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 20,
+    "code": "232405068001001",
+    "name": "Water Cup",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 21,
+    "code": "232401075044001",
+    "name": "Drain-Pipe",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 22,
+    "code": "20240500606003",
+    "name": "Compressor Pedestal",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 23,
+    "code": "21240101326001",
+    "name": "Process Pipeline",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 24,
+    "code": "21240600901003",
+    "name": "Device For Drying and Filtering",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 25,
+    "code": "222425694001001",
+    "name": "Compressor Communication Cable",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 26,
+    "code": "222425687001001",
+    "name": "Compressor Grounding Wire",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 27,
+    "code": "222426801025004",
+    "name": "Inverter Compressor",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 28,
+    "code": "20241112813001",
+    "name": "PTC Heater Gasket",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 29,
+    "code": "222416372006001",
+    "name": "PTC Heater",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 30,
+    "code": "20245202407002",
+    "name": "Exhaust Grille Frame",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 31,
+    "code": "222405040032001",
+    "name": "Magnetic Proximity Switch",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 32,
+    "code": "273020220401",
+    "name": "Blind Rivet Nut",
+    "qty": 4,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 33,
+    "code": "232404118005001",
+    "name": "Feets",
+    "qty": 4,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 34,
+    "code": "20245208107001",
+    "name": "Low Door Lid",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 35,
+    "code": "20245201507001",
+    "name": "Right-Door Lower Hinge Subassembly",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 36,
+    "code": "222401229019005",
+    "name": "DC Fan",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 37,
+    "code": "21240103607001",
+    "name": "DC Fan Mesh Cover",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 38,
+    "code": "21241302941005",
+    "name": "Guide Rail",
+    "qty": 8,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 39,
+    "code": "21241302552004",
+    "name": "Wooden Shelf",
+    "qty": 8,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 40,
+    "code": "20245217507001",
+    "name": "Door Lid Subassembly",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 41,
+    "code": "232452007042001",
+    "name": "Doorseal",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 42,
+    "code": "232427053009001",
+    "name": "Door Hinge Hole Cover",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 43,
+    "code": "232429158001001",
+    "name": "Switch Magnet Trim Cap",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 44,
+    "code": "222405033032001",
+    "name": "Door Sensor Switch Magnet",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 45,
+    "code": "20242709804001",
+    "name": "Glass Door Gasket",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 46,
+    "code": "20242705901003",
+    "name": "Right-Door Lower Hinge Limit Block",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 47,
+    "code": "20245206806002",
+    "name": "Glass Door Trim",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 48,
+    "code": "31245205W143001",
+    "name": "Glass Door",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 49,
+    "code": "20242917804002",
+    "name": "Ghost Handle",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 50,
+    "code": "20245206806004",
+    "name": "Glass Door Trim",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 51,
+    "code": "232453046015001",
+    "name": "Control Board Panel",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 52,
+    "code": "232428041039001",
+    "name": "Front Frame Bar of Middle Partition Board",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 53,
+    "code": "222426001032006",
+    "name": "Control Board",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 54,
+    "code": "252453031T000001",
+    "name": "Middle Partition Foam",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 55,
+    "code": "232408145058001",
+    "name": "Middle Partition sponger",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 56,
+    "code": "222401229019006",
+    "name": "DC Fan",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 57,
+    "code": "21240103607003",
+    "name": "DC Fan Mesh Cover",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 58,
+    "code": "20245302006001",
+    "name": "Lower Cover Assembly of Middle Partition",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 59,
+    "code": "20245301906001",
+    "name": "Upper Cover Assembly of Middle Partition",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 60,
+    "code": "232401113018001",
+    "name": "Temperature Sensor Probe Cover",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 61,
+    "code": "222407550086001",
+    "name": "Temperature Sensor Probe",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 62,
+    "code": "21240103607002",
+    "name": "DC Fan Mesh Cover",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 63,
+    "code": "222401229019001",
+    "name": "DC Fan",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 64,
+    "code": "232453006070001",
+    "name": "Dual Zone Air Duct Plate",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 65,
+    "code": "2105000070",
+    "name": "Lamp Box(Left and Right )",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 66,
+    "code": "222452010023005",
+    "name": "LED Light Board",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 67,
+    "code": "232452054015001",
+    "name": "Lampshade",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 68,
+    "code": "2006000164",
+    "name": "Right-Door Uper Hinge Subassembly",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 69,
+    "code": "21244800328001",
+    "name": "Finned Evaporator",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 70,
+    "code": "222407540086001",
+    "name": "Defrost Temperature Sensor Probe",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 71,
+    "code": "20245201707001",
+    "name": "Left-Door Lower Hinge Subassembly",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 72,
+    "code": "20242705901004",
+    "name": "Left-Door Lower Hinge Limit Block",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   },
+   {
+    "ref": 73,
+    "code": "2006000165",
+    "name": "Left-Door Uper Hinge Subassembly",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nnw120-64da-bfg-hr"
+    ]
+   }
+  ],
+  "productNames": [
+   "NNW120-64DA-BFG-HR",
+   "NNW120-64DA-BFG-HL"
+  ],
+  "date": "01/07/2026",
+  "revision": "v01",
+  "source": "docs/ricambi/nnw120-64da-bfg-h-v01.pdf",
+  "demo": false
+ },
+ {
+  "id": "esploso-nw93t",
+  "models": [
+   "nw93t-bfg-h"
+  ],
+  "title": "NW93T-BFG-H",
+  "image": "assets/img/esplosi/esploso-nw93t.jpg",
+  "hotspots": [],
+  "parts": [
+   {
+    "ref": 1,
+    "code": "DG11-46",
+    "name": "Drier filter",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 2,
+    "code": "DG13-1",
+    "name": "Water box",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 3,
+    "code": "DG12-217.1",
+    "name": "Refrigerrant valve",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 4,
+    "code": "DG2-2.2",
+    "name": "Power cord_SCHUKO",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 5,
+    "code": "DG1-126",
+    "name": "Compressor_FMXA 4C",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 6,
+    "code": "DG22-3289",
+    "name": "Power PCB box",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 7,
+    "code": "DGS3-332-4F",
+    "name": "Power PCB",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 8,
+    "code": "DG11-49",
+    "name": "Condenser",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 9,
+    "code": "DG22-3684",
+    "name": "Limiting bar",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 10,
+    "code": "DG14-256-SL",
+    "name": "Top hinge for NW100T-SS,",
+    "qty": 1,
+    "note": "Specifico per: NW100T-SS",
+    "compatible": []
+   },
+   {
+    "ref": 10,
+    "code": "DG14-255-1BR",
+    "name": "Top hinge for NW93T-BFG-H, NW93T-FG",
+    "qty": 1,
+    "note": "Specifico per: NW93T-FG, NW93T-BFG-H",
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 11,
+    "code": "DG7-67-W",
+    "name": "Fan",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 12,
+    "code": "DG11-18",
+    "name": "Heater",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 13,
+    "code": "DG14-148",
+    "name": "Insulating plate",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 14,
+    "code": "DG12-183-101",
+    "name": "Evaporator",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 14,
+    "code": "DG12-183-102",
+    "name": "Evaporator",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 15,
+    "code": "DG13-458",
+    "name": "Water box for air duct",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 16,
+    "code": "DG22-3266",
+    "name": "Air guide plate for top zone",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 17,
+    "code": "DG22-3268",
+    "name": "Air duct board A-top",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 18,
+    "code": "DG22-3270",
+    "name": "Air duct board A-middle",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 19,
+    "code": "DG22-3269",
+    "name": "Air duct board A-bottom",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 20,
+    "code": "DG22-3259",
+    "name": "Air duct board B",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 21,
+    "code": "DG18-111",
+    "name": "Foam",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 22,
+    "code": "DG22-3260-1",
+    "name": "Air duct board C",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 23,
+    "code": "DGS3-033-6F",
+    "name": "Display PCB top and middle zone",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 24,
+    "code": "DG22-3261",
+    "name": "Air duct board D",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 25,
+    "code": "DG22-3262-1",
+    "name": "Air duct board E",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 26,
+    "code": "DG22-3281",
+    "name": "Sliding glide",
+    "qty": 20,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG15-246",
+    "name": "Wooden shelves for NW93T-BFG-H, NW93T-FG",
+    "qty": 9,
+    "note": "Specifico per: NW93T-FG, NW93T-BFG-H",
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG22-3271-L",
+    "name": "Wooden shelves bracket-left for NW93T-BFG-H, NW93T-FG",
+    "qty": 10,
+    "note": "Specifico per: NW93T-FG, NW93T-BFG-H",
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG22-3271-R",
+    "name": "Wooden shelves bracket-right for NW93T-BFG-H, NW93T-FG",
+    "qty": 10,
+    "note": "Specifico per: NW93T-FG, NW93T-BFG-H",
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 27,
+    "code": "DG15-247",
+    "name": "Display shelves for NW93T-BFG-H, NW93T-FG",
+    "qty": 1,
+    "note": "Specifico per: NW93T-FG, NW93T-BFG-H",
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG15-246",
+    "name": "Wooden shelves for NW100T-SS",
+    "qty": 13,
+    "note": "Specifico per: NW100T-SS",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG22-3271-L",
+    "name": "Wooden shelves bracket-left for NW100T-SS",
+    "qty": 13,
+    "note": "Specifico per: NW100T-SS",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG22-3271-R",
+    "name": "Wooden shelves bracket-right for NW100T-SS",
+    "qty": 13,
+    "note": "Specifico per: NW100T-SS",
+    "compatible": []
+   },
+   {
+    "ref": 28,
+    "code": "DG13-1.1",
+    "name": "Humid box",
+    "qty": 3,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG23-340-5",
+    "name": "SS Door NW100T-SS",
+    "qty": 1,
+    "note": "Specifico per: NW100T-SS",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "M147-016",
+    "name": "Gasket",
+    "qty": 1,
+    "note": "Voce di gruppo o variante: verificare l'applicabilità nell'elenco PDF originale",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG13-3187",
+    "name": "Door handle_NW100T-SS",
+    "qty": 1,
+    "note": "Specifico per: NW100T-SS",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG13-445",
+    "name": "Door axis buckle",
+    "qty": 2,
+    "note": "Voce di gruppo o variante: verificare l'applicabilità nell'elenco PDF originale",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG22-3007",
+    "name": "Limiting core",
+    "qty": 2,
+    "note": "Voce di gruppo o variante: verificare l'applicabilità nell'elenco PDF originale",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG14-256-SL",
+    "name": "NW100T-SS Bottom hinge - left",
+    "qty": 1,
+    "note": "Specifico per: NW100T-SS",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG14-256-SR",
+    "name": "NW100T-SS Bottom hinge - right",
+    "qty": 1,
+    "note": "Specifico per: NW100T-SS",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG23-357-12",
+    "name": "Full Black Glass Door NW93T-BFG-H",
+    "qty": 1,
+    "note": "Specifico per: NW93T-BFG-H",
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG13-3179",
+    "name": "Door axis buckle",
+    "qty": 2,
+    "note": "Voce di gruppo o variante: verificare l'applicabilità nell'elenco PDF originale",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG22-3007",
+    "name": "Limiting core",
+    "qty": 2,
+    "note": "Voce di gruppo o variante: verificare l'applicabilità nell'elenco PDF originale",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "M147-016",
+    "name": "Gasket",
+    "qty": 1,
+    "note": "Voce di gruppo o variante: verificare l'applicabilità nell'elenco PDF originale",
+    "compatible": []
+   },
+   {
+    "ref": 29,
+    "code": "DG22-4135",
+    "name": "New Door handle_NW93T-BFG-H",
+    "qty": 1,
+    "note": "Specifico per: NW93T-BFG-H",
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG13-3240",
+    "name": "Door handle spacer_NW93T-BFG-H",
+    "qty": 2,
+    "note": "Specifico per: NW93T-BFG-H",
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG14-255-1BL",
+    "name": "NW93T-BFG-H Top hinge - left",
+    "qty": 1,
+    "note": "Specifico per: NW93T-BFG-H",
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG14-255-1BR",
+    "name": "NW93T-BFG-H Top hinge - right",
+    "qty": 1,
+    "note": "Specifico per: NW93T-BFG-H",
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG23-357-7",
+    "name": "Full Black Glass Door NW93T-FG",
+    "qty": 1,
+    "note": "Specifico per: NW93T-FG",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG13-3179",
+    "name": "Door axis buckle",
+    "qty": 2,
+    "note": "Voce di gruppo o variante: verificare l'applicabilità nell'elenco PDF originale",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG22-3007",
+    "name": "Limiting core",
+    "qty": 2,
+    "note": "Voce di gruppo o variante: verificare l'applicabilità nell'elenco PDF originale",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "M147-016",
+    "name": "Gasket",
+    "qty": 1,
+    "note": "Voce di gruppo o variante: verificare l'applicabilità nell'elenco PDF originale",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG13-3187",
+    "name": "Door handle_NW93T-FG",
+    "qty": 1,
+    "note": "Specifico per: NW93T-FG",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG13-3240",
+    "name": "Door handle spacer",
+    "qty": 2,
+    "note": "Voce di gruppo o variante: verificare l'applicabilità nell'elenco PDF originale",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG14-255-1BL",
+    "name": "NW93T-FG Top hinge - left",
+    "qty": 1,
+    "note": "Specifico per: NW93T-FG",
+    "compatible": []
+   },
+   {
+    "ref": null,
+    "code": "DG14-255-1BR",
+    "name": "NW93T-FG Top hinge - right",
+    "qty": 1,
+    "note": "Specifico per: NW93T-FG",
+    "compatible": []
+   },
+   {
+    "ref": 30,
+    "code": "DG22-475",
+    "name": "Door axis",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 31,
+    "code": "DG13-3129-3",
+    "name": "Display PCB box",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 32,
+    "code": "DG13-3358",
+    "name": "Display PCB bracket",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 33,
+    "code": "DGS3-032-4",
+    "name": "Display PCB for low zone",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 34,
+    "code": "DG20-657",
+    "name": "Display panel for top compartment",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 35,
+    "code": "DG20-658",
+    "name": "Display panel for bottom compartment",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 36,
+    "code": "DG3-249-3",
+    "name": "LED light",
+    "qty": 3,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 37,
+    "code": "DG13-3115",
+    "name": "LED lamp",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 38,
+    "code": "DG8-10",
+    "name": "Senser",
+    "qty": 3,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 39,
+    "code": "DG13-198-W",
+    "name": "Senser guard",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 40,
+    "code": "DG13-198",
+    "name": "Senser guard",
+    "qty": 2,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 41,
+    "code": "DG22-3265",
+    "name": "Air guide plate for bottom zone",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 42,
+    "code": "DG7-68-W",
+    "name": "Fan",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 43,
+    "code": "DG14-256-SR",
+    "name": "Bottom hinge for NW100T-SS, NW93T-SSL",
+    "qty": 1,
+    "note": "Specifico per: NW100T-SS",
+    "compatible": []
+   },
+   {
+    "ref": 43,
+    "code": "DG14-255-1BL",
+    "name": "Bottom hinge for NW93T-BFG-H, NW93T-FG",
+    "qty": 1,
+    "note": "Specifico per: NW93T-FG, NW93T-BFG-H",
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 44,
+    "code": "DG13-3116",
+    "name": "LED cover",
+    "qty": 3,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 45,
+    "code": "DG13-6-15",
+    "name": "Leveling leg",
+    "qty": 4,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 46,
+    "code": "DG12-110-2",
+    "name": "Air circulating pipe-top zone",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 47,
+    "code": "DG12-110-1",
+    "name": "Air circulating pipe-bottom zone",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 48,
+    "code": "DG22-3275",
+    "name": "Compressor bracket",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 49,
+    "code": "DG8-9",
+    "name": "Senser",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": 50,
+    "code": "DG7-67-W",
+    "name": "Fan - bottom",
+    "qty": 1,
+    "note": null,
+    "compatible": [
+     "nw93t-bfg-h"
+    ]
+   },
+   {
+    "ref": null,
+    "code": "DG7-67-W",
+    "name": "Fan - middle",
+    "qty": 1,
+    "note": "Voce di gruppo o variante: verificare l'applicabilità nell'elenco PDF originale",
+    "compatible": []
+   }
+  ],
+  "productNames": [
+   "NW93T-FG",
+   "NW93T-BFG-H",
+   "NW100T-SS"
+  ],
+  "date": "23/07/2025",
+  "revision": "v03",
+  "source": "docs/ricambi/nw93t-100t-v03.pdf",
+  "demo": false
+ }
+]
