@@ -1,14 +1,27 @@
 [
  {
-  "q": "Questi dati sono ufficiali?",
-  "a": "No. Nel prototipo solo i codici modello indicati dal committente sono reali, e vanno ancora verificati. Tutto ciò che riporta il badge DEMO è inventato per provare l'interfaccia."
+  "q": "Come si conta la capacità in bottiglie?",
+  "a": "La capacità massima è espressa in bottiglie bordolesi standard da 750 ml (H 300 mm, Ø 70 mm). Ogni altra tipologia di bottiglia modifica la capienza. La maggior parte dei ripiani in legno è estraibile e removibile per ospitare magnum o bottiglie di forma particolare.",
+  "src": "Catalogo 2026-27, Guida alla scelta"
  },
  {
-  "q": "Dove vengono salvati preferiti, cronologia e note?",
-  "a": "Solo nel browser di questo dispositivo (localStorage). Non vengono sincronizzati né inviati a Nevada. Con il backend verranno associati all'utente."
+  "q": "Le zone di temperatura sono sempre indipendenti?",
+  "a": "Non tutte le cantine a più temperature hanno zone completamente indipendenti: va verificato il range minimo e massimo previsto per ogni zona nella scheda del modello. Su alcuni modelli la zona inferiore può essere impostata uguale o superiore alla zona superiore.",
+  "src": "Catalogo 2026-27, Guida alla scelta"
  },
  {
-  "q": "Posso inviare una richiesta a Nevada?",
-  "a": "Il modulo salva una bozza locale. L'invio si attiva solo quando in data/config.json viene configurato un servizio ticket reale."
+  "q": "Come si attiva garanzia e assistenza?",
+  "a": "È sufficiente aprire un Ticket seguendo la procedura descritta sul sito www.nevadaeurope.com.",
+  "src": "Catalogo 2026-27, Garanzia e assistenza"
+ },
+ {
+  "q": "Cosa significa il simbolo Δ nel listino?",
+  "a": "Il catalogo rimanda alle condizioni commerciali dedicate per i prodotti contrassegnati dal simbolo Δ.",
+  "src": "Catalogo 2026-27, note listino"
+ },
+ {
+  "q": "Cosa significano le sigle PR/PL, HR/HL, SX?",
+  "a": "Indicano il verso di apertura/cerniera: ad esempio PR = cerniera destra, PL = cerniera sinistra, HR/HL = cerniera destra/sinistra, SX = versione sinistra. Il dettaglio è riportato nella riga «Reversibilità Porta» di ogni scheda.",
+  "src": "Schede prodotto, catalogo 2026-27"
  }
 ]

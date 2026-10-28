@@ -16,15 +16,17 @@ assets/img  assets/icons   docs/   (PDF; in produzione → storage protetto)
 ```
 Il router è a hash (`#/catalogo`, `#/modello/<id>/documenti`, `#/esplosi/<id>`, `#/diagnostica/<sintomo>`, `#/supporto`…).
 
-## Cosa è reale e cosa no
-- **Reali (da verificare):** solo i 4 codici indicati dal committente — NNW82-20S-BFG-NH, NNW82-30S-BFG-NH, NW24S-BFG-H, NNW72-29DA-BFG-PL. Ogni altro campo è `null` → "Da fornire".
-- **DEMO:** modelli `DEMO-*`, PDF `docs/demo/documento-demo.pdf`, esploso `assets/img/esploso-demo.svg`, scheda diagnostica d'esempio. Inventati, marcati col badge DEMO.
-- **Non implementato di proposito:** autenticazione, invio ticket, ricerca per seriale, assistente AI, pannello admin. Il modulo supporto salva solo una bozza locale finché `data/config.json → ticketEndpoint` è `null`.
-- Preferiti, cronologia, note: `localStorage` del browser (da spostare su API).
-- Il sito nevadaeurope.com **non era raggiungibile** dall'ambiente di sviluppo: catalogo, foto, logo e palette ufficiali non sono stati importati. Palette/tipografia sono token in `:root` di `style.css`.
+## Dati reali dal catalogo 2026-27
+`python3 tools/extract_catalog.py <catalogo.pdf>` rigenera da PDF: `data/products.json` (59 modelli: codice, varianti SX/DX, gamma, categoria, installazione, capacità, zone, dimensioni, classe energetica, rumorosità, EAN, tabella tecnica completa, pagina catalogo), le foto in `assets/img/products/` e una pagina PDF per modello in `docs/catalogo/` (richiede `pdfplumber`, `Pillow`, `pdfseparate`).
+Il prezzo di listino è estratto in `listPrice` ma **non viene mostrato** nell'interfaccia.
 
-## Dati ancora da fornire
-Elenco completo modelli con specifiche e foto · logo e linee guida · PDF (manuali, schede, esplosi, schemi, installazione, servizio, bollettini) con revisione e range seriali · tabelle ricambi e coordinate hotspot · codici errore · procedure diagnostiche verificate · contatti · endpoint ticket Nevada · banca dati seriali.
+## Cosa NON è ancora reale
+- 8 modelli senza foto (Teca Vino, 3 Quadro Vino, NNW180-600T-B, NW93T-BFG-H, 2 Vortex T Rock): placeholder.
+- Non estratti: configurazioni composte (integrabili in accosto), accessori/optional, schede senza tabella.
+- Manuali d'uso, esplosi, ricambi, schemi, bollettini, codici errore, procedure diagnostiche: **da fornire** (le sezioni mostrano stati vuoti).
+- Autenticazione, invio ticket, ricerca per seriale, assistente AI, admin: solo predisposizione. Il modulo supporto salva una bozza locale finché `data/config.json → ticketEndpoint` è `null`.
+- Preferiti, cronologia, note: `localStorage` del browser.
+- Le schede PDF sono pagine del catalogo (contengono anche i prezzi di listino): sostituirle con schede tecniche senza prezzi prima di aprire il portale ai tecnici.
 
 ## Versione definitiva (proposta)
 - **Backend:** Node.js (NestJS) o Django; **PostgreSQL** (prodotti, revisioni, documenti, ricambi, hotspot, errori, utenti, audit); ricerca con PostgreSQL `pg_trgm`/Meilisearch.

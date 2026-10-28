@@ -3,232 +3,5745 @@
   "categories": [
    "Cantine da incasso",
    "Cantine sottotop",
-   "Cantine a libera installazione",
    "Cantine integrabili",
-   "Gamma VINUMdesign",
-   "Frigoriferi quattro porte con cantinetta"
+   "VINUMdesign Big Size",
+   "VINUMdesign Countertop",
+   "VINUMdesign Vintage",
+   "VINUMdesign Vinum",
+   "Frigoriferi 4 porte con cantina",
+   "Teca Vino",
+   "Quadro Vino",
+   "Thrill",
+   "Linea promo"
   ],
   "installations": {
    "incasso": "Incasso",
    "sottotop": "Sottotop",
+   "integrabile": "Integrabile",
    "libera": "Libera installazione",
-   "integrabile": "Integrabile"
+   "parete": "A parete"
   },
   "statuses": {
    "attuale": "Attuale",
    "fuori produzione": "Fuori produzione"
-  }
+  },
+  "source": "Catalogo/Listino Nevada Vinum 2026-27"
  },
  "products": [
   {
-   "id": "nnw82-20s-bfg-nh",
-   "code": "NNW82-20S-BFG-NH",
-   "demo": false,
-   "verified": false,
-   "series": null,
-   "category": null,
-   "installation": null,
-   "bottles": null,
-   "zones": null,
-   "dimensions": null,
-   "status": null,
+   "id": "te-h14-dx",
+   "code": "TE-H14-DX",
+   "variants": [
+    "TE-H14-DX"
+   ],
+   "title": "Teca Vini A Temperatura Regolabile",
+   "series": "Della Marta for Nevada",
+   "category": "Teca Vino",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": 56,
+   "zones": 2,
+   "dimensions": {
+    "h": 186.5,
+    "l": 87.4,
+    "p": 38.8
+   },
+   "energyClass": null,
+   "noiseDb": 37,
+   "ean": null,
+   "listPrice": 8900,
+   "status": "attuale",
    "image": null,
    "revisions": [],
-   "source": "Codice indicato dal committente come presente a catalogo. Specifiche e foto da importare da nevadaeurope.com."
+   "spec": [
+    [
+     "Capacità Ca.",
+     "56|64 Variabile in base ai ripiani interni"
+    ],
+    [
+     "Tipo Di Comando",
+     "Termoregolatore a controllo remoto e digitale"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temp. a refrigerazione statica o ventilata"
+    ],
+    [
+     "Temp. Mod. Statica",
+     "Regolabile da 6 | 20°C"
+    ],
+    [
+     "Temp. Mod. Ventilata",
+     "Regolabile da 6 | 16°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "Allest. configurabile con ripiani opzionali aggiuntivi"
+    ],
+    [
+     "Allestimento Incluso:",
+     "1 Kit Porta Bottiglie Orizzontali (per 16 Bottiglie) / 2 Porta Bottiglie Inclinate / 3 Piani regolabili"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED Bianco Dinamico 2700 | 6000 K / 140 led/m - 19,2 Wm – 2.000 lumen/m - 24"
+    ],
+    [
+     "Filtro",
+     "Filtro a carboni attivi ricaricabile"
+    ],
+    [
+     "Riscaldatore",
+     "Doppio Riscaldatore Interno"
+    ],
+    [
+     "Finitura Struttura",
+     "verniciata a polveri epossidiche nero opaco"
+    ],
+    [
+     "Cornice Frontale",
+     "Cornice in MDF spessore 10 mm RAL 9005"
+    ],
+    [
+     "Isolamento Porta",
+     "Fianchi e top in vetrocamera temperato basso / emissivo con c/gas Argon"
+    ],
+    [
+     "Interno",
+     "Alluminio verniciato a polveri epossidiche"
+    ],
+    [
+     "Sicurezza",
+     "Serratura con chiave"
+    ],
+    [
+     "Compressore",
+     "Inverter"
+    ],
+    [
+     "Sistemi attivi",
+     "Sbrinamento automatico ed evaporazione / della condensa / Sistema di antivibrazione"
+    ],
+    [
+     "Silenziosità",
+     "37dB"
+    ],
+    [
+     "Apertura Porte",
+     "Scorrevoli"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 186,5x87,4x38,8 | Imballo 206x100x80"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 97 | 105 kg"
+    ]
+   ],
+   "catalogPage": 8,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
   },
   {
-   "id": "nnw82-30s-bfg-nh",
-   "code": "NNW82-30S-BFG-NH",
-   "demo": false,
-   "verified": false,
-   "series": null,
-   "category": null,
-   "installation": null,
-   "bottles": null,
-   "zones": null,
-   "dimensions": null,
-   "status": null,
+   "id": "qv12dx",
+   "code": "QV12DX",
+   "variants": [
+    "QV12DX"
+   ],
+   "title": "Quadro Vino A Temperatura Regolabile",
+   "series": "Della Marta for Nevada",
+   "category": "Quadro Vino",
+   "installation": "parete",
+   "installationNote": "a Parete",
+   "bottles": 1,
+   "zones": 1,
+   "dimensions": {
+    "h": 60.0,
+    "l": 60.0,
+    "p": 17.0
+   },
+   "energyClass": "G",
+   "noiseDb": 29,
+   "ean": null,
+   "listPrice": 2690,
+   "status": "attuale",
    "image": null,
    "revisions": [],
-   "source": "Codice indicato dal committente come presente a catalogo. Specifiche e foto da importare da nevadaeurope.com."
+   "spec": [
+    [
+     "Capacità Ca.",
+     "1 Bottiglia h max 32.4 | Diam. 10.5 cm e 2 calici"
+    ],
+    [
+     "Tipo Di Comando",
+     "Termoregolatore con controllo digitale"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temp. a refrigerazione ventilata"
+    ],
+    [
+     "Temp. Mod. Ventilata",
+     "Regolabile da 4 | 10°C"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED Bianco naturale 4000 K | 60 led/mt / 416 lumen/m Dimmerabile"
+    ],
+    [
+     "Finitura Struttura",
+     "Metallo verniciato a polvere Nero RAL 9005"
+    ],
+    [
+     "Cornice Frontale",
+     "Cornice in MDF spessore 10 mm con guarnizio- / ne magnetica e Finitura Cannettata Nera"
+    ],
+    [
+     "Isolamento Porta",
+     "Porta vetro con vetrocamera anti UV 20 mm"
+    ],
+    [
+     "Interno",
+     "Pannello in ecopelle color Bronzo"
+    ],
+    [
+     "Sistemi attivi",
+     "Sbrinamento automatico / Sistema di antivibrazione"
+    ],
+    [
+     "Classe Energetica",
+     "G"
+    ],
+    [
+     "Classe Climatica",
+     "SN-N"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "238 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "29dB"
+    ],
+    [
+     "Apertura Porta",
+     "Cerniera a Destra | non reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 60x60x17 | Imballo 70x70x25"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 22 | 25 kg"
+    ]
+   ],
+   "catalogPage": 11,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "qv30dx",
+   "code": "QV30DX",
+   "variants": [
+    "QV30DX"
+   ],
+   "title": "Quadro Vino A Temperatura Regolabile",
+   "series": "Della Marta for Nevada",
+   "category": "Quadro Vino",
+   "installation": "parete",
+   "installationNote": "a Parete",
+   "bottles": 3,
+   "zones": 1,
+   "dimensions": {
+    "h": 60.0,
+    "l": 60.0,
+    "p": 17.0
+   },
+   "energyClass": "G",
+   "noiseDb": 29,
+   "ean": null,
+   "listPrice": 2690,
+   "status": "attuale",
+   "image": null,
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "3 Bottiglie h max 32.8 | Diam. 9.8 cm"
+    ],
+    [
+     "Tipo Di Comando",
+     "Termoregolatore con controllo digitale"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temp. a refrigerazione ventilata"
+    ],
+    [
+     "Temp. Mod. Ventilata",
+     "Regolabile da 8 | 20°C"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED Bianco naturale 4000 K | 60 led/mt / 416 lumen/m Dimmerabile"
+    ],
+    [
+     "Finitura Struttura",
+     "Metallo Verniciato a polvere Nero RAL 9005"
+    ],
+    [
+     "Cornice Frontale",
+     "Cornice in MDF spessore 10 mm con guarnizio- / ne magnetica e Finitura Cannettata Nera"
+    ],
+    [
+     "Isolamento Porta",
+     "Porta vetro con vetrocamera anti UV 20 mm"
+    ],
+    [
+     "Interno",
+     "Pannello in ecopelle color Bronzo"
+    ],
+    [
+     "Sistemi attivi",
+     "Sbrinamento automatico / Sistema di antivibrazione"
+    ],
+    [
+     "Classe Energetica",
+     "G"
+    ],
+    [
+     "Classe Climatica",
+     "SN-N"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "194 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "29dB"
+    ],
+    [
+     "Apertura Porta",
+     "Cerniera a Destra | non reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 60x60x17 | Imballo 70x70x25"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 22 | 25 kg"
+    ]
+   ],
+   "catalogPage": 11,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "qv40dx",
+   "code": "QV40DX",
+   "variants": [
+    "QV40DX"
+   ],
+   "title": "Quadro Vino A Temperatura Regolabile",
+   "series": "Della Marta for Nevada",
+   "category": "Quadro Vino",
+   "installation": "parete",
+   "installationNote": "a Parete",
+   "bottles": 4,
+   "zones": 1,
+   "dimensions": {
+    "h": 78.0,
+    "l": 78.0,
+    "p": 17.0
+   },
+   "energyClass": "G",
+   "noiseDb": 29,
+   "ean": null,
+   "listPrice": 2990,
+   "status": "attuale",
+   "image": "assets/img/products/qv40dx.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "4 Bottiglie h max 40 | Diam. 9 cm"
+    ],
+    [
+     "Tipo Di Comando",
+     "Termoregolatore con controllo digitale"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temp. a refrigerazione ventilata"
+    ],
+    [
+     "Temp. Mod. Ventilata",
+     "Regolabile da 12 | 20°C"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED Bianco naturale 4000 K | 60 led/mt / 416 lumen/m Dimmerabile"
+    ],
+    [
+     "Finitura Struttura",
+     "Metallo verniciato a polvere Nero RAL 9005"
+    ],
+    [
+     "Cornice Frontale",
+     "Cornice in MDF spessore 10 mm con guarnizio- / ne magnetica e Finitura Cannettata Nera"
+    ],
+    [
+     "Isolamento Porta",
+     "Porta vetro con vetrocamera anti UV 20 mm"
+    ],
+    [
+     "Interno",
+     "Pannello in ecopelle color Bronzo"
+    ],
+    [
+     "Sistemi attivi",
+     "Sbrinamento automatico / Sistema di antivibrazione"
+    ],
+    [
+     "Classe Energetica",
+     "G"
+    ],
+    [
+     "Classe Climatica",
+     "SN-N"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "182 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "29dB"
+    ],
+    [
+     "Apertura Porta",
+     "Cerniera a Destra | non reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 78x78x17 | Imballo 86x86x25"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 30 | 39 kg"
+    ]
+   ],
+   "catalogPage": 11,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "qv52dx",
+   "code": "QV52DX",
+   "variants": [
+    "QV52DX"
+   ],
+   "title": "Quadro Vino A Temperatura Regolabile",
+   "series": "Della Marta for Nevada",
+   "category": "Quadro Vino",
+   "installation": "parete",
+   "installationNote": "a Parete",
+   "bottles": 5,
+   "zones": 1,
+   "dimensions": {
+    "h": 78.0,
+    "l": 78.0,
+    "p": 17.0
+   },
+   "energyClass": "G",
+   "noiseDb": 29,
+   "ean": null,
+   "listPrice": 2990,
+   "status": "attuale",
+   "image": null,
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "5 Bottiglie h max 32.8 | Diam. 9 cm e 2 calici"
+    ],
+    [
+     "Tipo Di Comando",
+     "Termoregolatore con controllo digitale"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temp. a refrigerazione ventilata"
+    ],
+    [
+     "Temp. Mod. Ventilata",
+     "Regolabile da 12 | 20°C"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED Bianco naturale 4000 K | 60 led/mt / 416 lumen/m Dimmerabile"
+    ],
+    [
+     "Finitura Struttura",
+     "Metallo verniciato a polvere Nero RAL 9005"
+    ],
+    [
+     "Cornice Frontale",
+     "Cornice in MDF spessore 10 mm con guarnizio- / ne magnetica e Finitura Cannettata Nera"
+    ],
+    [
+     "Isolamento Porta",
+     "Porta vetro con vetrocamera anti UV 20 mm"
+    ],
+    [
+     "Interno",
+     "Pannello in ecopelle color Bronzo"
+    ],
+    [
+     "Sistemi attivi",
+     "Sbrinamento automatico / Sistema di antivibrazione"
+    ],
+    [
+     "Classe Energetica",
+     "G"
+    ],
+    [
+     "Classe Climatica",
+     "SN-N"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "198 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "29dB"
+    ],
+    [
+     "Apertura Porta",
+     "Cerniera a Destra | non reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 78x78x17 | Imballo 86x86x25"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 30 | 39 kg"
+    ]
+   ],
+   "catalogPage": 11,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw180-600t-b",
+   "code": "NNW180-600T-B",
+   "variants": [
+    "NNW180-600T-B"
+   ],
+   "title": "Frigorifero 4 Porte 600 Lt 3 Temperature",
+   "series": "4 Porte",
+   "category": "Frigoriferi 4 porte con cantina",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": 34,
+   "zones": 3,
+   "dimensions": null,
+   "energyClass": "E",
+   "noiseDb": 41,
+   "ean": null,
+   "listPrice": 2650,
+   "status": "attuale",
+   "image": null,
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Tot. Netta lt",
+     "606 | Frigo 382 | Freezer 105 | Cantina 119"
+    ],
+    [
+     "Capacità Tot. Cantina",
+     "Capacità ca. 34 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Display elettronico esterno LED Touch"
+    ],
+    [
+     "Tecnologia",
+     "Total No Frost Niente ghiaccio e Brina"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Tripla Temperatura indipendente"
+    ],
+    [
+     "Temp. Frigorifero",
+     "Regolabile da 2 | 8°C"
+    ],
+    [
+     "Temp. Congelatore",
+     "Regolabile da -15 | -25°C"
+    ],
+    [
+     "Temp. Cantina",
+     "Regolabile da 5 | 18°C"
+    ],
+    [
+     "Ripiani Frigorifero",
+     "3 Ripiani in cristallo di cui 1 regolabile in altezza"
+    ],
+    [
+     "Ripiani Cantina",
+     "4 Ripiani in legno da conservazione, di cui / estrazione totale su guide telescopiche"
+    ],
+    [
+     "Cassetti Congelatore",
+     "2 Cassetti interni e 1 vassoio estraibile"
+    ],
+    [
+     "Illuminazione Interna",
+     "Tripla Luce LED Bianca ad emissione orizzontale / vano frigo, congelatore e cantina"
+    ],
+    [
+     "Pannello Posteriore",
+     "Schienale interno Inox satinato"
+    ],
+    [
+     "Filtri",
+     "Doppio Filtro ai carboni attivi | Filtro Air Long / vano Frigo | Filtro dedicato per Cantina"
+    ],
+    [
+     "Funzioni",
+     "Funzione Raffreddamento Rapido / Funzione Congelamento Rapido / Funzione Holiday Mode | Economic Mode / Funzione Allarme Porta Aperta"
+    ],
+    [
+     "Finitura Porta",
+     "Porta Nera"
+    ],
+    [
+     "Isolamento Porta Cant.",
+     "Triplo Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Gola Orizzontale Nera"
+    ],
+    [
+     "Compressore",
+     "Inverter 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "E | Climatica N-ST"
+    ],
+    [
+     "Consumo Kwh/Anno",
+     "265 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "41dB"
+    ]
+   ],
+   "catalogPage": 15,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
   },
   {
    "id": "nw24s-bfg-h",
    "code": "NW24S-BFG-H",
-   "demo": false,
-   "verified": false,
-   "series": null,
-   "category": null,
-   "installation": null,
-   "bottles": null,
-   "zones": null,
-   "dimensions": null,
-   "status": null,
-   "image": null,
-   "revisions": [],
-   "source": "Codice indicato dal committente come presente a catalogo. Specifiche e foto da importare da nevadaeurope.com."
-  },
-  {
-   "id": "nnw72-29da-bfg-pl",
-   "code": "NNW72-29DA-BFG-PL",
-   "demo": false,
-   "verified": false,
-   "series": null,
-   "category": null,
-   "installation": null,
-   "bottles": null,
-   "zones": null,
-   "dimensions": null,
-   "status": null,
-   "image": null,
-   "revisions": [],
-   "source": "Codice indicato dal committente come presente a catalogo. Specifiche e foto da importare da nevadaeurope.com."
-  },
-  {
-   "id": "demo-inc-01",
-   "code": "DEMO-INC-01",
-   "demo": true,
-   "verified": false,
-   "series": "Gamma DEMO",
+   "variants": [
+    "NW24S-BFG-H",
+    "NW24S-BFG-H SX"
+   ],
+   "title": "Cantina 24 Bottiglie 1 Temperatura",
+   "series": "Cantine Nevada",
    "category": "Cantine da incasso",
    "installation": "incasso",
+   "installationNote": "Incasso",
    "bottles": 24,
    "zones": 1,
    "dimensions": {
-    "h": 595,
-    "l": 450,
-    "p": 550
+    "h": 45.5,
+    "l": 59.0,
+    "p": 55.7
    },
+   "energyClass": "F",
+   "noiseDb": 37,
+   "ean": "0607111417989",
+   "listPrice": 1700,
    "status": "attuale",
-   "image": null,
+   "image": "assets/img/products/nw24s-bfg-h.jpg",
    "revisions": [],
-   "source": "DATO DIMOSTRATIVO: modello e valori inventati per provare filtri e layout."
+   "spec": [
+    [
+     "Capacità Ca.",
+     "24 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temperatura"
+    ],
+    [
+     "Temperatura Zona",
+     "Regolabile da 5 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "3 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED Bianca 2700 K / Mono emissione orizzontale"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Ghost Orizzontale Nera"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "F | Climatica N-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "100 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "37dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 45,5x59x55,7 | Imballo 52x64x64"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 30 | 31 kg"
+    ],
+    [
+     "Codice Ean",
+     "0607111417989"
+    ]
+   ],
+   "catalogPage": 20,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
   },
   {
-   "id": "demo-inc-02",
-   "code": "DEMO-INC-02",
-   "demo": true,
-   "verified": false,
-   "series": "Gamma DEMO",
+   "id": "nw41d-bfg-h",
+   "code": "NW41D-BFG-H",
+   "variants": [
+    "NW41D-BFG-H",
+    "NW41D-BFG-H SX"
+   ],
+   "title": "Cantina 41 Bottiglie 2 Temperature",
+   "series": "Cantine Nevada",
    "category": "Cantine da incasso",
    "installation": "incasso",
-   "bottles": 46,
+   "installationNote": "Incasso",
+   "bottles": 41,
    "zones": 2,
    "dimensions": {
-    "h": 820,
-    "l": 595,
-    "p": 570
+    "h": 59.6,
+    "l": 59.0,
+    "p": 56.2
    },
+   "energyClass": "G",
+   "noiseDb": 38,
+   "ean": "0607111418313",
+   "listPrice": 2350,
    "status": "attuale",
-   "image": null,
-   "revisions": [
-    {
-     "rev": "A",
-     "note": "Revisione dimostrativa",
-     "serial": "intervallo da fornire"
-    }
+   "image": "assets/img/products/nw41d-bfg-h.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "41 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 5 | 10°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 10 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "3 Ripiani scorrevoli su Guide Telescopiche"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED 3 Colori | Bianca 2700 K / Doppia emissione orizzontale"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Ghost Verticale Nera"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica N-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "142 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "38dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 59,6x59x56,2 | Imballo 65x64x64"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 39 | 42 kg"
+    ],
+    [
+     "Codice Ean",
+     "0607111418313"
+    ]
    ],
-   "source": "DATO DIMOSTRATIVO: modello e valori inventati per provare filtri e layout."
+   "catalogPage": 20,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
   },
   {
-   "id": "demo-sot-01",
-   "code": "DEMO-SOT-01",
-   "demo": true,
-   "verified": false,
-   "series": "Gamma DEMO",
-   "category": "Cantine sottotop",
-   "installation": "sottotop",
-   "bottles": 18,
-   "zones": 1,
+   "id": "nw41d-ss-h",
+   "code": "NW41D-SS-H",
+   "variants": [
+    "NW41D-SS-H",
+    "NW41D-SS-H SX"
+   ],
+   "title": "Cantina 41 Bottiglie 2 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine da incasso",
+   "installation": "incasso",
+   "installationNote": "Incasso",
+   "bottles": 41,
+   "zones": 2,
    "dimensions": {
-    "h": 820,
-    "l": 300,
-    "p": 570
+    "h": 59.6,
+    "l": 59.0,
+    "p": 56.2
    },
-   "status": "fuori produzione",
-   "image": null,
-   "revisions": [],
-   "source": "DATO DIMOSTRATIVO: modello e valori inventati per provare filtri e layout."
-  },
-  {
-   "id": "demo-lib-01",
-   "code": "DEMO-LIB-01",
-   "demo": true,
-   "verified": false,
-   "series": "Gamma DEMO",
-   "category": "Cantine a libera installazione",
-   "installation": "libera",
-   "bottles": 60,
-   "zones": 3,
-   "dimensions": {
-    "h": 1300,
-    "l": 595,
-    "p": 640
-   },
+   "energyClass": "G",
+   "noiseDb": 38,
+   "ean": "0700598872798",
+   "listPrice": 2350,
    "status": "attuale",
-   "image": null,
+   "image": "assets/img/products/nw41d-ss-h.jpg",
    "revisions": [],
-   "source": "DATO DIMOSTRATIVO: modello e valori inventati per provare filtri e layout."
+   "spec": [
+    [
+     "Capacità Ca.",
+     "41 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 5 | 10°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 10 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "3 Ripiani scorrevoli su Guide Telescopiche"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED 3 Colori | Bianca 2700 K / Doppia emissione orizzontale"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Acciao Satinato"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Ghost Verticale Inox"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica N-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "142 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "38dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 59,6x59x56,2 | Imballo 65x64x64"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 39 | 42 kg"
+    ],
+    [
+     "Codice Ean",
+     "0700598872798"
+    ]
+   ],
+   "catalogPage": 20,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
   },
   {
-   "id": "demo-int-01",
-   "code": "DEMO-INT-01",
-   "demo": true,
-   "verified": false,
-   "series": "Gamma DEMO",
-   "category": "Cantine integrabili",
-   "installation": "integrabile",
+   "id": "nw25d-bfg-pr60",
+   "code": "NW25D-BFG-PR60",
+   "variants": [
+    "NW25D-BFG-PR60",
+    "PL60"
+   ],
+   "title": "Cantina 24 Bottiglie 2 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine da incasso",
+   "installation": "incasso",
+   "installationNote": "Incasso | Sottotop Autoventilata",
+   "bottles": 24,
+   "zones": 2,
+   "dimensions": {
+    "h": 59.5,
+    "l": 59.5,
+    "p": 56.0
+   },
+   "energyClass": "F",
+   "noiseDb": 36,
+   "ean": "PR60 0666186409640 | PL60 0666186409657",
+   "listPrice": 2900,
+   "status": "attuale",
+   "image": "assets/img/products/nw25d-bfg-pr60.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "24 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 5 | 12°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 12 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "3 Ripiani scorrevoli su Guide Telescopiche ad / Estrazione Totale"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce a LED 9 colori regolabile in intensità / Doppia emissione orizzontale e verticale"
+    ],
+    [
+     "Filtro",
+     "Filtro ai carboni attivi"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Triplo Vetro Basso Emissivo c/gas Argon"
+    ],
+    [
+     "Maniglia",
+     "Apertura Push To Open | Soft Close"
+    ],
+    [
+     "Compressore",
+     "Inverter Embraco 220-240V; 50-60Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "F | Climatica ST-N"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "101 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "36dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "PR60 Cerniera Destra | PL60 Cerniera Sinistra"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 59,5x59,5x56 | Imballo 66,3x66,2x64,8"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 45 | 50 kg"
+    ],
+    [
+     "Codice Ean",
+     "PR60 0666186409640 | PL60 0666186409657"
+    ]
+   ],
+   "catalogPage": 21,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw60-25da-wp-pr",
+   "code": "NNW60-25DA-WP-PR",
+   "variants": [
+    "NNW60-25DA-WP-PR"
+   ],
+   "title": "Cantina 24 Bottiglie 2 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine da incasso",
+   "installation": "incasso",
+   "installationNote": "Incasso | Sottotop Autoventilata",
+   "bottles": 24,
+   "zones": 2,
+   "dimensions": {
+    "h": 58.4,
+    "l": 54.5,
+    "p": 55.6
+   },
+   "energyClass": "F",
+   "noiseDb": 36,
+   "ean": "PR 0666186409756 | PL 0666186409763",
+   "listPrice": 2800,
+   "status": "attuale",
+   "image": "assets/img/products/nnw60-25da-wp-pr.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "24 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 5 | 12°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 12 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "3 Ripiani scorrevoli su Guide Telescopiche ad / Estrazione Totale"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce a LED 9 colori regolabile in intensità / Doppia emissione orizzontale e verticale"
+    ],
+    [
+     "Filtro",
+     "Filtro ai carboni attivi"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Da Pannellare | Cornice non inclusa"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo c/gas Argon"
+    ],
+    [
+     "Maniglia",
+     "Apertura Push To Open | Soft Close"
+    ],
+    [
+     "Compressore",
+     "Inverter Embraco 220-240V; 50-60Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "F | Climatica ST-N"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "101 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "36dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "PR Cerniera Destra | PL Cerniera Sinistra"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "58,4x54,5x55,6 + Pann. | Imballo 66,3x66,2x64,8"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 45 | 50 kg"
+    ],
+    [
+     "Codice Ean",
+     "PR 0666186409756 | PL 0666186409763"
+    ]
+   ],
+   "catalogPage": 21,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw72-30dsa-bfg-hr",
+   "code": "NNW72-30DSA-BFG-HR",
+   "variants": [
+    "NNW72-30DSA-BFG-HR"
+   ],
+   "title": "Cantina 30 Bottiglie 2 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine da incasso",
+   "installation": "incasso",
+   "installationNote": "Incasso | Sottotop Semi Autoventilata",
    "bottles": 30,
    "zones": 2,
    "dimensions": {
-    "h": 880,
-    "l": 595,
-    "p": 550
+    "h": 71.5,
+    "l": 59.2,
+    "p": 58.0
    },
+   "energyClass": "G",
+   "noiseDb": 41,
+   "ean": "HR 0666186409770 | HL 0666186409787",
+   "listPrice": 2400,
    "status": "attuale",
-   "image": null,
+   "image": "assets/img/products/nnw72-30dsa-bfg-hr.jpg",
    "revisions": [],
-   "source": "DATO DIMOSTRATIVO: modello e valori inventati per provare filtri e layout."
+   "spec": [
+    [
+     "Capacità Ca.",
+     "30 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 4 | 12°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 12 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "4 Ripiani scorrevoli su Guide Telescopiche / Estrazione Totale"
+    ],
+    [
+     "Tipologia Ripiani",
+     "3 Ripiani In Legno da conservazione / 1 Ripiano In Legno per Champagne"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED 3 Colori | Bianca 2700 K / Doppia emissione verticale"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Triplo Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Ghost Verticale Nera"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica N-SN-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "140 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "41dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "HR Cerniera Destra | HL Cerniera Sinistra"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 71,5x59,2x58 | Imballo 78x71x70"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 41 | 47 kg"
+    ],
+    [
+     "Codice Ean",
+     "HR 0666186409770 | HL 0666186409787"
+    ]
+   ],
+   "catalogPage": 21,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
   },
   {
-   "id": "demo-vin-01",
-   "code": "DEMO-VIN-01",
-   "demo": true,
-   "verified": false,
-   "series": "VINUMdesign (DEMO)",
-   "category": "Gamma VINUMdesign",
-   "installation": "libera",
-   "bottles": 90,
+   "id": "nnw72-29da-bfg-pr",
+   "code": "NNW72-29DA-BFG-PR",
+   "variants": [
+    "NNW72-29DA-BFG-PR"
+   ],
+   "title": "Cantina 29 Bottiglie 2 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine da incasso",
+   "installation": "incasso",
+   "installationNote": "Incasso | Sottotop Autoventilata",
+   "bottles": 29,
    "zones": 2,
    "dimensions": {
-    "h": 1800,
-    "l": 600,
-    "p": 650
+    "h": 71.5,
+    "l": 59.5,
+    "p": 56.0
    },
+   "energyClass": "F",
+   "noiseDb": 38,
+   "ean": "PR 0666186409688 | PL 0666186409695",
+   "listPrice": 3050,
    "status": "attuale",
-   "image": null,
+   "image": "assets/img/products/nnw72-29da-bfg-pr.jpg",
    "revisions": [],
-   "source": "DATO DIMOSTRATIVO: modello e valori inventati per provare filtri e layout."
+   "spec": [
+    [
+     "Capacità Ca.",
+     "29 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 5 | 12°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 12 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "4 Ripiani scorrevoli su Guide Telescopiche ad / Estrazione Totale"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce a LED 9 colori regolabile in intensità / Doppia emissione orizzontale e verticale"
+    ],
+    [
+     "Pannello Posteriore",
+     "Schienale interno Inox"
+    ],
+    [
+     "Filtro",
+     "Filtro ai carboni attivi"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Triplo Vetro Basso Emissivo c/gas Argon"
+    ],
+    [
+     "Maniglia",
+     "Apertura Push To Open | Soft Close"
+    ],
+    [
+     "Compressore",
+     "Inverter Embraco 220-240V; 50-60Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "F | Climatica ST-N | Silenziosità 38dB"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "94 KWh|anno"
+    ],
+    [
+     "Reversibilità Porta",
+     "PR Cerniera Destra | PL Cerniera Sinistra"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 71,5x59,5x56 | Imballo 74,9x66,2x64,8"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 51 | 55 kg"
+    ],
+    [
+     "Codice Ean",
+     "PR 0666186409688 | PL 0666186409695"
+    ]
+   ],
+   "catalogPage": 22,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
   },
   {
-   "id": "demo-4p-01",
-   "code": "DEMO-4P-01",
-   "demo": true,
-   "verified": false,
-   "series": "Gamma DEMO",
-   "category": "Frigoriferi quattro porte con cantinetta",
-   "installation": "libera",
-   "bottles": 18,
+   "id": "nnw72-29da-wp-pr",
+   "code": "NNW72-29DA-WP-PR",
+   "variants": [
+    "NNW72-29DA-WP-PR"
+   ],
+   "title": "Cantina 29 Bottiglie 2 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine da incasso",
+   "installation": "incasso",
+   "installationNote": "Incasso | Sottotop Autoventilata",
+   "bottles": 29,
    "zones": 2,
    "dimensions": {
-    "h": 1850,
-    "l": 900,
-    "p": 700
+    "h": 67.5,
+    "l": 54.5,
+    "p": 55.6
    },
+   "energyClass": "F",
+   "noiseDb": 38,
+   "ean": "PR 0666186409794 | PL 0666186409800",
+   "listPrice": 2950,
+   "status": "attuale",
+   "image": "assets/img/products/nnw72-29da-wp-pr.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "29 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 5 | 12°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 12 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "4 Ripiani scorrevoli su Guide Telescopiche ad / Estrazione Totale"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce a LED 9 colori regolabile in intensità / Doppia emissione orizzontale e verticale"
+    ],
+    [
+     "Pannello Posteriore",
+     "Schienale interno Inox"
+    ],
+    [
+     "Filtro",
+     "Filtro ai carboni attivi"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Da Pannellare | Cornice non inclusa"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo c/gas Argon"
+    ],
+    [
+     "Maniglia",
+     "Apertura Push To Open | Soft Close"
+    ],
+    [
+     "Compressore",
+     "Inverter Embraco 220-240V; 50-60Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "F | Climatica ST-N | Silenziosità 38dB"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "94 KWh|anno"
+    ],
+    [
+     "Reversibilità Porta",
+     "PR Cerniera Destra | PL Cerniera Sinistra"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "67,5x54,5x55,6 + Pann. | Imballo 74,9x66,2x64,8"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 51 | 55 kg"
+    ],
+    [
+     "Codice Ean",
+     "PR 0666186409794 | PL 0666186409800"
+    ]
+   ],
+   "catalogPage": 22,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nw52d-bfg-h",
+   "code": "NW52D-BFG-H",
+   "variants": [
+    "NW52D-BFG-H",
+    "NW52D-BFG-H SX"
+   ],
+   "title": "Cantina 52 Bottiglie 2 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine da incasso",
+   "installation": "incasso",
+   "installationNote": "Incasso",
+   "bottles": 52,
+   "zones": 2,
+   "dimensions": {
+    "h": 88.6,
+    "l": 59.0,
+    "p": 55.7
+   },
+   "energyClass": "G",
+   "noiseDb": 39,
+   "ean": "0607111418368",
+   "listPrice": 2500,
+   "status": "attuale",
+   "image": "assets/img/products/nw52d-bfg-h.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "52 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 5 | 10°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 10 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "4 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED 3 Colori | Bianca 2700 K / Doppia emissione orizzontale"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Ghost Verticale Nera"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica N-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "140 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "39dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 88,6x59x55,7 | Imballo 93,5x64x64"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 49 | 54 kg"
+    ],
+    [
+     "Codice Ean",
+     "0607111418368"
+    ]
+   ],
+   "catalogPage": 22,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw88-47da-bfg-pr",
+   "code": "NNW88-47DA-BFG-PR",
+   "variants": [
+    "NNW88-47DA-BFG-PR"
+   ],
+   "title": "Cantina 47 Bottiglie 2 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine da incasso",
+   "installation": "incasso",
+   "installationNote": "Incasso Autoventilata",
+   "bottles": 47,
+   "zones": 2,
+   "dimensions": {
+    "h": 88.5,
+    "l": 59.5,
+    "p": 56.0
+   },
+   "energyClass": "F",
+   "noiseDb": 38,
+   "ean": "PR 0666186409701 | PL 0666186409718",
+   "listPrice": 3200,
+   "status": "attuale",
+   "image": "assets/img/products/nnw88-47da-bfg-pr.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "47 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 5 | 12°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 12 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "5 Ripiani scorrevoli su Guide Telescopiche / Estrazione Totale"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce a LED 9 colori regolabile in intensità / Doppia emissione orizzontale e verticale"
+    ],
+    [
+     "Pannello Posteriore",
+     "Schienale interno Inox"
+    ],
+    [
+     "Filtro",
+     "Filtro ai carboni attivi"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Triplo Vetro Basso Emissivo c/gas Argon"
+    ],
+    [
+     "Maniglia",
+     "Apertura Push To Open | Soft Close"
+    ],
+    [
+     "Compressore",
+     "Inverter Embraco 220-240V; 50-60Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "F | Climatica ST-N | Silenziosità 38dB"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "108 KWh|anno"
+    ],
+    [
+     "Reversibilità Porta",
+     "PR Cerniera Destra | PL Cerniera Sinistra"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 88,5x59,5x56 | Imballo 95x66,2x64,8"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 62 | 67 kg"
+    ],
+    [
+     "Codice Ean",
+     "PR 0666186409701 | PL 0666186409718"
+    ]
+   ],
+   "catalogPage": 22,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw98-46da-bfg-pr",
+   "code": "NNW98-46DA-BFG-PR",
+   "variants": [
+    "NNW98-46DA-BFG-PR"
+   ],
+   "title": "Cantina 46 Bottiglie 2 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine da incasso",
+   "installation": "incasso",
+   "installationNote": "Incasso Autoventilata",
+   "bottles": 46,
+   "zones": 2,
+   "dimensions": {
+    "h": 99.3,
+    "l": 59.5,
+    "p": 56.5
+   },
+   "energyClass": "F",
+   "noiseDb": 37,
+   "ean": "PR 0666186410301 | PL 0666186410318",
+   "listPrice": 3300,
+   "status": "attuale",
+   "image": "assets/img/products/nnw98-46da-bfg-pr.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "46 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 3 | 20°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 3 | 20°C *"
+    ],
+    [
+     "N° Ripiani Interni",
+     "6 Ripiani scorrevoli su Guide Telescopiche ad / Estrazione Totale"
+    ],
+    [
+     "Tipologia Ripiani",
+     "4 Ripiani In Legno da conservazione / 2 Ripiani In Legno da mescita"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce a LED 8 colori Doppia emissione vertica- / le e taglio luce a 45°"
+    ],
+    [
+     "Filtro",
+     "Filtro ai carboni attivi"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Triplo Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Apertura Push To Open | Soft Close"
+    ],
+    [
+     "Compressore",
+     "Inverter Embraco 220-240V; 50-60Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "F | Climatica ST | Silenziosità 37dB"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "107 KWh|anno"
+    ],
+    [
+     "Reversibilità Porta",
+     "PR Cerniera Destra | PL Cerniera Sinistra"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 99,3x59,5x56,5 | Imballo 112x68,5x68,5"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 63 | 76 kg"
+    ],
+    [
+     "Codice Ean",
+     "PR 0666186410301 | PL 0666186410318"
+    ]
+   ],
+   "catalogPage": 23,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw105-50d-bfg-pr",
+   "code": "NNW105-50D-BFG-PR",
+   "variants": [
+    "NNW105-50D-BFG-PR"
+   ],
+   "title": "Cantina 51 Bottiglie 2 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine da incasso",
+   "installation": "incasso",
+   "installationNote": "Incasso",
+   "bottles": 51,
+   "zones": 2,
+   "dimensions": {
+    "h": 105.5,
+    "l": 59.5,
+    "p": 57.5
+   },
+   "energyClass": "F",
+   "noiseDb": 37,
+   "ean": "PR 0666186409817 | PL 0666186409824",
+   "listPrice": 2900,
+   "status": "attuale",
+   "image": "assets/img/products/nnw105-50d-bfg-pr.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "51 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 3 | 20°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 3 | 20°C *"
+    ],
+    [
+     "N° Ripiani Interni",
+     "6 Ripiani scorrevoli su Guide Telescopiche ad / Estrazione Totale"
+    ],
+    [
+     "Tipologia Ripiani",
+     "4 Ripiani In Legno da conservazione / 2 Ripiani In Legno da mescita"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce a LED 8 colori Doppia emissione vertica- / le e taglio luce a 45°"
+    ],
+    [
+     "Filtro",
+     "Filtro ai carboni attivi"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Triplo Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Apertura Push To Open | Soft Close"
+    ],
+    [
+     "Compressore",
+     "Inverter Embraco 220-240V; 50-60Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "F | Climatica ST | Silenziosità 37dB"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "107 KWh|anno"
+    ],
+    [
+     "Reversibilità Porta",
+     "PR Cerniera Destra | PL Cerniera Sinistra"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 105,5x59,5x57,5 | Imballo 117x69,5x72,5"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 63 | 76 kg"
+    ],
+    [
+     "Codice Ean",
+     "PR 0666186409817 | PL 0666186409824"
+    ]
+   ],
+   "catalogPage": 23,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw120-64da-bfg-hr",
+   "code": "NNW120-64DA-BFG-HR",
+   "variants": [
+    "NNW120-64DA-BFG-HR"
+   ],
+   "title": "Cantina 64 Bottiglie 2 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine da incasso",
+   "installation": "incasso",
+   "installationNote": "Incasso Autoventilata",
+   "bottles": 64,
+   "zones": 2,
+   "dimensions": {
+    "h": 123.4,
+    "l": 59.4,
+    "p": 57.3
+   },
+   "energyClass": "G",
+   "noiseDb": 40,
+   "ean": "HR 0666186410325 | HL 0666186410332",
+   "listPrice": 3150,
+   "status": "attuale",
+   "image": "assets/img/products/nnw120-64da-bfg-hr.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "64 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 4 | 12°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 12 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "8 Ripiani scorrevoli su Guide Telescopiche / Estrazione Totale"
+    ],
+    [
+     "Tipologia Ripiani",
+     "6 Ripiani In Legno da conservazione / 2 Ripiani In Legno per Champagne"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED 3 Colori | Bianca 2700 K / Doppia emissione verticale"
+    ],
+    [
+     "Filtro",
+     "Doppio Filtro ai carboni attivi"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Triplo Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Ghost Verticale Nera"
+    ],
+    [
+     "Compressore",
+     "Inverter 220-240V; 50-60Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica N-SN-ST-T | Silenziosità 40dB"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "140 KWh|anno"
+    ],
+    [
+     "Reversibilità Porta",
+     "HR Cerniera Destra | HL Cerniera Sinistra"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 123,4x59,4x57,3 | Imballo 131,5x65,5x65,5"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 63 | 68 kg"
+    ],
+    [
+     "Codice Ean",
+     "HR 0666186410325 | HL 0666186410332"
+    ]
+   ],
+   "catalogPage": 23,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw180-94ta-bfg-ko",
+   "code": "NNW180-94TA-BFG-KO",
+   "variants": [
+    "NNW180-94TA-BFG-KO",
+    "NNW180-94TA-BFG-KO"
+   ],
+   "title": "Cantina 94 Bottiglie 3 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine da incasso",
+   "installation": "incasso",
+   "installationNote": "Incasso Autoventilata",
+   "bottles": 94,
+   "zones": 3,
+   "dimensions": null,
+   "energyClass": null,
+   "noiseDb": null,
+   "ean": null,
+   "listPrice": 4800,
+   "status": "attuale",
+   "image": "assets/img/products/nnw180-94ta-bfg-ko.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "94 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Tripla Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 5 | 20°C"
+    ],
+    [
+     "Temp. Zona Intermedia",
+     "Regolabile da 5 | 12°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 12 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "12 Ripiani scorrevoli su Guide Telescopiche"
+    ],
+    [
+     "Tipologia Ripiani",
+     "12 Ripiani In Legno da conservazione"
+    ]
+   ],
+   "catalogPage": 24,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nw93t-bfg-h",
+   "code": "NW93T-BFG-H",
+   "variants": [
+    "NW93T-BFG-H",
+    "NW93T-BFG-H SX"
+   ],
+   "title": "Cantina 93 Bottiglie 3 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine da incasso",
+   "installation": "incasso",
+   "installationNote": "Incasso",
+   "bottles": 93,
+   "zones": 3,
+   "dimensions": null,
+   "energyClass": null,
+   "noiseDb": null,
+   "ean": null,
+   "listPrice": 3900,
    "status": "attuale",
    "image": null,
    "revisions": [],
-   "source": "DATO DIMOSTRATIVO: modello e valori inventati per provare filtri e layout."
+   "spec": [
+    [
+     "Capacità Ca.",
+     "93 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Tripla Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 5 | 20°C"
+    ],
+    [
+     "Temp. Zona Intermedia",
+     "Regolabile da 5 | 10°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 10 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "10 Ripiani scorrevoli su Guide Telescopiche"
+    ],
+    [
+     "Tipologia Ripiani",
+     "9 Ripiani In Legno da conservazione"
+    ]
+   ],
+   "catalogPage": 25,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw180-92d-bfg-pr",
+   "code": "NNW180-92D-BFG-PR",
+   "variants": [
+    "NNW180-92D-BFG-PR"
+   ],
+   "title": "Cantina 92 Bottiglie 2 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine da incasso",
+   "installation": "incasso",
+   "installationNote": "Incasso",
+   "bottles": 92,
+   "zones": 2,
+   "dimensions": null,
+   "energyClass": null,
+   "noiseDb": null,
+   "ean": null,
+   "listPrice": 4200,
+   "status": "attuale",
+   "image": "assets/img/products/nnw180-92d-bfg-pr.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "92 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 3 | 20°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 3 | 20°C *"
+    ],
+    [
+     "N° Ripiani Interni",
+     "12 Ripiani scorrevoli su Guide Telescopiche"
+    ],
+    [
+     "Tipologia Ripiani",
+     "9 Ripiani In Legno da conservazione"
+    ]
+   ],
+   "catalogPage": 26,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw180-92d-wp-pr",
+   "code": "NNW180-92D-WP-PR",
+   "variants": [
+    "NNW180-92D-WP-PR"
+   ],
+   "title": "Cantina 92 Bottiglie 2 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine da incasso",
+   "installation": "incasso",
+   "installationNote": "Incasso Pannellabile",
+   "bottles": 92,
+   "zones": 2,
+   "dimensions": null,
+   "energyClass": null,
+   "noiseDb": null,
+   "ean": null,
+   "listPrice": 4100,
+   "status": "attuale",
+   "image": "assets/img/products/nnw180-92d-wp-pr.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "92 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 3 | 20°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 3 | 20°C *"
+    ],
+    [
+     "N° Ripiani Interni",
+     "12 Ripiani scorrevoli su Guide Telescopiche"
+    ],
+    [
+     "Tipologia Ripiani",
+     "9 Ripiani In Legno da conservazione"
+    ]
+   ],
+   "catalogPage": 27,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw82-9s-bfg-nh",
+   "code": "NNW82-9S-BFG-NH",
+   "variants": [
+    "NNW82-9S-BFG-NH",
+    "NNW82-9S-BFG-NH SX"
+   ],
+   "title": "Cantina 9 Bottiglie 1 Temperatura",
+   "series": "Cantine Nevada",
+   "category": "Cantine sottotop",
+   "installation": "sottotop",
+   "installationNote": "Sottotop",
+   "bottles": 9,
+   "zones": 1,
+   "dimensions": {
+    "h": 82.0,
+    "l": 15.0,
+    "p": 52.4
+   },
+   "energyClass": "G",
+   "noiseDb": 38,
+   "ean": "0666186410110",
+   "listPrice": 850,
+   "status": "attuale",
+   "image": "assets/img/products/nnw82-9s-bfg-nh.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "9 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer Touch con Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temperatura"
+    ],
+    [
+     "Temp. Zona",
+     "Regolabile da 2 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "6 doghe in legno da conservazione + / 2 zone da servizio"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED Bianca mono emissione orizzontale"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Gola Laterale"
+    ],
+    [
+     "Griglia",
+     "Senza griglia Removibile"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica N-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "106 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "38dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 82x15x52,4 | Imballo 85,5x18,5x58"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 20 | 22 kg"
+    ],
+    [
+     "Codice Ean",
+     "0666186410110"
+    ]
+   ],
+   "catalogPage": 35,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw82-20d-bfg-nh",
+   "code": "NNW82-20D-BFG-NH",
+   "variants": [
+    "NNW82-20D-BFG-NH",
+    "NNW82-20D-BFG-NH SX"
+   ],
+   "title": "Cantina 17 Bottiglie 2 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine sottotop",
+   "installation": "sottotop",
+   "installationNote": "Sottotop | Libero Posizionamento",
+   "bottles": 17,
+   "zones": 2,
+   "dimensions": {
+    "h": 82.0,
+    "l": 29.5,
+    "p": 58.5
+   },
+   "energyClass": "G",
+   "noiseDb": 38,
+   "ean": "0666186409732",
+   "listPrice": 1450,
+   "status": "attuale",
+   "image": "assets/img/products/nnw82-20d-bfg-nh.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "17 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 2 | 12°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 12 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "5 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "LED 7 colori Emissione orizzontale e verticale"
+    ],
+    [
+     "Filtro",
+     "Filtro ai carboni attivi"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Gola Laterale"
+    ],
+    [
+     "Sicurezza",
+     "Serratura con chiave"
+    ],
+    [
+     "Griglia",
+     "Frontale Removibile"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica N-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "120 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "38dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 82x29,5x58,5 | Imballo 86,3x33,2x62,5"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 30 | 33 kg"
+    ],
+    [
+     "Codice Ean",
+     "0666186409732"
+    ]
+   ],
+   "catalogPage": 36,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw82-20s-bfg-nh",
+   "code": "NNW82-20S-BFG-NH",
+   "variants": [
+    "NNW82-20S-BFG-NH",
+    "NNW82-20S-BFG-NH SX"
+   ],
+   "title": "Cantina 19 Bottiglie 1 Temperatura",
+   "series": "Cantine Nevada",
+   "category": "Cantine sottotop",
+   "installation": "sottotop",
+   "installationNote": "Sottotop | Libero Posizionamento",
+   "bottles": 19,
+   "zones": 1,
+   "dimensions": {
+    "h": 82.0,
+    "l": 29.5,
+    "p": 58.5
+   },
+   "energyClass": "G",
+   "noiseDb": 41,
+   "ean": "0666186409855",
+   "listPrice": 1350,
+   "status": "attuale",
+   "image": "assets/img/products/nnw82-20s-bfg-nh.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "19 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temperatura"
+    ],
+    [
+     "Temp. Zona",
+     "Regolabile da 2 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "6 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "LED 7 colori Emissione orizzontale e verticale"
+    ],
+    [
+     "Filtro",
+     "Filtro ai carboni attivi"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Gola Laterale"
+    ],
+    [
+     "Sicurezza",
+     "Serratura con chiave"
+    ],
+    [
+     "Griglia",
+     "Frontale Removibile"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica N-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "133 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "41dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 82x29,5x58,5 | Imballo 86,3x33,2x62,5"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 30 | 33 kg"
+    ],
+    [
+     "Codice Ean",
+     "0666186409855"
+    ]
+   ],
+   "catalogPage": 36,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw82-30d-bfg-nh",
+   "code": "NNW82-30D-BFG-NH",
+   "variants": [
+    "NNW82-30D-BFG-NH",
+    "NNW82-30D-BFG-NH SX"
+   ],
+   "title": "Cantina 28 Bottiglie 2 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine sottotop",
+   "installation": "sottotop",
+   "installationNote": "Sottotop | Libero Posizionamento",
+   "bottles": 28,
+   "zones": 2,
+   "dimensions": {
+    "h": 82.0,
+    "l": 38.0,
+    "p": 58.5
+   },
+   "energyClass": "G",
+   "noiseDb": 40,
+   "ean": "0666186409749",
+   "listPrice": 1680,
+   "status": "attuale",
+   "image": "assets/img/products/nnw82-30d-bfg-nh.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "28 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura Indipendente"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 2 | 20°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 2 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "6 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "LED 7 colori Emissione orizzontale e verticale"
+    ],
+    [
+     "Filtro",
+     "Doppio Filtro ai carboni attivi"
+    ],
+    [
+     "Riscaldatore",
+     "Doppio Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Triplo Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Gola Laterale"
+    ],
+    [
+     "Sicurezza",
+     "Serratura con chiave"
+    ],
+    [
+     "Griglia",
+     "Frontale Removibile"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica N-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "138 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "40dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 82x38x58,5 | Imballo 87,5x43,5x65,5"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 36 | 38 kg"
+    ],
+    [
+     "Codice Ean",
+     "0666186409749"
+    ]
+   ],
+   "catalogPage": 36,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw82-30s-bfg-nh",
+   "code": "NNW82-30S-BFG-NH",
+   "variants": [
+    "NNW82-30S-BFG-NH",
+    "NNW82-30S-BFG-NH SX"
+   ],
+   "title": "Cantina 32 Bottiglie 1 Temperatura",
+   "series": "Cantine Nevada",
+   "category": "Cantine sottotop",
+   "installation": "sottotop",
+   "installationNote": "Sottotop | Libero Posizionamento",
+   "bottles": 32,
+   "zones": 1,
+   "dimensions": {
+    "h": 82.0,
+    "l": 38.0,
+    "p": 58.5
+   },
+   "energyClass": "G",
+   "noiseDb": 42,
+   "ean": "0666186409862",
+   "listPrice": 1500,
+   "status": "attuale",
+   "image": "assets/img/products/nnw82-30s-bfg-nh.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "32 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temperatura"
+    ],
+    [
+     "Temp. Zona",
+     "Regolabile da 2 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "6 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "LED 7 colori Emissione orizzontale e verticale"
+    ],
+    [
+     "Filtro",
+     "Filtro ai carboni attivi"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Triplo Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Gola Laterale"
+    ],
+    [
+     "Sicurezza",
+     "Serratura con chiave"
+    ],
+    [
+     "Griglia",
+     "Frontale Removibile"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica N-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "139 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "42dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 82x38x58,5 | Imballo 87,5x43,5x65,5"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 35 | 37 kg"
+    ],
+    [
+     "Codice Ean",
+     "0666186409862"
+    ]
+   ],
+   "catalogPage": 36,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw82-50d-bfg-nh",
+   "code": "NNW82-50D-BFG-NH",
+   "variants": [
+    "NNW82-50D-BFG-NH",
+    "NNW82-50D-BFG-NH SX"
+   ],
+   "title": "Cantina 46 Bottiglie 2 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine sottotop",
+   "installation": "sottotop",
+   "installationNote": "Sottotop | Libero Posizionamento",
+   "bottles": 46,
+   "zones": 2,
+   "dimensions": {
+    "h": 82.0,
+    "l": 59.5,
+    "p": 58.5
+   },
+   "energyClass": "G",
+   "noiseDb": 38,
+   "ean": "0666186409664",
+   "listPrice": 2300,
+   "status": "attuale",
+   "image": "assets/img/products/nnw82-50d-bfg-nh.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "46 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura Indipendente"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 2 | 20°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 2 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "6 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "4 Ripiani In Legno da conservazione / 2 Ripiani In Legno da Mescita"
+    ],
+    [
+     "Illuminazione Interna",
+     "LED 7 colori Emissione orizzontale e verticale"
+    ],
+    [
+     "Filtro",
+     "Doppio Filtro ai carboni attivi"
+    ],
+    [
+     "Riscaldatore",
+     "Doppio Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Triplo Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Gola Laterale"
+    ],
+    [
+     "Sicurezza",
+     "Serratura con chiave"
+    ],
+    [
+     "Griglia",
+     "Frontale Removibile"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica N-ST | Silenziosità 38dB"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "141 KWh|anno"
+    ],
+    [
+     "Reversibilità Porta",
+     "Reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 82x59,5x58,5 | Imballo 87,4x62,5x66"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 47 | 49 kg"
+    ],
+    [
+     "Codice Ean",
+     "0666186409664"
+    ]
+   ],
+   "catalogPage": 37,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw82-50s-bfg-nh",
+   "code": "NNW82-50S-BFG-NH",
+   "variants": [
+    "NNW82-50S-BFG-NH",
+    "NNW82-50S-BFG-NH SX"
+   ],
+   "title": "Cantina 52 Bottiglie 1 Temperatura",
+   "series": "Cantine Nevada",
+   "category": "Cantine sottotop",
+   "installation": "sottotop",
+   "installationNote": "Sottotop | Libero Posizionamento",
+   "bottles": 52,
+   "zones": 1,
+   "dimensions": {
+    "h": 82.0,
+    "l": 59.5,
+    "p": 58.5
+   },
+   "energyClass": "G",
+   "noiseDb": 41,
+   "ean": "0666186409671",
+   "listPrice": 2100,
+   "status": "attuale",
+   "image": "assets/img/products/nnw82-50s-bfg-nh.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "52 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temperatura"
+    ],
+    [
+     "Temp. Zona",
+     "Regolabile da 2 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "6 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "4 Ripiani In Legno da conservazione / 2 Ripiani In Legno da Mescita"
+    ],
+    [
+     "Illuminazione Interna",
+     "LED 7 colori Emissione orizzontale e verticale"
+    ],
+    [
+     "Filtro",
+     "Filtro ai carboni attivi"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Triplo Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Gola Laterale"
+    ],
+    [
+     "Sicurezza",
+     "Serratura con chiave"
+    ],
+    [
+     "Griglia",
+     "Frontale Removibile"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica N-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "144 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "41dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 82x59,5x58,5 | Imballo 87,4x62,5x66"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 45 | 47 kg"
+    ],
+    [
+     "Codice Ean",
+     "0666186409671"
+    ]
+   ],
+   "catalogPage": 37,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw180-150d-bfg",
+   "code": "NNW180-150D-BFG",
+   "variants": [
+    "NNW180-150D-BFG",
+    "NNW180-150D-BFG SX"
+   ],
+   "title": "Cantina 150 Bottiglie 2 Temperature Anni Di",
+   "series": "Cantine Nevada",
+   "category": "Cantine integrabili",
+   "installation": "integrabile",
+   "installationNote": "Integrale | Libero Posizionamento",
+   "bottles": 150,
+   "zones": 2,
+   "dimensions": null,
+   "energyClass": null,
+   "noiseDb": null,
+   "ean": null,
+   "listPrice": 3950,
+   "status": "attuale",
+   "image": "assets/img/products/nnw180-150d-bfg.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "150 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura Indipendente"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 2 | 20°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 2 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "9 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "5 Ripiani In Legno da conservazione"
+    ]
+   ],
+   "catalogPage": 42,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw180-150s-bfg",
+   "code": "NNW180-150S-BFG",
+   "variants": [
+    "NNW180-150S-BFG",
+    "NNW180-150S-BFG SX"
+   ],
+   "title": "Cantina 150 Bottiglie 1 Temperatura",
+   "series": "Cantine Nevada",
+   "category": "Cantine integrabili",
+   "installation": "integrabile",
+   "installationNote": "Integrale | Libero Posizionamento",
+   "bottles": 150,
+   "zones": 1,
+   "dimensions": null,
+   "energyClass": null,
+   "noiseDb": null,
+   "ean": null,
+   "listPrice": 3800,
+   "status": "attuale",
+   "image": "assets/img/products/nnw180-150s-bfg.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "150 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temperatura"
+    ],
+    [
+     "Temp. Zona",
+     "Regolabile da 2 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "8 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "3 Ripiani In Legno da conservazione"
+    ]
+   ],
+   "catalogPage": 42,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw180-150d-bfg-nh",
+   "code": "NNW180-150D-BFG-NH",
+   "variants": [
+    "NNW180-150D-BFG-NH",
+    "NNW180-150D-BFG-NH SX"
+   ],
+   "title": "Cantina 150 Bottiglie 2 Temperature Anni Di",
+   "series": "Cantine Nevada",
+   "category": "Cantine integrabili",
+   "installation": "integrabile",
+   "installationNote": "Integrale | Libero Posizionamento",
+   "bottles": 150,
+   "zones": 2,
+   "dimensions": null,
+   "energyClass": null,
+   "noiseDb": null,
+   "ean": null,
+   "listPrice": 3900,
+   "status": "attuale",
+   "image": "assets/img/products/nnw180-150d-bfg-nh.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "150 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura Indipendente"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 2 | 20°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 2 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "9 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "5 Ripiani In Legno da conservazione"
+    ]
+   ],
+   "catalogPage": 43,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw180-150s-bfg-nh",
+   "code": "NNW180-150S-BFG-NH",
+   "variants": [
+    "NNW180-150S-BFG-NH",
+    "NNW180-150S-BFG-NH SX"
+   ],
+   "title": "Cantina 150 Bottiglie 1 Temperatura",
+   "series": "Cantine Nevada",
+   "category": "Cantine integrabili",
+   "installation": "integrabile",
+   "installationNote": "Integrale | Libero Posizionamento",
+   "bottles": 150,
+   "zones": 1,
+   "dimensions": null,
+   "energyClass": null,
+   "noiseDb": null,
+   "ean": null,
+   "listPrice": 3750,
+   "status": "attuale",
+   "image": "assets/img/products/nnw180-150s-bfg-nh.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "150 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temperatura"
+    ],
+    [
+     "Temp. Zona",
+     "Regolabile da 2 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "8 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "3 Ripiani In Legno da conservazione"
+    ]
+   ],
+   "catalogPage": 43,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nw180d-ss",
+   "code": "NW180D-SS",
+   "variants": [
+    "NW180D-SS",
+    "NW180D-SS SX"
+   ],
+   "title": "Cantina 180 Bottiglie 2 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine integrabili",
+   "installation": "integrabile",
+   "installationNote": "Integrale | Libero Posizionamento",
+   "bottles": 180,
+   "zones": 2,
+   "dimensions": null,
+   "energyClass": null,
+   "noiseDb": null,
+   "ean": null,
+   "listPrice": 3950,
+   "status": "attuale",
+   "image": "assets/img/products/nw180d-ss.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "174 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura Indipendente"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 2 | 20°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 2 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "15 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "5 Ripiani In Legno da conservazione"
+    ]
+   ],
+   "catalogPage": 44,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nnw180-hcd-bfg-nh",
+   "code": "NNW180-HCD-BFG-NH",
+   "variants": [
+    "NNW180-HCD-BFG-NH"
+   ],
+   "title": "Cantina Salumi E Formaggi 2 Temperature",
+   "series": "Cantine Nevada",
+   "category": "Cantine integrabili",
+   "installation": "integrabile",
+   "installationNote": "Integrale | Libero Posizionamento",
+   "bottles": null,
+   "zones": 2,
+   "dimensions": null,
+   "energyClass": null,
+   "noiseDb": null,
+   "ean": null,
+   "listPrice": 4450,
+   "status": "attuale",
+   "image": "assets/img/products/nnw180-hcd-bfg-nh.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Tot. Netta lt",
+     "441 lt"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura Indipendente"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 0 | 20°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 0 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "7 Ripiani Interni scorrevoli"
+    ],
+    [
+     "Tipologia Ripiani",
+     "7 Ripiani In Acciaio Inox regolabili in altezza"
+    ]
+   ],
+   "catalogPage": 45,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "vortex-f1-sbi-inox",
+   "code": "VORTEX F1 SBI INOX",
+   "variants": [
+    "VORTEX F1 SBI INOX"
+   ],
+   "title": "Vortex F1 Sbi Inox",
+   "series": "Thrill",
+   "category": "Thrill",
+   "installation": "incasso",
+   "installationNote": "Incasso Semi filo | Filo top",
+   "bottles": null,
+   "zones": null,
+   "dimensions": null,
+   "energyClass": null,
+   "noiseDb": 37,
+   "ean": null,
+   "listPrice": 1900,
+   "status": "attuale",
+   "image": "assets/img/products/vortex-f1-sbi-inox.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Tipo Di Comando",
+     "Tasto di funzionamento fisico"
+    ],
+    [
+     "Elettronica",
+     "Elettronica tropicalizzata per utilizzo esterno"
+    ],
+    [
+     "Incasso Base",
+     "Inserimento a partire da basi larghe 25 cm"
+    ],
+    [
+     "Finitura",
+     "100% Acciaio Inox satinato"
+    ],
+    [
+     "Gas refrigerante",
+     "CO E290 / 2"
+    ],
+    [
+     "Bombola tipo",
+     "Bombola di CO2 con tubo pescante / (non inclusa)"
+    ],
+    [
+     "Lunghezza tubo CO2",
+     "mt. 2,80 (compresa la elettrovalvola / di connessione)"
+    ],
+    [
+     "Alimentazione",
+     "Batteria ricaricabile da 12 V a lunga durata / da 12 V- 100/240v AC Plug"
+    ],
+    [
+     "Tensione di rete",
+     "100-240 V ~ AC"
+    ],
+    [
+     "Frequenza",
+     "50-60 Hz"
+    ],
+    [
+     "Potenza massima",
+     "50 W"
+    ],
+    [
+     "Accessori",
+     "Kit fissaggio al piano e Carica batterie inclusi"
+    ],
+    [
+     "Dimens. piano visibile",
+     "22,2 x 22,2 cm R. 10 mm"
+    ],
+    [
+     "Foro incasso",
+     "Inst. Semi Filo 19,5 x 19,5 cm"
+    ],
+    [
+     "Profondità dal piano",
+     "cm 20 con batteria | cm 13 senza batteri"
+    ],
+    [
+     "Silenziosità",
+     "37dB"
+    ],
+    [
+     "Peso Prodotto",
+     "4,5 kg con batteria | 3 kg circa senza batteria"
+    ],
+    [
+     "In caso di utilizzo della",
+     "prolunga ERT ordinare Versione predisposta"
+    ],
+    [
+     "Codice: VORTEX F1 SBI",
+     "INOX ERT"
+    ]
+   ],
+   "catalogPage": 51,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "vortex-f1-sbi-nero",
+   "code": "VORTEX F1 SBI NERO",
+   "variants": [
+    "VORTEX F1 SBI NERO"
+   ],
+   "title": "Vortex F1 Sbi Nero",
+   "series": "Thrill",
+   "category": "Thrill",
+   "installation": "incasso",
+   "installationNote": "Incasso Semi filo | Filo top",
+   "bottles": null,
+   "zones": null,
+   "dimensions": null,
+   "energyClass": null,
+   "noiseDb": 37,
+   "ean": null,
+   "listPrice": 2200,
+   "status": "attuale",
+   "image": "assets/img/products/vortex-f1-sbi-nero.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Tipo Di Comando",
+     "Tasto di funzionamento fisico"
+    ],
+    [
+     "Elettronica",
+     "Elettronica tropicalizzata per utilizzo esterno"
+    ],
+    [
+     "Incasso Base",
+     "Inserimento a partire da basi larghe 25 cm"
+    ],
+    [
+     "Finitura",
+     "Nera goffrato verniciato a polvere"
+    ],
+    [
+     "Gas refrigerante",
+     "CO E290 / 2"
+    ],
+    [
+     "Bombola tipo",
+     "Bombola di CO2 con tubo pescante / (non inclusa)"
+    ],
+    [
+     "Lunghezza tubo CO2",
+     "mt. 2,80 (compresa la elettrovalvola / di connessione)"
+    ],
+    [
+     "Alimentazione",
+     "Batteria ricaricabile da 12 V a lunga durata / da 12 V- 100/240v AC Plug"
+    ],
+    [
+     "Tensione di rete",
+     "100-240 V ~ AC"
+    ],
+    [
+     "Frequenza",
+     "50-60 Hz"
+    ],
+    [
+     "Potenza massima",
+     "50 W"
+    ],
+    [
+     "Accessori",
+     "Kit fissaggio al piano e Carica batterie inclusi"
+    ],
+    [
+     "Dimens. piano visibile",
+     "22,3 x 22,3 cm R. 10 mm"
+    ],
+    [
+     "Foro incasso",
+     "Inst. Semi Filo 19,5 x 19,5 cm"
+    ],
+    [
+     "Profondità dal piano",
+     "cm 20 con batteria | cm 13 senza batteri"
+    ],
+    [
+     "Silenziosità",
+     "37dB"
+    ],
+    [
+     "Peso Prodotto",
+     "4,5 kg con batteria | 3 kg circa senza batteria"
+    ],
+    [
+     "In caso di utilizzo della",
+     "prolunga ERT ordinare Versione predisposta"
+    ],
+    [
+     "Codice: VORTEX F1 SBI",
+     "NERO ERT"
+    ]
+   ],
+   "catalogPage": 51,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "vortex-f1-sbi-pvd-black",
+   "code": "VORTEX F1 SBI PVD BLACK",
+   "variants": [
+    "VORTEX F1 SBI PVD BLACK"
+   ],
+   "title": "Vortex F1 Sbi Pvd Black",
+   "series": "Thrill",
+   "category": "Thrill",
+   "installation": "incasso",
+   "installationNote": "Incasso Semi filo | Filo top",
+   "bottles": null,
+   "zones": null,
+   "dimensions": null,
+   "energyClass": null,
+   "noiseDb": 37,
+   "ean": null,
+   "listPrice": 2200,
+   "status": "attuale",
+   "image": "assets/img/products/vortex-f1-sbi-pvd-black.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Tipo Di Comando",
+     "Tasto di funzionamento fisico"
+    ],
+    [
+     "Elettronica",
+     "Elettronica tropicalizzata per utilizzo esterno"
+    ],
+    [
+     "Incasso Base",
+     "Inserimento a partire da basi larghe 25 cm"
+    ],
+    [
+     "Finitura",
+     "PVD Black"
+    ],
+    [
+     "Gas refrigerante",
+     "CO E290 / 2"
+    ],
+    [
+     "Bombola tipo",
+     "Bombola di CO2 con tubo pescante / (non inclusa)"
+    ],
+    [
+     "Lunghezza tubo CO2",
+     "mt. 2,80 (compresa la elettrovalvola / di connessione)"
+    ],
+    [
+     "Alimentazione",
+     "Batteria ricaricabile da 12 V a lunga durata / da 12 V- 100/240v AC Plug"
+    ],
+    [
+     "Tensione di rete",
+     "100-240 V ~ AC"
+    ],
+    [
+     "Frequenza",
+     "50-60 Hz"
+    ],
+    [
+     "Potenza massima",
+     "50 W"
+    ],
+    [
+     "Accessori",
+     "Kit fissaggio al piano e Carica batterie inclusi"
+    ],
+    [
+     "Dimens. piano visibile",
+     "22,2 x 22,2 cm R. 10 mm"
+    ],
+    [
+     "Foro incasso",
+     "Inst. Semi Filo 19,5 x 19,5 cm"
+    ],
+    [
+     "Profondità dal piano",
+     "cm 20 con batteria | cm 13 senza batteri"
+    ],
+    [
+     "Silenziosità",
+     "37dB"
+    ],
+    [
+     "Peso Prodotto",
+     "4,5 kg con batteria | 3 kg circa senza batteria"
+    ],
+    [
+     "In caso di utilizzo della",
+     "prolunga ERT ordinare Versione predisposta"
+    ],
+    [
+     "Codice: VORTEX F1 SBI",
+     "PVD BLACK ERT"
+    ]
+   ],
+   "catalogPage": 51,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "vortex-f1-sbi-pvd-copper-gold",
+   "code": "VORTEX F1 SBI PVD COPPER | GOLD",
+   "variants": [
+    "VORTEX F1 SBI PVD COPPER | GOLD"
+   ],
+   "title": "Vortex F1 Sbi Pvd Copper | Gold",
+   "series": "Thrill",
+   "category": "Thrill",
+   "installation": "incasso",
+   "installationNote": "Incasso Semi filo | Filo top",
+   "bottles": null,
+   "zones": null,
+   "dimensions": null,
+   "energyClass": null,
+   "noiseDb": 37,
+   "ean": null,
+   "listPrice": 2200,
+   "status": "attuale",
+   "image": "assets/img/products/vortex-f1-sbi-pvd-copper-gold.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Tipo Di Comando",
+     "Tasto di funzionamento fisico"
+    ],
+    [
+     "Elettronica",
+     "Elettronica tropicalizzata per utilizzo esterno"
+    ],
+    [
+     "Incasso Base",
+     "Inserimento a partire da basi larghe 25 cm"
+    ],
+    [
+     "Finitura",
+     "PVD Copper o Gold"
+    ],
+    [
+     "Gas refrigerante",
+     "CO E290 / 2"
+    ],
+    [
+     "Bombola tipo",
+     "Bombola di CO2 con tubo pescante / (non inclusa)"
+    ],
+    [
+     "Lunghezza tubo CO2",
+     "mt. 2,80 (compresa la elettrovalvola / di connessione)"
+    ],
+    [
+     "Alimentazione",
+     "Batteria ricaricabile da 12 V a lunga durata / da 12 V- 100/240v AC Plug"
+    ],
+    [
+     "Tensione di rete",
+     "100-240 V ~ AC"
+    ],
+    [
+     "Frequenza",
+     "50-60 Hz"
+    ],
+    [
+     "Potenza massima",
+     "50 W"
+    ],
+    [
+     "Accessori",
+     "Kit fissaggio al piano e Carica batterie inclusi"
+    ],
+    [
+     "Dimens. piano visibile",
+     "22,2 x 22,2 cm R. 10 mm"
+    ],
+    [
+     "Foro incasso",
+     "Inst. Semi Filo 19,5 x 19,5 cm"
+    ],
+    [
+     "Profondità dal piano",
+     "cm 20 con batteria | cm 13 senza batteri"
+    ],
+    [
+     "Silenziosità",
+     "37dB"
+    ],
+    [
+     "Peso Prodotto",
+     "4,5 kg con batteria | 3 kg circa senza batteria"
+    ],
+    [
+     "In caso di utilizzo della",
+     "prolunga ERT ordinare Versione predisposta"
+    ],
+    [
+     "Codice: VORTEX F1 SBI",
+     "PVD COPPER | GOLD ERT"
+    ]
+   ],
+   "catalogPage": 51,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "vortex-cube-inox",
+   "code": "VORTEX CUBE INOX",
+   "variants": [
+    "VORTEX CUBE INOX"
+   ],
+   "title": "Vortex Cube Inox",
+   "series": "Thrill",
+   "category": "Thrill",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": null,
+   "zones": null,
+   "dimensions": {
+    "h": 17.0,
+    "l": 20.0,
+    "p": 20.0
+   },
+   "energyClass": null,
+   "noiseDb": 37,
+   "ean": null,
+   "listPrice": 1900,
+   "status": "attuale",
+   "image": "assets/img/products/vortex-cube-inox.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Tipo Di Comando",
+     "A Pressione"
+    ],
+    [
+     "Elettronica",
+     "Elettronica tropicalizzata per utilizzo esterno"
+    ],
+    [
+     "Finitura",
+     "100% Acciaio Inox satinato"
+    ],
+    [
+     "Gas refrigerante",
+     "CO E290 / 2"
+    ],
+    [
+     "Bombola tipo",
+     "Bombola di CO2 con tubo pescante / (non inclusa)"
+    ],
+    [
+     "Lunghezza tubo CO2",
+     "mt. 2,80 (compresa la elettrovalvola / di connessione)"
+    ],
+    [
+     "Alimentazione",
+     "Batteria ricaricabile da 12 V a lunga durata / da 12 V- 100/240v AC Plug"
+    ],
+    [
+     "Tensione di rete",
+     "100-240 V ~ AC"
+    ],
+    [
+     "Frequenza",
+     "50-60 Hz"
+    ],
+    [
+     "Potenza massima",
+     "50 W"
+    ],
+    [
+     "Carica batterie",
+     "Incluso"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "17 x 20 x 20"
+    ],
+    [
+     "Silenziosità",
+     "37dB"
+    ],
+    [
+     "Peso Prodotto",
+     "6 kg"
+    ]
+   ],
+   "catalogPage": 52,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "vortex-tower-inox",
+   "code": "VORTEX TOWER INOX",
+   "variants": [
+    "VORTEX TOWER INOX"
+   ],
+   "title": "Vortex Tower Inox",
+   "series": "Thrill",
+   "category": "Thrill",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": null,
+   "zones": null,
+   "dimensions": {
+    "h": 102.0,
+    "l": 52.0,
+    "p": 40.0
+   },
+   "energyClass": null,
+   "noiseDb": null,
+   "ean": null,
+   "listPrice": 6500,
+   "status": "attuale",
+   "image": "assets/img/products/vortex-tower-inox.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Tipo Di Comando",
+     "Tasto di funzionamento fisico"
+    ],
+    [
+     "Elettronica",
+     "Elettronica tropicalizzata per utilizzo esterno"
+    ],
+    [
+     "Posizionamento",
+     "Mobile, trasportabile ovunque su ruote"
+    ],
+    [
+     "Finitura",
+     "Acciaio Inox satinato | Top in legno IROKO"
+    ],
+    [
+     "Accessori",
+     "Porta bicchieri e porta cestello"
+    ],
+    [
+     "Gas refrigerante",
+     "CO E290 / 2"
+    ],
+    [
+     "Bombola tipo",
+     "Bombola di CO2 con tubo pescante / (non inclusa)"
+    ],
+    [
+     "Alimentazione",
+     "Batteria ricaricabile da 12 V a lunga durata / da 12 V- 100/240v AC Plug"
+    ],
+    [
+     "Tensione di rete",
+     "100-240 V ~ AC"
+    ],
+    [
+     "Frequenza",
+     "50-60 Hz"
+    ],
+    [
+     "Potenza massima",
+     "50 W"
+    ],
+    [
+     "Sicurezza",
+     "Vano Bombola con cinghie di tenuta"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "102 x 52 x 40 senza | 83 con accessori"
+    ],
+    [
+     "Ruote",
+     "4 ruote inox con gomma antiusura"
+    ],
+    [
+     "Peso Prodotto",
+     "38 | 40 kg esclusa bombola (non in dotazione)"
+    ]
+   ],
+   "catalogPage": 52,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "vortex-t-rock-inox-nero",
+   "code": "VORTEX T ROCK INOX NERO",
+   "variants": [
+    "VORTEX T ROCK INOX NERO"
+   ],
+   "title": "Vortex T Rock Inox Nero",
+   "series": "Thrill",
+   "category": "Thrill",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": null,
+   "zones": null,
+   "dimensions": {
+    "h": 90.0,
+    "l": 30.0,
+    "p": 30.0
+   },
+   "energyClass": null,
+   "noiseDb": null,
+   "ean": null,
+   "listPrice": 4400,
+   "status": "attuale",
+   "image": null,
+   "revisions": [],
+   "spec": [
+    [
+     "Tipo Di Comando",
+     "Tasto di funzionamento fisico"
+    ],
+    [
+     "Elettronica",
+     "Elettronica tropicalizzata per utilizzo esterno"
+    ],
+    [
+     "Posizionamento",
+     "Mobile, trasportabile ovunque su ruote"
+    ],
+    [
+     "Finitura",
+     "100% Acciaio Inox satinato verniciato nero a / polvere"
+    ],
+    [
+     "Top",
+     "Plexiglass da 20 mm retro illuminato"
+    ],
+    [
+     "Gas refrigerante",
+     "CO E290 / 2"
+    ],
+    [
+     "Bombola tipo",
+     "Bombola di CO2 con tubo pescante / (non inclusa)"
+    ],
+    [
+     "Alimentazione",
+     "Batteria ricaricabile da 12 V a lunga durata / da 12 V- 100/240v AC Plug"
+    ],
+    [
+     "Tensione di rete",
+     "100-240 V ~ AC"
+    ],
+    [
+     "Frequenza",
+     "50-60 Hz"
+    ],
+    [
+     "Potenza massima",
+     "50 W"
+    ],
+    [
+     "Vano Bombola",
+     "Vano Bombola h 70 cm"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "90 x 30 x 30"
+    ],
+    [
+     "Ruote",
+     "4 ruote inox con gomma antiusura"
+    ],
+    [
+     "Peso Prodotto",
+     "23,5 kg esclusa bombola (non in dotazione)"
+    ]
+   ],
+   "catalogPage": 52,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "vortex-t-rock-wood-noce-noce-nero",
+   "code": "VORTEX T ROCK WOOD NOCE | NOCE NERO",
+   "variants": [
+    "VORTEX T ROCK WOOD NOCE | NOCE NERO"
+   ],
+   "title": "Vortex T Rock Wood Noce | Noce Nero",
+   "series": "Thrill",
+   "category": "Thrill",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": null,
+   "zones": null,
+   "dimensions": {
+    "h": 90.0,
+    "l": 30.0,
+    "p": 30.0
+   },
+   "energyClass": null,
+   "noiseDb": null,
+   "ean": null,
+   "listPrice": 4500,
+   "status": "attuale",
+   "image": null,
+   "revisions": [],
+   "spec": [
+    [
+     "Tipo Di Comando",
+     "Tasto di funzionamento fisico"
+    ],
+    [
+     "Elettronica",
+     "Elettronica tropicalizzata per utilizzo esterno"
+    ],
+    [
+     "Posizionamento",
+     "Mobile, trasportabile ovunque su ruote"
+    ],
+    [
+     "Finitura",
+     "Legno noce massello naturale / Legno noce massello dipinto di nero"
+    ],
+    [
+     "Top",
+     "Plexiglass da 20 mm retro illuminato"
+    ],
+    [
+     "Gas refrigerante",
+     "CO E290 / 2"
+    ],
+    [
+     "Bombola tipo",
+     "Bombola di CO2 con tubo pescante / (non inclusa)"
+    ],
+    [
+     "Alimentazione",
+     "Batteria ricaricabile da 12 V a lunga durata / da 12 V- 100/240v AC Plug"
+    ],
+    [
+     "Tensione di rete",
+     "100-240 V ~ AC"
+    ],
+    [
+     "Frequenza",
+     "50-60 Hz"
+    ],
+    [
+     "Potenza massima",
+     "50 W"
+    ],
+    [
+     "Vano Bombola",
+     "Vano Bombola h 68 cm"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "90 x 30 x 30"
+    ],
+    [
+     "Ruote",
+     "4 ruote inox con gomma piroettanti"
+    ],
+    [
+     "Peso Prodotto",
+     "19 kg esclusa bombola (non in dotazione)"
+    ]
+   ],
+   "catalogPage": 52,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nvd180-160d-bfg-r",
+   "code": "NVD180-160D-BFG-R",
+   "variants": [
+    "NVD180-160D-BFG-R"
+   ],
+   "title": "Cantina 164 Bottiglie 2 Temperature",
+   "series": "VINUMdesign",
+   "category": "VINUMdesign Big Size",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": 164,
+   "zones": 2,
+   "dimensions": null,
+   "energyClass": null,
+   "noiseDb": null,
+   "ean": null,
+   "listPrice": 2880,
+   "status": "attuale",
+   "image": "assets/img/products/nvd180-160d-bfg-r.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "164 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 3 | 20°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 3 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "6 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "1 Ripiano In Legno da conservazione"
+    ]
+   ],
+   "catalogPage": 59,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nvd180-160s-bfg-r",
+   "code": "NVD180-160S-BFG-R",
+   "variants": [
+    "NVD180-160S-BFG-R"
+   ],
+   "title": "Cantina 160 Bottiglie 1 Temperatura",
+   "series": "VINUMdesign",
+   "category": "VINUMdesign Big Size",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": 160,
+   "zones": 1,
+   "dimensions": null,
+   "energyClass": null,
+   "noiseDb": null,
+   "ean": null,
+   "listPrice": 2790,
+   "status": "attuale",
+   "image": "assets/img/products/nvd180-160s-bfg-r.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "160 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temperatura"
+    ],
+    [
+     "Temp. Zona",
+     "Regolabile da 3 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "5 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "1 Ripiano In Legno su Guide Telescopiche"
+    ]
+   ],
+   "catalogPage": 59,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nvd180-170s-bfg-r",
+   "code": "NVD180-170S-BFG-R",
+   "variants": [
+    "NVD180-170S-BFG-R"
+   ],
+   "title": "Cantina 160 Bottiglie 1 Temperatura",
+   "series": "VINUMdesign",
+   "category": "VINUMdesign Big Size",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": 160,
+   "zones": 1,
+   "dimensions": null,
+   "energyClass": null,
+   "noiseDb": null,
+   "ean": null,
+   "listPrice": 2850,
+   "status": "attuale",
+   "image": "assets/img/products/nvd180-170s-bfg-r.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "172 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 3 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "7 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "1 Ripiano In Legno da conservazione"
+    ]
+   ],
+   "catalogPage": 60,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nvdct90-9d-b",
+   "code": "NVDCT90-9D-B",
+   "variants": [
+    "NVDCT90-9D-B"
+   ],
+   "title": "Cantina 9 Bottiglie 2 Temperature",
+   "series": "VINUMdesign",
+   "category": "VINUMdesign Countertop",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": 9,
+   "zones": 2,
+   "dimensions": {
+    "h": 32.5,
+    "l": 91.0,
+    "p": 39.0
+   },
+   "energyClass": null,
+   "noiseDb": 41,
+   "ean": "0666186410257",
+   "listPrice": 1280,
+   "status": "attuale",
+   "image": "assets/img/products/nvdct90-9d-b.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità",
+     "9 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Sinistra",
+     "Regolabile da 10 | 18°C"
+    ],
+    [
+     "Temp. Zona Destra",
+     "Regolabile da 5 | 10°C"
+    ],
+    [
+     "Inserimento Bottiglie",
+     "7 Bottiglie Bottiglie bordolesi diametro 93 / 2 Bottiglie Bottiglie di champagne diametro"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED 3 Colori mono emissione orizzontale"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura",
+     "Nera opaca"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Senza Maniglia"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Climatica",
+     "Climatica SN-N-ST"
+    ],
+    [
+     "Silenziosità",
+     "41dB"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 32,5x91x39 | Imballo 37,5x98x46"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 38 | 42 kg"
+    ],
+    [
+     "Codice Ean",
+     "0666186410257"
+    ]
+   ],
+   "catalogPage": 62,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nvd120-30d-black",
+   "code": "NVD120-30D-BLACK",
+   "variants": [
+    "NVD120-30D-BLACK"
+   ],
+   "title": "Cantina 30 Bottiglie 2 Temperature",
+   "series": "VINUMdesign",
+   "category": "VINUMdesign Vintage",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": 30,
+   "zones": 2,
+   "dimensions": {
+    "h": 120.5,
+    "l": 36.6,
+    "p": 47.6
+   },
+   "energyClass": "G",
+   "noiseDb": 39,
+   "ean": "0666186410103 Black | 0666186410097 White / 0666186410080 Red",
+   "listPrice": 980,
+   "status": "attuale",
+   "image": "assets/img/products/nvd120-30d-black.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "30 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 3 | 10°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 10 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "7 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED Bianca 3000 K / Doppia emissione orizzontale"
+    ],
+    [
+     "Filtro",
+     "Filtro ai carboni attivi"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta | Scocca",
+     "Nero Ral 9011 | Rosso Ral 3003 | Bianca Ral"
+    ],
+    [
+     "Isolamento Porta",
+     "Triplo Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Senza Maniglia"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica SN-N-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "139 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "39dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Cerniera Destra | Non reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 120,5x36,6x47,6 | Imballo 125,2x42,5x55"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 39 | 44 kg"
+    ],
+    [
+     "Codice Ean",
+     "0666186410103 Black | 0666186410097 White / 0666186410080 Red"
+    ]
+   ],
+   "catalogPage": 65,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nvd90-24s-black",
+   "code": "NVD90-24S-BLACK",
+   "variants": [
+    "NVD90-24S-BLACK"
+   ],
+   "title": "Cantina 24 Bottiglie 1 Temperatura",
+   "series": "VINUMdesign",
+   "category": "VINUMdesign Vintage",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": 24,
+   "zones": 1,
+   "dimensions": {
+    "h": 92.8,
+    "l": 36.6,
+    "p": 47.6
+   },
+   "energyClass": "F",
+   "noiseDb": 37,
+   "ean": "0666186409947 Black | 0666186409930 White / 0666186409923 Red",
+   "listPrice": 790,
+   "status": "attuale",
+   "image": "assets/img/products/nvd90-24s-black.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "24 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LCD"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temperatura"
+    ],
+    [
+     "Temp. Zona",
+     "Regolabile da 3 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "5 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED Bianca 3000 K / Mono emissione orizzontale"
+    ],
+    [
+     "Filtro",
+     "Filtro ai carboni attivi"
+    ],
+    [
+     "Finitura Porta | Scocca",
+     "Nero Ral 9011 | Rosso Ral 3003 | Bianca Ral"
+    ],
+    [
+     "Isolamento Porta",
+     "Triplo Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Senza Maniglia"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "F | Climatica SN-N-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "98 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "37dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Cerniera Destra | Non reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 92,8x36,6x47,6 | Imballo 99,5x42,5x55"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 30,5 | 35,5 kg"
+    ],
+    [
+     "Codice Ean",
+     "0666186409947 Black | 0666186409930 White / 0666186409923 Red"
+    ]
+   ],
+   "catalogPage": 66,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nvd50-15s-b",
+   "code": "NVD50-15S-B",
+   "variants": [
+    "NVD50-15S-B"
+   ],
+   "title": "Cantina 15 Bottiglie 1 Temperatura",
+   "series": "VINUMdesign",
+   "category": "VINUMdesign Vinum",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": 15,
+   "zones": 1,
+   "dimensions": {
+    "h": 50.3,
+    "l": 43.0,
+    "p": 48.8
+   },
+   "energyClass": "G",
+   "noiseDb": 40,
+   "ean": "0666186410158",
+   "listPrice": 380,
+   "status": "attuale",
+   "image": "assets/img/products/nvd50-15s-b.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "15 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Controllo Digitale Touch frontale, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temperatura"
+    ],
+    [
+     "Temp. Zona",
+     "Regolabile da 4 | 18°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "2 Ripiani scorrevoli e Doga in legno"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED Bianca 3000 K / Mono emissione orizzontale"
+    ],
+    [
+     "Finitura Porta",
+     "Total Black"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Senza Maniglia"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica N-SN"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "134 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "40dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Cerniera Destra | Non reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 50,3x43x48,8 | Imballo 53x46x51,5"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 18 | 20 kg"
+    ],
+    [
+     "Codice Ean",
+     "0666186410158"
+    ]
+   ],
+   "catalogPage": 68,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nvd80-28s-b",
+   "code": "NVD80-28S-B",
+   "variants": [
+    "NVD80-28S-B"
+   ],
+   "title": "Cantina 28 Bottiglie 1 Temperatura",
+   "series": "VINUMdesign",
+   "category": "VINUMdesign Vinum",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": 28,
+   "zones": 1,
+   "dimensions": {
+    "h": 81.8,
+    "l": 43.0,
+    "p": 48.8
+   },
+   "energyClass": "G",
+   "noiseDb": 41,
+   "ean": "0666186410165",
+   "listPrice": 570,
+   "status": "attuale",
+   "image": "assets/img/products/nvd80-28s-b.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "28 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Controllo Digitale Touch frontale, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temperatura"
+    ],
+    [
+     "Temp. Zona",
+     "Regolabile da 4 | 18°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "6 Ripiani scorrevoli e Doga in legno"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED Bianca 3000 K / Mono emissione orizzontale"
+    ],
+    [
+     "Finitura Porta",
+     "Total Black"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Senza Maniglia"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica N-SN"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "139 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "41dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Cerniera Destra | Non reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 81,8x43x48,8 | Imballo 84,5x46x51,5"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 25 | 28 kg"
+    ],
+    [
+     "Codice Ean",
+     "0666186410165"
+    ]
+   ],
+   "catalogPage": 68,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nvd80-35s-b",
+   "code": "NVD80-35S-B",
+   "variants": [
+    "NVD80-35S-B"
+   ],
+   "title": "Cantina 35 Bottiglie 1 Temperatura",
+   "series": "VINUMdesign",
+   "category": "VINUMdesign Vinum",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": 35,
+   "zones": 1,
+   "dimensions": {
+    "h": 82.8,
+    "l": 48.0,
+    "p": 47.8
+   },
+   "energyClass": "G",
+   "noiseDb": 40,
+   "ean": "0666186410172",
+   "listPrice": 680,
+   "status": "attuale",
+   "image": "assets/img/products/nvd80-35s-b.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "35 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Controllo Digitale Touch frontale, Display"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temperatura"
+    ],
+    [
+     "Temp. Zona",
+     "Regolabile da 4 | 18°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "6 Ripiani scorrevoli e Doga in legno"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED Bianca 3000 K / Mono emissione orizzontale"
+    ],
+    [
+     "Finitura Porta",
+     "Total Black"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Senza Maniglia"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica N-SN"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "140 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "40dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Cerniera Destra | Non reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 82,8x48x47,8 | Imballo 87x51x52"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 28 | 30 kg"
+    ],
+    [
+     "Codice Ean",
+     "0666186410172"
+    ]
+   ],
+   "catalogPage": 68,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "nvd83-12s-bfg",
+   "code": "NVD83-12S-BFG",
+   "variants": [
+    "NVD83-12S-BFG"
+   ],
+   "title": "Cantina 12 Bottiglie 1 Temperatura",
+   "series": "VINUMdesign",
+   "category": "VINUMdesign Vinum",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": 12,
+   "zones": 1,
+   "dimensions": {
+    "h": 83.0,
+    "l": 25.0,
+    "p": 52.0
+   },
+   "energyClass": "G",
+   "noiseDb": 41,
+   "ean": "0666186410189",
+   "listPrice": 420,
+   "status": "attuale",
+   "image": "assets/img/products/nvd83-12s-bfg.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "12 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Controllo Digitale Touch sul vetro con Display / LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temperatura"
+    ],
+    [
+     "Temp. Zona",
+     "Regolabile da 3 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "5 Ripiani scorrevoli e Vano Mescita bottiglie"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED Bianca 3000 K / Mono emissione orizzontale"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Senza Maniglia"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica N-SN-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "129 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "41dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Cerniera Destra | Non reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 83x25x52 | Imballo 86,5x28x56"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 22 | 25 kg"
+    ],
+    [
+     "Codice Ean",
+     "0666186410189"
+    ]
+   ],
+   "catalogPage": 69,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "vd19smc2",
+   "code": "VD19SMC2",
+   "variants": [
+    "VD19SMC2"
+   ],
+   "title": "Cantina 19 Bottiglie 1 Temperatura",
+   "series": "VINUMdesign",
+   "category": "VINUMdesign Vinum",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": 19,
+   "zones": 1,
+   "dimensions": {
+    "h": 51.8,
+    "l": 47.4,
+    "p": 44.0
+   },
+   "energyClass": "G",
+   "noiseDb": 40,
+   "ean": "0705586955613",
+   "listPrice": 340,
+   "status": "attuale",
+   "image": "assets/img/products/vd19smc2.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "19 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Controllo Digitale Touch screen sul Vetro Porta"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temperatura"
+    ],
+    [
+     "Temp. Zona",
+     "Regolabile da 5 | 18°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "3 Ripiani + doga in acciaio cromato"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED Blu Mono emissione orizzontale"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Maniglia laterale incassata"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica SN-N-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "130 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "40dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Cerniera Destra | Non reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 51,8x47,4x44 | Imballo 54x51x46,5"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 17,5 | 19,5 kg"
+    ],
+    [
+     "Codice Ean",
+     "0705586955613"
+    ]
+   ],
+   "catalogPage": 70,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "vd40smcw",
+   "code": "VD40SMCW",
+   "variants": [
+    "VD40SMCW"
+   ],
+   "title": "Cantina 32 Bottiglie 1 Temperatura",
+   "series": "VINUMdesign",
+   "category": "VINUMdesign Vinum",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": 32,
+   "zones": 1,
+   "dimensions": {
+    "h": 84.7,
+    "l": 49.5,
+    "p": 43.0
+   },
+   "energyClass": "G",
+   "noiseDb": 41,
+   "ean": "0705586955606",
+   "listPrice": 610,
+   "status": "attuale",
+   "image": "assets/img/products/vd40smcw.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "32 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Controllo Digitale Touch screen sul Vetro Porta"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temperatura"
+    ],
+    [
+     "Temp. Zona",
+     "Regolabile da 5 | 18°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "4 Ripiani scorrevoli"
+    ],
+    [
+     "Tipologia Ripiani",
+     "3 Ripiani In Legno da conservazione / 1 Ripiano In Legno Multilivello"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED Blu Mono emissione orizzontale"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Maniglia laterale incassata"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica SN-N-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "138 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "41dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Cerniera Destra | Non reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 84,7x49,5x43 | Imballo 88x53,5x46,5"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 27 | 30 kg"
+    ],
+    [
+     "Codice Ean",
+     "0705586955606"
+    ]
+   ],
+   "catalogPage": 70,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "vd60scsw",
+   "code": "VD60SCSW",
+   "variants": [
+    "VD60SCSW"
+   ],
+   "title": "Cantina 60 Bottiglie 1 Temperatura",
+   "series": "VINUMdesign",
+   "category": "VINUMdesign Vinum",
+   "installation": "libera",
+   "installationNote": "Libero Posizionamento",
+   "bottles": 60,
+   "zones": 1,
+   "dimensions": {
+    "h": 84.7,
+    "l": 49.5,
+    "p": 56.0
+   },
+   "energyClass": "G",
+   "noiseDb": 39,
+   "ean": "0705586955637",
+   "listPrice": 590,
+   "status": "attuale",
+   "image": "assets/img/products/vd60scsw.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "51 | 60 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Controllo Digitale Touch screen sul Vetro Porta"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temperatura"
+    ],
+    [
+     "Temp. Zona",
+     "Regolabile da 5 | 18°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "4 Ripiani scorrevoli"
+    ],
+    [
+     "Tipologia Ripiani",
+     "4 Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED Blu Mono emissione orizzontale"
+    ],
+    [
+     "Finitura Porta",
+     "Acciao Satinato"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Maniglia Inox tonda"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica SN-N-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "142 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "39dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Cerniera Destra | Non reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 84,7x49,5x56 | Imballo 88x53,5x60,5"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 30 | 37 kg"
+    ],
+    [
+     "Codice Ean",
+     "0705586955637"
+    ]
+   ],
+   "catalogPage": 70,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "45-24b-rev",
+   "code": "45.24B-REV",
+   "variants": [
+    "45.24B-REV"
+   ],
+   "title": "Cantina 24 Bottiglie 1 Temperatura",
+   "series": "Promo",
+   "category": "Linea promo",
+   "installation": "incasso",
+   "installationNote": "Incasso",
+   "bottles": 24,
+   "zones": 1,
+   "dimensions": {
+    "h": 45.5,
+    "l": 59.0,
+    "p": 55.7
+   },
+   "energyClass": "F",
+   "noiseDb": 37,
+   "ean": "0666186410028",
+   "listPrice": 1290,
+   "status": "attuale",
+   "image": "assets/img/products/45-24b-rev.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "24 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Singola Temperatura"
+    ],
+    [
+     "Temperatura Zona",
+     "Regolabile da 5 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "3 Ripiani scorrevoli antiribaltamento"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED Bianca 2700 K / Mono emissione orizzontale"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Nera Squadrata verticale"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "F | Climatica N-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "100 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "37dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 45,5x59x55,7 | Imballo 52x64x64"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 30 | 31 kg"
+    ],
+    [
+     "Codice Ean",
+     "0666186410028"
+    ]
+   ],
+   "catalogPage": 72,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
+  },
+  {
+   "id": "60-41b-rev",
+   "code": "60.41B-REV",
+   "variants": [
+    "60.41B-REV"
+   ],
+   "title": "Cantina 41 Bottiglie 2 Temperature",
+   "series": "Promo",
+   "category": "Linea promo",
+   "installation": "incasso",
+   "installationNote": "Incasso",
+   "bottles": 41,
+   "zones": 2,
+   "dimensions": {
+    "h": 59.6,
+    "l": 59.0,
+    "p": 56.2
+   },
+   "energyClass": "G",
+   "noiseDb": 38,
+   "ean": "0666186410011",
+   "listPrice": 1690,
+   "status": "attuale",
+   "image": "assets/img/products/60-41b-rev.jpg",
+   "revisions": [],
+   "spec": [
+    [
+     "Capacità Ca.",
+     "41 bottiglie (75 Cl. Tipo Bordolesi)"
+    ],
+    [
+     "Tipo Di Comando",
+     "Computer evoluto, Soft Touch, Display LED"
+    ],
+    [
+     "N° Zone Temperatura",
+     "Doppia Temperatura"
+    ],
+    [
+     "Temp. Zona Superiore",
+     "Regolabile da 5 | 10°C"
+    ],
+    [
+     "Temp. Zona Inferiore",
+     "Regolabile da 10 | 20°C"
+    ],
+    [
+     "N° Ripiani Interni",
+     "3 Ripiani scorrevoli su Guide Telescopiche"
+    ],
+    [
+     "Tipologia Ripiani",
+     "Ripiani In Legno da conservazione"
+    ],
+    [
+     "Illuminazione Interna",
+     "Luce LED Bianca 2700 K / Doppia emissione orizzontale"
+    ],
+    [
+     "Riscaldatore",
+     "Mono Riscaldatore Interno"
+    ],
+    [
+     "Finitura Porta",
+     "Nera Full Glass"
+    ],
+    [
+     "Isolamento Porta",
+     "Doppio Vetro Basso Emissivo"
+    ],
+    [
+     "Maniglia",
+     "Nera Squadrata verticale"
+    ],
+    [
+     "Compressore",
+     "Standard; 220-240 V; 50Hz; Gas R600a"
+    ],
+    [
+     "Classe Energetica",
+     "G | Climatica N-ST"
+    ],
+    [
+     "Consumo Kwh|Anno",
+     "142 KWh|anno"
+    ],
+    [
+     "Silenziosità",
+     "38dB"
+    ],
+    [
+     "Reversibilità Porta",
+     "Reversibile"
+    ],
+    [
+     "Misure (Hxlxp) Cm",
+     "Prodotto 59,6x59x56,2 | Imballo 65x64x64"
+    ],
+    [
+     "Peso Prodotto",
+     "Peso Netto | Lordo: 39 | 42 kg"
+    ],
+    [
+     "Codice Ean",
+     "0666186410011"
+    ]
+   ],
+   "catalogPage": 72,
+   "demo": false,
+   "verified": true,
+   "source": "Catalogo/Listino Nevada Vinum 2026-27"
   }
  ]
 }

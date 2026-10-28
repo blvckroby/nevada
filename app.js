@@ -23,7 +23,7 @@ async function load() {
 }
 const byId = id => DB.products.find(p => p.id === id);
 const DOC_TYPES = [
-  ["manuale", "Manuale d'uso", "book", "Visualizza PDF"], ["scheda", "Scheda tecnica", "file", "Visualizza PDF"],
+  ["manuale", "Manuale d'uso", "book", "Visualizza PDF"], ["scheda", "Scheda tecnica (catalogo)", "file", "Visualizza PDF"],
   ["esploso", "Disegno esploso", "layers", "Visualizza"], ["ricambi", "Elenco ricambi", "wrench", "Visualizza codici"],
   ["schema", "Schema elettrico", "activity", "Visualizza"], ["installazione", "Istruzioni di installazione", "settings", "Visualizza"],
   ["servizio", "Manuale di servizio", "wrench", "Visualizza"], ["bollettini", "Bollettini tecnici", "bell", "Visualizza aggiornamenti"]
@@ -52,8 +52,8 @@ function searchAll(raw) {
   const q = norm(raw); if (!q) return [];
   const out = [];
   const push = (type, s, o) => s > 0 && out.push({ type, s, ...o });
-  DB.products.forEach(p => push("Modelli", Math.max(score(q, p.code), score(q, p.series) * .6, score(q, p.category) * .5), { p, title: p.code, sub: [p.series, p.category].filter(Boolean).join(" · ") || "Dati da verificare", href: `#/modello/${p.id}` }));
-  DB.documents.forEach(d => { const p = byId(d.model); push("Documenti", Math.max(score(q, d.title), score(q, p?.code) * .8), { title: d.title, sub: p?.code, href: `#/modello/${d.model}/doc/${d.type}`, demo: d.demo }); });
+  DB.products.forEach(p => push("Modelli", Math.max(score(q, p.code), ...(p.variants || []).map(v => score(q, v)), score(q, p.series) * .5, score(q, p.category) * .5, score(q, p.title) * .45), { p, title: p.code, sub: [p.title, p.category].filter(Boolean).join(" · "), href: `#/modello/${p.id}` }));
+  DB.documents.forEach(d => { const p = byId(d.model); push("Documenti", score(q, d.title), { title: d.title, sub: p?.code, href: `#/modello/${d.model}/doc/${d.type}`, demo: d.demo }); });
   DB.parts.forEach(x => x.parts.forEach(pt => push("Ricambi", Math.max(score(q, pt.name), score(q, pt.code)), { title: pt.name, sub: `Rif. ${pt.ref} · ${x.title}`, href: `#/esplosi/${x.id}?ref=${pt.ref}`, demo: x.demo })));
   DB.errors.forEach(e => push("Codici errore", Math.max(score(q, e.code), score(q, e.title)), { title: e.code, sub: e.title, href: `#/errori?q=${encodeURIComponent(e.code)}` }));
   DB.diagnostics.symptoms.forEach(s => push("Diagnostica", score(q, s.label), { title: s.label, sub: "Diagnostica per sintomo", href: `#/diagnostica/${s.id}` }));
@@ -61,16 +61,12 @@ function searchAll(raw) {
   return out.sort((a, b) => b.s - a.s);
 }
 
-/* ---------- grafica placeholder cantina (nessuna foto reale disponibile) ---------- */
-function cellar(p) {
-  const z = p.zones || 1, sh = p.bottles ? Math.min(7, Math.max(3, Math.round(p.bottles / 12) + 3)) : 5;
-  const lines = Array.from({ length: sh }, (_, i) => `<line x1="20" x2="100" y1="${30 + i * (110 / sh)}" y2="${30 + i * (110 / sh)}" stroke="#c9b48a" stroke-opacity=".5"/>`).join("");
-  const zl = z > 1 ? `<line x1="20" x2="100" y1="85" y2="85" stroke="#c9b48a" stroke-width="2"/>` : "";
-  return `<svg class="cell" viewBox="0 0 120 170" role="img" aria-label="Illustrazione generica di cantina"><rect x="8" y="6" width="104" height="156" rx="7" fill="#2a2b2e"/><rect x="16" y="18" width="88" height="132" rx="3" fill="#3a3c40"/><rect x="16" y="18" width="88" height="132" rx="3" fill="url(#g)" opacity=".5"/>${lines}${zl}<rect x="44" y="9" width="32" height="5" rx="2.5" fill="#d9c7a0"/><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".25"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient></defs></svg>`;
-}
-const imgOf = p => p.image ? `<img src="${esc(p.image)}" alt="${esc(p.code)}" loading="lazy" style="width:100%;height:100%;object-fit:cover">` : `${cellar(p)}<span class="ph">Foto da fornire</span>`;
+/* ---------- immagini prodotto (foto dal catalogo; placeholder se assente) ---------- */
+const imgOf = p => p.image ? `<img src="${esc(p.image)}" alt="${esc(p.code)}" loading="lazy" decoding="async">` : `<div class="noimg">${ic("grid")}Foto non disponibile</div>`;
 const instLabel = k => DB.meta.installations[k] || null;
-const zoneLabel = z => z ? ({ 1: "Singola temp.", 2: "Doppia temp.", 3: "Tripla temp." }[z] || z + " zone") : null;
+const zoneLabel = z => z ? ({ 1: "Singola temp.", 2: "Doppia temp.", 3: "Tripla temp.", 4: "4 temperature" }[z] || z + " zone") : null;
+const fmtDims = d => d ? `${d.h} × ${d.l} × ${d.p} cm` : null;
+const SHORT = c => c.replace("VINUMdesign ", "").replace("Cantine ", "").replace("Frigoriferi 4 porte con cantina", "4 Porte");
 
 /* ---------- preferiti / cronologia / note ---------- */
 const favs = () => store.get("favs", []);
@@ -80,11 +76,12 @@ const pushHist = (kind, id, label) => { const h = store.get("hist", []).filter(x
 /* ---------- componenti UI ---------- */
 function pcard(p) {
   const on = favs().includes(p.id);
-  return `<article class="card pcard"><a href="#/modello/${p.id}" style="text-decoration:none;display:contents">
-    <div class="pimg">${imgOf(p)}${p.demo ? `<span class="badge demo">DEMO</span>` : !p.verified ? `<span class="badge warn">Da verificare</span>` : ""}</div>
-    <div class="pbody"><b>${esc(p.code)}</b><div class="small muted">${esc(p.series || p.category || "Scheda da completare")}</div>
-    <div class="meta">${[instLabel(p.installation), p.bottles && p.bottles + " bt", zoneLabel(p.zones)].filter(Boolean).map(x => `<span class="badge">${esc(x)}</span>`).join("")}</div></div></a></article>`;
+  return `<article class="card pcard"><button class="icon-btn fav ${on ? "on" : ""}" data-fav="${p.id}" aria-label="Preferito">${ic("star", "sm")}</button><a href="#/modello/${p.id}">
+    <div class="pimg">${imgOf(p)}<span class="badge">${esc(SHORT(p.category))}</span></div>
+    <div class="pbody"><b>${esc(p.code)}</b><div class="small muted" style="margin-top:2px">${esc(p.title)}</div>
+    <div class="meta">${[p.bottles && p.bottles + " bt", zoneLabel(p.zones), p.dimensions && "H " + p.dimensions.h + " cm"].filter(Boolean).map(x => `<span class="badge">${esc(x)}</span>`).join("")}</div></div></a></article>`;
 }
+document.addEventListener("click", e => { const b = e.target.closest("[data-fav]"); if (!b) return; e.preventDefault(); const on = toggleFav(b.dataset.fav); b.classList.toggle("on", on); toast(on ? "Aggiunto ai preferiti" : "Rimosso dai preferiti"); });
 const empty = (icon, t, s = "") => `<div class="empty">${ic(icon)}<b>${t}</b>${s}</div>`;
 const crumbs = (...c) => `<nav class="crumbs" aria-label="Percorso">${c.map((x, i) => i < c.length - 1 ? `<a href="${x[1]}">${x[0]}</a>${ic("chev", "sm")}` : `<span aria-current="page">${x[0]}</span>`).join("")}</nav>`;
 const skeleton = () => `<div class="grid g-prod">${'<div class="sk" style="aspect-ratio:4/5"></div>'.repeat(8)}</div>`;
@@ -122,45 +119,50 @@ const after = f => { $("#view")._after = f; };
 routes[""] = () => {
   const shorts = [["catalogo", "Catalogo prodotti", "Tutte le cantine", "grid"], ["documentazione", "Manuali e documentazione", "PDF per modello", "book"], ["esplosi", "Esplosi e ricambi", "Disegni e codici", "layers"], ["errori", "Codici errore", "Ricerca rapida", "alert"], ["diagnostica", "Diagnostica guasti", "Per sintomo", "activity"], ["supporto", "Contatta Nevada", "Richiesta tecnica", "phone"]];
   const hist = store.get("hist", []).filter(h => h.kind === "model").slice(0, 4).map(h => byId(h.id)).filter(Boolean);
+  const cats = DB.meta.categories.map(c => ({ c, list: DB.products.filter(p => p.category === c) })).filter(x => x.list.length);
   after(() => $("#bigq")?.addEventListener("input", e => { $("#gq").value = e.target.value; $("#gq").dispatchEvent(new Event("input")); $("#gq").focus(); e.target.value = ""; }));
-  return `<section class="hero"><h1>Benvenuto nel Centro Assistenza Nevada</h1><p>Tutte le informazioni tecniche di cui hai bisogno, in un unico posto.</p>
-  <label class="bigsearch">${ic("search", "lg")}<input id="bigq" type="search" placeholder="Cerca un modello, codice prodotto o numero seriale..." aria-label="Cerca un modello, codice prodotto o numero seriale"></label></section>
-  <div class="grid g-short">${shorts.map(([h, t, s, i]) => `<a class="card short" href="#/${h}"><span class="ico">${ic(i)}</span><b>${t}</b><small>${s}</small></a>`).join("")}</div>
+  return `<section class="hero"><span class="eyebrow"><i><b style="background:#99002e"></b><b style="background:#b65674"></b><b style="background:#d3a0b3"></b></i>Technical Support Portal</span>
+  <h1>Benvenuto nel Centro Assistenza Nevada</h1><p>Tutte le informazioni tecniche di cui hai bisogno, in un unico posto.</p>
+  <label class="bigsearch">${ic("search", "lg")}<input id="bigq" type="search" placeholder="Cerca un modello, codice prodotto o numero seriale..." aria-label="Cerca un modello, codice prodotto o numero seriale"></label>
+  <div class="stats"><div class="glass stat card"><b>${DB.products.length}</b><small>modelli a catalogo</small></div><div class="glass stat card"><b>${cats.length}</b><small>gamme</small></div><div class="glass stat card"><b>${DB.documents.length}</b><small>schede disponibili</small></div></div></section>
+  <div class="grid g-short sec" style="margin-top:22px">${shorts.map(([h, t, s, i]) => `<a class="card short" href="#/${h}"><span class="ico">${ic(i)}</span><b>${t}</b><small>${s}</small></a>`).join("")}</div>
+  <section class="sec"><div class="sec-h"><h2>Sfoglia per gamma</h2><a href="#/catalogo">Tutto il catalogo</a></div>
+  <div class="cats">${cats.map(({ c, list }) => `<a class="cat" href="#/catalogo?cat=${encodeURIComponent(c)}">${list.find(p => p.image) ? `<img src="${esc(list.find(p => p.image).image)}" alt="" loading="lazy">` : ""}<span>${esc(c)}<small>${list.length} ${list.length === 1 ? "modello" : "modelli"}</small></span></a>`).join("")}</div></section>
   <section class="sec"><div class="sec-h"><h2>Prodotti consultati di recente</h2><a href="#/cronologia">Cronologia</a></div>
   ${hist.length ? `<div class="grid g-prod">${hist.map(pcard).join("")}</div>` : empty("clock", "Nessun prodotto consultato", `<p class="small">I modelli che apri compariranno qui, su questo dispositivo.</p>`)}</section>
-  <section class="sec"><div class="sec-h"><h2>Ultimi aggiornamenti tecnici</h2></div>
-  ${DB.updates.length ? `<div class="card list">${DB.updates.map(u => `<div class="li"><span class="ico">${ic("bell")}</span><div class="grow"><b>${esc(u.title)} ${u.demo ? '<span class="badge demo">DEMO</span>' : ""}</b><span class="small muted">${esc(u.date)} — ${esc(u.text)}</span></div></div>`).join("")}</div>` : empty("bell", "Nessun aggiornamento")}</section>`;
+  <section class="sec" id="upd"><div class="sec-h"><h2>Ultimi aggiornamenti tecnici</h2></div>
+  ${DB.updates.length ? `<div class="card list">${DB.updates.map(u => `<div class="li"><span class="ico">${ic("bell")}</span><div class="grow"><b>${esc(u.title)} <span class="badge new">${esc(u.tag || "")}</span></b><span class="small muted">${esc(u.date)} — ${esc(u.text)}</span></div></div>`).join("")}</div>` : empty("bell", "Nessun aggiornamento")}</section>`;
 };
 
 /* ---------- CATALOGO ---------- */
 routes.catalogo = (_, qp) => {
-  const F = { q: qp.get("q") || "", cat: "", inst: "", cap: "", zones: "", status: "", series: "", demo: true };
-  const series = [...new Set(DB.products.map(p => p.series).filter(Boolean))];
+  const F = { q: qp.get("q") || "", cat: qp.get("cat") || "", inst: "", cap: "", zones: "", status: "", series: "" };
   const opt = (arr, fmt = x => x) => arr.map(x => `<option value="${esc(Array.isArray(x) ? x[0] : x)}">${esc(Array.isArray(x) ? x[1] : fmt(x))}</option>`).join("");
   const sel = (id, label, o) => `<div><label for="${id}">${label}</label><select id="${id}"><option value="">Tutti</option>${o}</select></div>`;
+  const usedCats = DB.meta.categories.filter(c => DB.products.some(p => p.category === c));
+  const series = [...new Set(DB.products.map(p => p.series).filter(Boolean))];
   after(() => {
     const apply = () => {
       const q = norm(F.q);
-      let list = DB.products.filter(p => (!F.cat || p.category === F.cat) && (!F.inst || p.installation === F.inst) && (!F.zones || String(p.zones) === F.zones) && (!F.status || p.status === F.status) && (!F.series || p.series === F.series) && (F.demo || !p.demo)
-        && (!F.cap || (p.bottles != null && (F.cap === "s" ? p.bottles <= 24 : F.cap === "m" ? p.bottles > 24 && p.bottles <= 50 : p.bottles > 50))));
-      if (q) list = list.map(p => ({ p, s: Math.max(score(q, p.code), score(q, p.series) * .6) })).filter(x => x.s > 0).sort((a, b) => b.s - a.s).map(x => x.p);
+      let list = DB.products.filter(p => (!F.cat || p.category === F.cat) && (!F.inst || p.installation === F.inst) && (!F.zones || String(p.zones) === F.zones) && (!F.status || p.status === F.status) && (!F.series || p.series === F.series)
+        && (!F.cap || (p.bottles != null && (F.cap === "s" ? p.bottles <= 24 : F.cap === "m" ? p.bottles > 24 && p.bottles <= 60 : p.bottles > 60))));
+      if (q) list = list.map(p => ({ p, s: Math.max(score(q, p.code), ...(p.variants || []).map(v => score(q, v)), score(q, p.title) * .5) })).filter(x => x.s > 0).sort((a, b) => b.s - a.s).map(x => x.p);
       $("#count").textContent = `${list.length} ${list.length === 1 ? "modello" : "modelli"}`;
       $("#plist").innerHTML = list.length ? list.map(pcard).join("") : `<div style="grid-column:1/-1">${empty("search", "Nessun modello trovato", `<p class="small">Prova a togliere qualche filtro o a cercare un codice parziale.</p>`)}</div>`;
     };
-    const bind = (id, k) => $("#" + id).addEventListener("input", e => { F[k] = e.target.type === "checkbox" ? e.target.checked : e.target.value; apply(); });
-    [["f-q", "q"], ["f-cat", "cat"], ["f-inst", "inst"], ["f-cap", "cap"], ["f-z", "zones"], ["f-st", "status"], ["f-se", "series"], ["f-demo", "demo"]].forEach(([i, k]) => bind(i, k));
-    $("#f-q").value = F.q; $(".fbtn").onclick = () => $("#filtersWrap").classList.toggle("open");
-    $("#reset").onclick = () => { $$("#filtersWrap select").forEach(s => s.value = ""); $("#f-q").value = ""; $("#f-demo").checked = true; Object.assign(F, { q: "", cat: "", inst: "", cap: "", zones: "", status: "", series: "", demo: true }); apply(); };
+    const bind = (id, k) => $("#" + id).addEventListener("input", e => { F[k] = e.target.value; apply(); });
+    [["f-q", "q"], ["f-cat", "cat"], ["f-inst", "inst"], ["f-cap", "cap"], ["f-z", "zones"], ["f-st", "status"], ["f-se", "series"]].forEach(([i, k]) => bind(i, k));
+    $("#f-q").value = F.q; $("#f-cat").value = F.cat; $(".fbtn").onclick = () => $("#filtersWrap").classList.toggle("open");
+    $("#reset").onclick = () => { $$("#filtersWrap select").forEach(s => s.value = ""); $("#f-q").value = ""; Object.assign(F, { q: "", cat: "", inst: "", cap: "", zones: "", status: "", series: "" }); apply(); };
     apply();
   });
-  return `<h1>Catalogo prodotti</h1><p class="muted">Il catalogo è alimentato da <code>data/products.json</code>. Solo i modelli con badge “Da verificare” provengono da codici reali indicati dal committente.</p>
-  <div class="row" style="margin:14px 0"><button class="btn fbtn">${ic("filter", "sm")} Filtri</button><span id="count" class="muted small"></span></div>
-  <div class="cat-wrap"><aside class="filters card pad" id="filtersWrap" aria-label="Filtri catalogo">
-    <div><label for="f-q">Codice modello</label><input id="f-q" type="search" placeholder="es. nnw8220 (anche parziale)" autocomplete="off"></div>
-    ${sel("f-cat", "Categoria", opt(DB.meta.categories))}${sel("f-inst", "Installazione", opt(Object.entries(DB.meta.installations)))}
-    ${sel("f-cap", "Capacità bottiglie", opt([["s", "fino a 24"], ["m", "25 – 50"], ["l", "oltre 50"]]))}${sel("f-z", "Temperature", opt([["1", "Singola"], ["2", "Doppia"], ["3", "Tripla"]]))}
+  return `<h1>Catalogo prodotti</h1><p class="muted">Dati dal catalogo/listino Nevada Vinum 2026-27. Cerca anche per codice parziale, senza trattini o con piccoli errori.</p>
+  <div class="row" style="margin:16px 4px"><button class="btn fbtn">${ic("filter", "sm")} Filtri</button><span id="count" class="muted small"></span></div>
+  <div class="cat-wrap"><aside class="filters" id="filtersWrap" aria-label="Filtri catalogo">
+    <div><label for="f-q">Codice modello</label><input id="f-q" type="search" placeholder="es. nnw8230 o 72 29 da" autocomplete="off"></div>
+    ${sel("f-cat", "Categoria", opt(usedCats))}${sel("f-inst", "Installazione", opt(Object.entries(DB.meta.installations)))}
+    ${sel("f-cap", "Capacità bottiglie", opt([["s", "fino a 24"], ["m", "25 – 60"], ["l", "oltre 60"]]))}${sel("f-z", "Temperature", opt([["1", "Singola"], ["2", "Doppia"], ["3", "Tripla"], ["4", "Quadrupla"]]))}
     ${sel("f-se", "Gamma / serie", opt(series))}${sel("f-st", "Stato", opt(Object.entries(DB.meta.statuses)))}
-    <label style="display:flex;gap:8px;align-items:center;text-transform:none;letter-spacing:0;font-size:.85rem"><input type="checkbox" id="f-demo" checked> Mostra modelli DEMO</label>
     <button class="btn" id="reset">Azzera filtri</button></aside>
   <div class="grid g-prod" id="plist"></div></div>`;
 };
@@ -171,7 +173,7 @@ routes.modello = ([id, sub, key]) => {
   if (!p) return notFound();
   pushHist("model", p.id, p.code);
   const docs = DB.documents.filter(d => d.model === p.id);
-  const tab = sub === "doc" || !sub ? "documenti" : sub;
+  const tab = !sub || sub === "doc" ? "scheda" : sub;
   after(() => {
     $("#favBtn").onclick = e => { const on = toggleFav(p.id); e.currentTarget.classList.toggle("on", on); toast(on ? "Aggiunto ai preferiti" : "Rimosso dai preferiti"); };
     $$("[data-view]").forEach(b => b.onclick = () => openDoc(docs.find(d => d.type === b.dataset.view), p));
@@ -179,27 +181,28 @@ routes.modello = ([id, sub, key]) => {
     $("#noteSave")?.addEventListener("click", () => { const n = store.get("notes", {}); n[p.id] = $("#noteTxt").value; store.set("notes", n); toast("Nota salvata su questo dispositivo"); });
     if (sub === "doc" && key) openDoc(docs.find(d => d.type === key), p);
   });
-  const dims = p.dimensions ? `${p.dimensions.h} × ${p.dimensions.l} × ${p.dimensions.p} mm` : null;
-  const kv = [["Codice modello", p.code], ["Serie", p.series], ["Categoria", p.category], ["Installazione", instLabel(p.installation)], ["Capacità", p.bottles && p.bottles + " bottiglie"], ["Zone di temperatura", zoneLabel(p.zones)], ["Dimensioni (A×L×P)", dims], ["Stato prodotto", DB.meta.statuses[p.status]]];
-  const tabs = [["documenti", "Documentazione"], ["esploso", "Esploso e ricambi"], ["diagnostica", "Diagnostica"], ["revisioni", "Revisioni"], ["nota", "Note di intervento"]];
+  const kv = [["Codice modello", p.code], ["Serie / gamma", p.series], ["Categoria", p.category], ["Installazione", p.installationNote || instLabel(p.installation)], ["Capacità", p.bottles && p.bottles + " bottiglie"], ["Zone di temperatura", zoneLabel(p.zones)], ["Dimensioni (A×L×P)", fmtDims(p.dimensions)], ["Classe energetica", p.energyClass], ["Rumorosità", p.noiseDb && p.noiseDb + " dB"]];
+  const tabs = [["scheda", "Scheda tecnica"], ["documenti", "Documentazione"], ["esploso", "Esploso e ricambi"], ["diagnostica", "Diagnostica"], ["revisioni", "Revisioni"], ["nota", "Note"]];
   let body = "";
+  if (tab === "scheda") body = p.spec?.length ? `<div class="card" style="overflow:hidden"><table class="spec">${p.spec.map(([k, v]) => `<tr><th scope="row">${esc(k)}</th><td>${esc(v) || TBD}</td></tr>`).join("")}</table></div><p class="small muted" style="margin:10px 4px">Fonte: ${esc(p.source)}, pag. ${p.catalogPage}. Valori riportati come da catalogo, non rielaborati.</p>` : empty("file", "Scheda tecnica non disponibile");
   if (tab === "documenti") body = `<div class="docs">${DOC_TYPES.map(([t, l, i, act]) => {
     const d = docs.find(x => x.type === t);
-    return d?.file ? `<div class="card doc"><span class="ico">${ic(i)}</span><div class="grow"><b>${l} ${d.demo ? '<span class="badge demo">DEMO</span>' : ""}</b><div class="small muted">Rev. ${esc(d.revision || "—")} · Seriali: ${esc(d.serial || "tutti / da specificare")}</div></div>
-      <div class="row"><button class="btn sm primary" data-view="${t}">${ic("eye", "sm")} ${act}</button><a class="btn sm" href="${esc(d.file)}" download>${ic("download", "sm")} Scarica</a><button class="btn sm" data-save="${esc(d.file)}" title="Rendi disponibile offline">${ic("wifioff", "sm")}</button></div></div>`
+    return d?.file ? `<div class="card doc"><span class="ico">${ic(i)}</span><div class="grow"><b>${d.title}</b><div class="small muted">${esc(d.revision || "—")}${d.pdfPage ? ` · pag. ${d.pdfPage}` : ""} · Seriali: ${esc(d.serial || "non specificati")}</div></div>
+      <div class="row"><button class="btn sm primary" data-view="${t}">${ic("eye", "sm")} ${act}</button><a class="btn sm" href="${esc(d.file)}" download>${ic("download", "sm")} Scarica</a><button class="btn sm" data-save="${esc(d.file)}" title="Salva per uso offline" aria-label="Salva per uso offline">${ic("wifioff", "sm")}</button></div></div>`
       : `<div class="card doc na"><span class="ico">${ic(i)}</span><div class="grow"><b>${l}</b><div class="small muted">Documento non disponibile</div></div></div>`;
-  }).join("")}</div>`;
-  if (tab === "esploso") { const ex = DB.parts.filter(x => x.models.includes(p.id)); body = ex.length ? ex.map(x => `<a class="card li" href="#/esplosi/${x.id}?model=${p.id}"><span class="ico">${ic("layers")}</span><div class="grow"><b>${esc(x.title)}</b><span class="small muted">${x.parts.length} riferimenti</span></div>${ic("chev")}</a>`).join("") : empty("layers", "Esploso non disponibile", `<p class="small">Nessun disegno esploso associato a ${esc(p.code)}.</p>`); }
-  if (tab === "diagnostica") { const en = DB.diagnostics.entries.filter(e => e.models.includes(p.id)); body = en.length ? en.map(e => { const s = DB.diagnostics.symptoms.find(s => s.id === e.symptom); return `<a class="card li" href="#/diagnostica/${e.symptom}?model=${p.id}"><span class="ico">${ic("activity")}</span><div class="grow"><b>${esc(s.label)} ${e.demo ? '<span class="badge demo">DEMO</span>' : ""}</b></div>${ic("chev")}</a>`; }).join("") : empty("activity", "Nessuna procedura verificata per questo modello", `<p class="small">Le procedure vanno fornite e validate da Nevada.</p>`); }
-  if (tab === "revisioni") body = p.revisions.length ? `<div class="tscroll card"><table><tr><th>Rev.</th><th>Note</th><th>Intervallo seriali</th></tr>${p.revisions.map(r => `<tr><td>${esc(r.rev)}</td><td>${esc(r.note)}</td><td>${esc(r.serial)}</td></tr>`).join("")}</table></div><p class="small muted">Il confronto automatico delle differenze richiede dati di revisione strutturati (da fornire).</p>` : empty("columns", "Nessuna revisione documentata", `<p class="small">Il confronto tra versioni si attiva quando esistono almeno due revisioni nei dati.</p>`);
+  }).join("")}</div><p class="small muted" style="margin:10px 4px">La scheda è la pagina del catalogo 2026-27 che contiene il modello (può includere altri modelli della stessa gamma). Gli altri documenti saranno aggiunti dal pannello amministrativo.</p>`;
+  if (tab === "esploso") { const ex = DB.parts.filter(x => x.models.includes(p.id)); body = ex.length ? ex.map(x => `<a class="card li" href="#/esplosi/${x.id}?model=${p.id}"><span class="ico">${ic("layers")}</span><div class="grow"><b>${esc(x.title)}</b><span class="small muted">${x.parts.length} riferimenti</span></div>${ic("chev")}</a>`).join("") : empty("layers", "Esploso non disponibile", `<p class="small">Nessun disegno esploso associato a ${esc(p.code)}: da fornire da Nevada.</p>`); }
+  if (tab === "diagnostica") { const en = DB.diagnostics.entries.filter(e => e.models.includes(p.id)); body = en.length ? en.map(e => { const s = DB.diagnostics.symptoms.find(s => s.id === e.symptom); return `<a class="card li" href="#/diagnostica/${e.symptom}?model=${p.id}"><span class="ico">${ic("activity")}</span><div class="grow"><b>${esc(s.label)}</b></div>${ic("chev")}</a>`; }).join("") : empty("activity", "Nessuna procedura verificata per questo modello", `<p class="small">Le procedure vanno fornite e validate da Nevada.</p>`); }
+  if (tab === "revisioni") body = p.revisions.length ? `<div class="tscroll card"><table><tr><th>Rev.</th><th>Note</th><th>Intervallo seriali</th></tr>${p.revisions.map(r => `<tr><td>${esc(r.rev)}</td><td>${esc(r.note)}</td><td>${esc(r.serial)}</td></tr>`).join("")}</table></div>` : empty("columns", "Nessuna revisione documentata", `<p class="small">Il confronto tra versioni si attiva quando esistono almeno due revisioni nei dati.</p>`);
   if (tab === "nota") body = `<div class="card pad"><label for="noteTxt" class="small"><b>Appunti su ${esc(p.code)}</b> (salvati solo su questo dispositivo)</label><textarea id="noteTxt" class="fld" style="margin:8px 0">${esc(store.get("notes", {})[p.id] || "")}</textarea><button class="btn primary" id="noteSave">Salva nota</button></div>`;
+  const vars = (p.variants || []).filter(v => v !== p.code);
   return `${crumbs(["Catalogo", "#/catalogo"], [esc(p.code)])}
-  <div class="detail"><div class="pimg">${imgOf(p)}${p.demo ? '<span class="badge demo">DEMO</span>' : ""}</div>
-  <div><div class="row" style="justify-content:space-between"><div><span class="badge ${p.verified ? "ok" : p.demo ? "demo" : "warn"}">${p.verified ? "Verificato" : p.demo ? "Dato dimostrativo" : "Dati da verificare"}</span><h1 style="word-break:break-all;margin-top:8px">${esc(p.code)}</h1></div>
-  <button id="favBtn" class="icon-btn fav ${favs().includes(p.id) ? "on" : ""}" aria-label="Preferito" style="border:1px solid var(--line)">${ic("star")}</button></div>
+  <div class="detail"><div class="pimg">${imgOf(p)}</div>
+  <div><div class="row" style="justify-content:space-between;align-items:flex-start"><div><span class="badge new">${esc(p.category)}</span><h1 style="word-break:break-all;margin-top:10px;font-size:clamp(1.6rem,4vw,2.4rem)">${esc(p.code)}</h1><p class="muted">${esc(p.title)}</p></div>
+  <button id="favBtn" class="icon-btn fav ${favs().includes(p.id) ? "on" : ""}" style="position:static" aria-label="Preferito">${ic("star")}</button></div>
+  ${vars.length ? `<p class="small" style="margin:6px 0"><b>Varianti:</b> ${vars.map(esc).join(" · ")}</p>` : ""}
   <div class="kv" style="margin-top:14px">${kv.map(([k, v]) => `<div><small>${k}</small><b>${v ? esc(v) : TBD}</b></div>`).join("")}</div>
-  <div class="notice" style="margin-top:12px">${ic("alert", "sm")}<span>${esc(p.source)}</span></div>
-  <div class="row" style="margin-top:14px"><a class="btn wine" href="#/supporto?model=${p.id}">${ic("phone", "sm")} Richiedi supporto per questo modello</a></div></div></div>
+  <div class="row" style="margin-top:16px"><a class="btn wine" href="#/supporto?model=${p.id}">${ic("phone", "sm")} Richiedi supporto</a><button class="btn" id="viewDoc" data-view="scheda">${ic("eye", "sm")} Apri pagina catalogo</button></div></div></div>
   <div class="tabs" role="tablist">${tabs.map(([k, l]) => `<a href="#/modello/${p.id}/${k}" ${k === tab ? 'aria-current="true"' : ""}>${l}</a>`).join("")}</div>${body}`;
 };
 
@@ -220,10 +223,10 @@ function openDoc(d, p) {
   modal(`${d.title} — ${p.code}`, `<div class="viewer-wrap" id="vw"><div class="viewer-tools">
     <button class="icon-btn" data-z="-" aria-label="Riduci zoom">${ic("minus")}</button><span id="zv" class="small" style="min-width:42px;text-align:center">100%</span><button class="icon-btn" data-z="+" aria-label="Aumenta zoom">${ic("plus")}</button>
     <button class="icon-btn" id="vfs" aria-label="Schermo intero">${ic("max")}</button><button class="icon-btn" id="vpr" aria-label="Stampa">${ic("print")}</button>
-    <a class="btn sm" style="margin-left:auto" href="${esc(d.file)}" download>${ic("download", "sm")} Scarica</a></div>
-    <iframe class="viewer-frame" id="vf" title="${esc(d.title)}" src="${esc(d.file)}#zoom=100"></iframe></div>`);
+    <a class="btn sm" style="margin-left:auto" href="${esc(d.file)}" target="_blank" rel="noopener">Apri in nuova scheda</a><a class="btn sm" href="${esc(d.file)}" download>${ic("download", "sm")} Scarica</a></div>
+    <iframe class="viewer-frame" id="vf" title="${esc(d.title)}" src="${esc(d.file)}#page=${d.page || 1}&zoom=100"></iframe></div>`);
   const fr = $("#vf");
-  $$("[data-z]").forEach(b => b.onclick = () => { zoom = Math.min(400, Math.max(50, zoom + (b.dataset.z === "+" ? 25 : -25))); $("#zv").textContent = zoom + "%"; fr.src = `${d.file}#zoom=${zoom}`; });
+  $$("[data-z]").forEach(b => b.onclick = () => { zoom = Math.min(400, Math.max(50, zoom + (b.dataset.z === "+" ? 25 : -25))); $("#zv").textContent = zoom + "%"; fr.src = `${d.file}#page=${d.page || 1}&zoom=${zoom}`; });
   $("#vfs").onclick = () => $("#vw").requestFullscreen?.().catch(() => toast("Schermo intero non supportato"));
   $("#vpr").onclick = () => { try { fr.contentWindow.focus(); fr.contentWindow.print(); } catch { window.open(d.file); } };
 }
@@ -233,12 +236,15 @@ async function saveOffline(file, btn) {
   catch { toast("Salvataggio offline non riuscito (serve connessione e service worker attivo)"); }
 }
 
+/* ---------- menu "Altro" (mobile) ---------- */
+routes.altro = () => `<h1>Menu</h1><div class="sec card list">${NAV.filter(n => !BNAV.some(b => b[0] === n[0])).map(([h, l, i]) => `<a class="li" href="#/${h}"><span class="ico">${ic(i)}</span><div class="grow"><b>${l}</b></div>${ic("chev")}</a>`).join("")}<a class="li" href="#/contatti"><span class="ico">${ic("phone")}</span><div class="grow"><b>Contatti</b></div>${ic("chev")}</a><a class="li" href="#/faq"><span class="ico">${ic("help")}</span><div class="grow"><b>FAQ</b></div>${ic("chev")}</a><a class="li" href="#/accesso"><span class="ico">${ic("user")}</span><div class="grow"><b>Accesso</b></div>${ic("chev")}</a></div>`;
+
 /* ---------- DOCUMENTAZIONE (indice) ---------- */
 routes.documentazione = () => {
   const withDocs = DB.products.filter(p => DB.documents.some(d => d.model === p.id));
   return `<h1>Manuali e documentazione</h1><p class="muted">Ogni documento è collegato al codice modello corretto. Per cercare un modello usa il <a href="#/catalogo"><u>catalogo</u></a>.</p>
-  <div class="sec">${withDocs.length ? `<div class="card list">${withDocs.map(p => `<a class="li" href="#/modello/${p.id}/documenti"><span class="ico">${ic("file")}</span><div class="grow"><b>${esc(p.code)} ${p.demo ? '<span class="badge demo">DEMO</span>' : ""}</b><span class="small muted">${DB.documents.filter(d => d.model === p.id).length} documenti disponibili</span></div>${ic("chev")}</a>`).join("")}</div>` : empty("file", "Nessun documento caricato")}</div>
-  <div class="notice" style="margin-top:16px">${ic("alert", "sm")}<span>Tutti i documenti ufficiali (manuali, schede, schemi, bollettini) sono <b>ancora da fornire</b>. Il file presente è un PDF dimostrativo.</span></div>`;
+  <div class="sec">${withDocs.length ? `<div class="card list">${withDocs.map(p => `<a class="li" href="#/modello/${p.id}/documenti"><span class="ico">${ic("file")}</span><div class="grow"><b>${esc(p.code)} </b><span class="small muted">${DB.documents.filter(d => d.model === p.id).length} documenti disponibili</span></div>${ic("chev")}</a>`).join("")}</div>` : empty("file", "Nessun documento caricato")}</div>
+  <div class="notice" style="margin-top:16px">${ic("alert", "sm")}<span>Per ora è disponibile solo la scheda del catalogo 2026-27. Manuali d'uso, esplosi, schemi elettrici, manuali di servizio e bollettini sono <b>ancora da fornire</b>.</span></div>`;
 };
 
 /* ---------- ESPLOSI ---------- */
@@ -333,7 +339,7 @@ routes.supporto = (_, qp) => {
     };
   });
   return `<h1>Supporto Nevada</h1><p class="muted">Usa il modulo quando la documentazione non è sufficiente.</p>
-  <div style="margin:14px 0" class="notice ${configured ? "" : "warn"}">${ic("alert", "sm")}<span>${configured ? "Servizio ticket collegato." : "<b>Servizio ticket non configurato.</b> Il modulo salva solo una <b>bozza locale</b>: nessuna richiesta viene inviata a Nevada. Imposta <code>ticketEndpoint</code> in <code>data/config.json</code> per attivare l'invio."}</span></div>
+  <div style="margin:14px 0" class="notice ${configured ? "" : "warn"}">${ic("alert", "sm")}<span>${configured ? "Servizio ticket collegato." : `<b>Servizio ticket non configurato.</b> Il modulo salva solo una <b>bozza locale</b>: nessuna richiesta viene inviata. Per garanzia e assistenza il catalogo indica di aprire un Ticket con la procedura sul sito Nevada Europe. <a href="${esc(DB.config.siteUrl)}" target="_blank" rel="noopener"><u>Vai a nevadaeurope.com</u></a>. Per attivare l'invio da qui imposta <code>ticketEndpoint</code> in <code>data/config.json</code>.`}</span></div>
   <form id="sf" class="card pad form"><div class="two">${f.map(([n, l, t]) => `<div><label for="s-${n}">${l}</label><input class="fld" id="s-${n}" name="${n}" type="${t}" value="${esc(draft[n])}" ${n === "model" ? 'list="models"' : ""}></div>`).join("")}</div>
   <datalist id="models">${DB.products.map(p => `<option value="${esc(p.code)}">`).join("")}</datalist>
   <div><label for="s-issue">Descrizione del malfunzionamento</label><textarea class="fld" id="s-issue" name="issue">${esc(draft.issue)}</textarea></div>
@@ -344,8 +350,8 @@ routes.supporto = (_, qp) => {
   <div class="row"><button type="submit" class="btn wine" ${configured ? "" : "disabled"} title="${configured ? "" : "Servizio ticket non configurato"}">${ic("send", "sm")} Invia a Nevada</button><button type="button" class="btn" id="bsave">Salva bozza</button><button type="button" class="btn" id="bcopy">${ic("copy", "sm")} Copia riepilogo</button><button type="button" class="btn" id="bdl">${ic("download", "sm")} Scarica .txt</button><button type="button" class="btn" id="bclr">${ic("trash", "sm")} Svuota</button></div></form>
   <section class="sec"><div class="sec-h"><h2>Contatti</h2><a href="#/contatti">Rubrica</a></div></section>`;
 };
-routes.contatti = () => `<h1>Rubrica contatti</h1><div class="sec">${DB.contacts.length ? `<div class="card list">${DB.contacts.map(c => `<div class="li"><b>${esc(c.name)}</b></div>`).join("")}</div>` : empty("phone", "Contatti da fornire", `<p class="small">Nominativi, telefoni ed email del supporto Nevada non sono stati forniti (<code>data/contacts.json</code>).</p>`)}</div>`;
-routes.faq = () => `<h1>FAQ per i tecnici</h1><div class="sec grid">${DB.faq.map(f => `<details class="card pad"><summary><b>${esc(f.q)}</b></summary><p>${esc(f.a)}</p></details>`).join("")}</div><div class="notice" style="margin-top:14px">${ic("alert", "sm")}<span>FAQ tecniche sui prodotti: da fornire da Nevada.</span></div>`;
+routes.contatti = () => `<h1>Rubrica contatti</h1><div class="sec">${DB.contacts.length ? `<div class="grid" style="gap:12px">${DB.contacts.map(c => `<div class="card pad"><h3>${esc(c.name)}</h3><p class="muted small">${esc(c.address || "")}</p><div class="row" style="margin-top:10px">${c.phone ? `<a class="btn sm" href="tel:${esc(c.phone.replace(/\s/g, ""))}">${ic("phone", "sm")} ${esc(c.phone)}</a>` : ""}${c.email ? `<a class="btn sm" href="mailto:${esc(c.email)}">${esc(c.email)}</a>` : ""}${c.web ? `<a class="btn sm" href="${esc(c.web)}" target="_blank" rel="noopener">Sito web</a>` : ""}</div></div>`).join("")}</div>` : empty("phone", "Contatti da fornire")}</div><div class="notice" style="margin-top:14px">${ic("alert", "sm")}<span>Fonte: catalogo 2026-27. Contatti del supporto tecnico dedicato ai centri assistenza: da fornire.</span></div>`;
+routes.faq = () => `<h1>FAQ per i tecnici</h1><div class="sec grid">${DB.faq.map(f => `<details class="card pad"><summary><b>${esc(f.q)}</b></summary><p>${esc(f.a)}</p><p class="small muted">Fonte: ${esc(f.src || "")}</p></details>`).join("")}</div><div class="notice" style="margin-top:14px">${ic("alert", "sm")}<span>FAQ tecniche di diagnosi e riparazione: da fornire da Nevada.</span></div>`;
 
 /* ---------- PREFERITI / CRONOLOGIA / NOTE ---------- */
 routes.preferiti = () => { const l = favs().map(byId).filter(Boolean); return `<h1>Preferiti</h1><div class="sec">${l.length ? `<div class="grid g-prod">${l.map(pcard).join("")}</div>` : empty("star", "Nessun preferito", `<p class="small">Tocca la stella nella scheda di un modello.</p>`)}</div>`; };

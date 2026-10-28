@@ -5,9 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Nevada Service — Technical Support Portal</title>
 <meta name="description" content="Portale tecnico riservato ai centri assistenza autorizzati Nevada Europe (prototipo).">
-<meta name="theme-color" content="#1b1c1e">
+<meta name="theme-color" content="#f6f3ee">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -58,7 +60,7 @@
 <div class="app">
   <aside class="side" aria-label="Navigazione principale">
     <a class="brand" href="#/" aria-label="Nevada Service — Home">
-      <span class="brand-mark">NEVADA</span><span class="brand-sub">SERVICE</span>
+      <img src="assets/img/logo-sm.png" alt="Nevada" width="100" height="16"><span class="brand-sub">SERVICE</span>
     </a>
     <nav id="sidenav"></nav>
     <div class="side-foot"><span class="dot" id="netdot"></span><span id="nettxt">Online</span></div>
@@ -66,7 +68,7 @@
 
   <div class="main">
     <header class="top">
-      <a class="brand brand-m" href="#/" aria-label="Home"><span class="brand-mark">NEVADA</span><span class="brand-sub">SERVICE</span></a>
+      <a class="brand brand-m" href="#/" aria-label="Home"><img src="assets/img/logo-sm.png" alt="Nevada" width="100" height="16"><span class="brand-sub">SERVICE</span></a>
       <div class="gsearch" role="search">
         <svg class="ic"><use href="#i-search"/></svg>
         <input id="gq" type="search" autocomplete="off" spellcheck="false" placeholder="Cerca un modello, codice prodotto o numero seriale..." aria-label="Ricerca globale" aria-controls="sugg" aria-expanded="false">
@@ -74,9 +76,9 @@
         <div id="sugg" class="sugg" role="listbox" hidden></div>
       </div>
       <button class="icon-btn" id="bellBtn" title="Aggiornamenti" aria-label="Aggiornamenti tecnici"><svg class="ic"><use href="#i-bell"/></svg><span class="pip" id="pip"></span></button>
-      <a class="profile" href="#/accesso" title="Profilo centro assistenza"><svg class="ic"><use href="#i-user"/></svg><span>Centro assistenza<small>modalità prototipo</small></span></a>
+      <a class="profile" href="#/accesso" title="Profilo centro assistenza"><span class="av"><svg class="ic sm"><use href="#i-user"/></svg></span><span>Centro assistenza<small>modalità prototipo</small></span></a>
     </header>
-    <div class="banner" id="demoBanner"><svg class="ic"><use href="#i-alert"/></svg><span><b>Prototipo.</b> I dati con badge <span class="badge demo">DEMO</span> sono inventati. Nessuna autenticazione né invio ticket sono attivi.</span></div>
+    <div class="banner" id="demoBanner"><svg class="ic"><use href="#i-alert"/></svg><span><b>Prototipo</b> · dati dal catalogo 2026-27 · accesso e ticket non attivi</span></div>
     <main id="view" tabindex="-1"></main>
   </div>
 

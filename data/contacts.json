@@ -1,1 +1,16 @@
-[]
+[
+ {
+  "name": "Sede amministrativa e commerciale",
+  "address": "Via Margherita De Vizzi, 18 — 20092 Cinisello Balsamo (MI)",
+  "phone": "02 30559080",
+  "email": "commerciale@nevadaeurope.com",
+  "web": "https://www.nevadaeurope.com"
+ },
+ {
+  "name": "Magazzino (ritiro merce presso Trasgo S.r.l.)",
+  "address": "Via Guido il Grande 1 — 28061 Biandrate (NO)",
+  "phone": null,
+  "email": null,
+  "web": null
+ }
+]

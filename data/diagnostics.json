@@ -51,31 +51,5 @@
    "icon": "alert"
   }
  ],
- "entries": [
-  {
-   "symptom": "non-raffredda",
-   "models": [
-    "demo-inc-01"
-   ],
-   "demo": true,
-   "description": "[DEMO] Esempio di struttura di una scheda diagnostica.",
-   "causes": [
-    "[DEMO] Cause documentate: da fornire da Nevada"
-   ],
-   "prechecks": [
-    "[DEMO] Controlli preliminari: da fornire"
-   ],
-   "procedure": [
-    "[DEMO] Procedura verificata: da fornire"
-   ],
-   "components": [
-    "[DEMO] Componenti coinvolti: da fornire"
-   ],
-   "documents": [
-    "manuale"
-   ],
-   "contactNevada": "[DEMO] Criteri di escalation: da fornire",
-   "qualifiedOnly": true
-  }
- ]
+ "entries": []
 }
