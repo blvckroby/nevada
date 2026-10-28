@@ -1,5 +1,5 @@
 // Service worker: guscio applicativo + dati in cache; i documenti vanno in cache solo se salvati esplicitamente.
-const SHELL = "nv-shell-v2", DOCS = "nv-docs-v1";
+const SHELL = "nv-shell-v3", DOCS = "nv-docs-v1";
 const FILES = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest", "assets/icons/icon.svg",
   "data/products.json","data/documents.json","data/parts.json","data/diagnostics.json","data/errors.json","data/updates.json","data/contacts.json","data/faq.json","data/config.json","assets/img/logo.png","assets/img/logo-sm.png"];
 self.addEventListener("install", e => e.waitUntil(caches.open(SHELL).then(c => c.addAll(FILES)).then(() => self.skipWaiting())));

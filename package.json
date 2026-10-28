@@ -1,0 +1,13 @@
+{
+  "name": "nevada-service-portal",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "Nevada Service — Technical Support Portal (prototipo): front-end statico + server Node per l'assistente AI",
+  "scripts": {
+    "start": "node server/server.mjs",
+    "test": "node server/test.mjs"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": { "@anthropic-ai/sdk": "^0.100.0" }
+}

@@ -135,36 +135,76 @@ routes[""] = () => {
 };
 
 /* ---------- CATALOGO ---------- */
+// Filtri a faccette: ogni opzione mostra quanti modelli darebbe con gli altri filtri già applicati.
+const BINS = {
+  cap: [["≤ 24 bt", p => p.bottles != null && p.bottles <= 24], ["25 – 50 bt", p => p.bottles > 24 && p.bottles <= 50], ["51 – 100 bt", p => p.bottles > 50 && p.bottles <= 100], ["> 100 bt", p => p.bottles > 100]],
+  h: [["fino a 60 cm", p => p.dimensions && p.dimensions.h <= 60], ["61 – 90 cm", p => p.dimensions && p.dimensions.h > 60 && p.dimensions.h <= 90], ["91 – 150 cm", p => p.dimensions && p.dimensions.h > 90 && p.dimensions.h <= 150], ["oltre 150 cm", p => p.dimensions && p.dimensions.h > 150]],
+};
+const hasDoc = (p, f) => f === "scheda" ? DB.documents.some(d => d.model === p.id && d.type === "scheda" && d.file.includes("/schede/")) : f === "ricambi" ? DB.parts.some(x => x.models.includes(p.id)) : f === "foto" ? !!p.image : true;
+const FACETS = () => [
+  ["inst", "Installazione", (p, v) => p.installation === v, Object.entries(DB.meta.installations)],
+  ["zones", "Temperature", (p, v) => String(p.zones ?? "") === v, [["1", "Singola"], ["2", "Doppia"], ["3", "Tripla"], ["4", "Quadrupla"]]],
+  ["cap", "Capacità", (p, v) => BINS.cap[+v][1](p), BINS.cap.map(([l], i) => [String(i), l])],
+  ["h", "Altezza", (p, v) => BINS.h[+v][1](p), BINS.h.map(([l], i) => [String(i), l])],
+  ["series", "Gamma", (p, v) => p.series === v, [...new Set(DB.products.map(p => p.series).filter(Boolean))].map(s => [s, s])],
+  ["has", "Documentazione", (p, v) => hasDoc(p, v), [["scheda", "Scheda ufficiale PDF"], ["ricambi", "Ricambi ed esploso"], ["foto", "Con foto"]]],
+];
+const SORTS = { rel: "Rilevanza", cap_d: "Capacità ↓", cap_a: "Capacità ↑", h_a: "Altezza ↑", h_d: "Altezza ↓", code: "Codice A–Z" };
+
 routes.catalogo = (_, qp) => {
-  const F = { q: qp.get("q") || "", cat: qp.get("cat") || "", inst: "", cap: "", zones: "", status: "", series: "" };
-  const opt = (arr, fmt = x => x) => arr.map(x => `<option value="${esc(Array.isArray(x) ? x[0] : x)}">${esc(Array.isArray(x) ? x[1] : fmt(x))}</option>`).join("");
-  const sel = (id, label, o) => `<div><label for="${id}">${label}</label><select id="${id}"><option value="">Tutti</option>${o}</select></div>`;
-  const usedCats = DB.meta.categories.filter(c => DB.products.some(p => p.category === c));
-  const series = [...new Set(DB.products.map(p => p.series).filter(Boolean))];
+  const F = { q: qp.get("q") || "", sort: qp.get("sort") || "rel", cat: new Set(qp.getAll("cat")), inst: new Set(qp.getAll("inst")), zones: new Set(qp.getAll("zones")), cap: new Set(qp.getAll("cap")), h: new Set(qp.getAll("h")), series: new Set(qp.getAll("series")), has: new Set(qp.getAll("has")) };
+  const facets = FACETS(), usedCats = DB.meta.categories.filter(c => DB.products.some(p => p.category === c));
+  const KEYS = ["inst", "zones", "cap", "h", "series", "has"];
+  const fmatch = (p, k, v) => k === "cat" ? p.category === v : facets.find(f => f[0] === k)[2](p, v);
+  const passes = (p, skip) => ["cat", ...KEYS].every(k => k === skip || !F[k].size || [...F[k]].some(v => fmatch(p, k, v)));
+  const qScore = p => { const q = norm(F.q); return q ? Math.max(score(q, p.code), ...(p.variants || []).map(v => score(q, v)), score(q, p.title) * .5, score(q, p.series) * .4) : 1; };
+  const result = () => {
+    let l = DB.products.filter(p => passes(p) && qScore(p) > 0);
+    const by = { cap_d: p => -(p.bottles ?? -1), cap_a: p => p.bottles ?? 1e9, h_a: p => p.dimensions?.h ?? 1e9, h_d: p => -(p.dimensions?.h ?? -1), code: p => p.code };
+    if (F.sort === "rel" && F.q) l.sort((a, b) => qScore(b) - qScore(a)); else if (by[F.sort]) l.sort((a, b) => { const x = by[F.sort](a), y = by[F.sort](b); return x < y ? -1 : x > y ? 1 : 0; });
+    return l;
+  };
+  const count = (k, v) => DB.products.filter(p => passes(p, k) && qScore(p) > 0 && fmatch(p, k, v)).length;
+  const chip = (k, v, label) => { const n = count(k, v), on = F[k].has(v); return `<button class="fchip" data-f="${k}" data-v="${esc(v)}" aria-pressed="${on}" ${n === 0 && !on ? "disabled" : ""}>${esc(label)}<i>${n}</i></button>`; };
+  const panel = () => facets.map(([k, label, , opts]) => `<details class="fgroup" open><summary>${label}${F[k].size ? `<b>${F[k].size}</b>` : ""}</summary><div class="chips">${opts.map(([v, l]) => chip(k, v, l)).join("")}</div></details>`).join("");
+  const labelOf = (k, v) => k === "cat" ? v : facets.find(f => f[0] === k)[3].find(o => o[0] === v)?.[1] ?? v;
+  const activeN = () => ["cat", ...KEYS].reduce((n, k) => n + F[k].size, 0);
+  const sync = () => { const u = new URLSearchParams(); if (F.q) u.set("q", F.q); if (F.sort !== "rel") u.set("sort", F.sort); for (const k of ["cat", ...KEYS]) F[k].forEach(v => u.append(k, v)); history.replaceState(null, "", "#/catalogo" + (u.size ? "?" + u : "")); };
   after(() => {
-    const apply = () => {
-      const q = norm(F.q);
-      let list = DB.products.filter(p => (!F.cat || p.category === F.cat) && (!F.inst || p.installation === F.inst) && (!F.zones || String(p.zones) === F.zones) && (!F.status || p.status === F.status) && (!F.series || p.series === F.series)
-        && (!F.cap || (p.bottles != null && (F.cap === "s" ? p.bottles <= 24 : F.cap === "m" ? p.bottles > 24 && p.bottles <= 60 : p.bottles > 60))));
-      if (q) list = list.map(p => ({ p, s: Math.max(score(q, p.code), ...(p.variants || []).map(v => score(q, v)), score(q, p.title) * .5) })).filter(x => x.s > 0).sort((a, b) => b.s - a.s).map(x => x.p);
-      $("#count").textContent = `${list.length} ${list.length === 1 ? "modello" : "modelli"}`;
-      $("#plist").innerHTML = list.length ? list.map(pcard).join("") : `<div style="grid-column:1/-1">${empty("search", "Nessun modello trovato", `<p class="small">Prova a togliere qualche filtro o a cercare un codice parziale.</p>`)}</div>`;
+    const view = $("#catroot");
+    const draw = () => {
+      const l = result(), act = ["cat", ...KEYS].flatMap(k => [...F[k]].map(v => [k, v]));
+      $("#count").innerHTML = `<b>${l.length}</b> ${l.length === 1 ? "modello" : "modelli"}${F.q ? ` per “${esc(F.q)}”` : ""}`;
+      $("#catrow").innerHTML = `<button class="fchip big" data-f="cat-all" aria-pressed="${!F.cat.size}">Tutti<i>${DB.products.filter(p => passes(p, "cat") && qScore(p) > 0).length}</i></button>` + usedCats.map(c => chip("cat", c, c)).join("");
+      $("#active").innerHTML = act.length ? act.map(([k, v]) => `<button class="apill" data-rm="${k}" data-v="${esc(v)}">${esc(labelOf(k, v))} ${ic("x", "sm")}</button>`).join("") + `<button class="apill clear" data-clear>Azzera tutto</button>` : "";
+      $("#fpanel").innerHTML = panel();
+      $("#fcount").textContent = activeN() || "";
+      $("#plist").innerHTML = l.length ? l.map(pcard).join("") : `<div style="grid-column:1/-1">${empty("search", "Nessun modello con questi filtri", `<p class="small">Rimuovi qualche filtro o cerca un codice diverso.</p><button class="btn" data-clear>Azzera tutto</button>`)}</div>`;
+      const mp = $("#mpanel"); if (mp) { mp.innerHTML = panel(); $("#mshow").textContent = `Mostra ${l.length} ${l.length === 1 ? "modello" : "modelli"}`; }
+      sync();
     };
-    const bind = (id, k) => $("#" + id).addEventListener("input", e => { F[k] = e.target.value; apply(); });
-    [["f-q", "q"], ["f-cat", "cat"], ["f-inst", "inst"], ["f-cap", "cap"], ["f-z", "zones"], ["f-st", "status"], ["f-se", "series"]].forEach(([i, k]) => bind(i, k));
-    $("#f-q").value = F.q; $("#f-cat").value = F.cat; $(".fbtn").onclick = () => $("#filtersWrap").classList.toggle("open");
-    $("#reset").onclick = () => { $$("#filtersWrap select").forEach(s => s.value = ""); $("#f-q").value = ""; Object.assign(F, { q: "", cat: "", inst: "", cap: "", zones: "", status: "", series: "" }); apply(); };
-    apply();
+    const toggle = (k, v) => { const s = F[k]; s.has(v) ? s.delete(v) : s.add(v); draw(); };
+    view.addEventListener("click", e => {
+      const c = e.target.closest(".fchip,.apill,[data-clear]"); if (!c) return;
+      if (c.dataset.clear != null) { ["cat", ...KEYS].forEach(k => F[k].clear()); draw(); }
+      else if (c.dataset.rm) toggle(c.dataset.rm, c.dataset.v);
+      else if (c.dataset.f === "cat-all") { F.cat.clear(); draw(); }
+      else if (c.dataset.f) toggle(c.dataset.f, c.dataset.v);
+    });
+    $("#f-q").value = F.q; $("#f-q").addEventListener("input", e => { F.q = e.target.value; draw(); });
+    $("#f-sort").value = F.sort; $("#f-sort").addEventListener("input", e => { F.sort = e.target.value; draw(); });
+    $("#fopen").onclick = () => { modal("Filtri", `<div style="padding:6px 18px 90px" id="mpanel" class="fpanel"></div><div class="msticky"><button class="btn" id="mclear">Azzera</button><button class="btn wine" id="mshow" style="flex:1"></button></div>`);
+      $("#modal .sheet").addEventListener("click", e => { const c = e.target.closest(".fchip"); if (c?.dataset.f) toggle(c.dataset.f, c.dataset.v); if (e.target.closest("#mshow")) closeModal(); if (e.target.closest("#mclear")) { KEYS.forEach(k => F[k].clear()); F.cat.clear(); draw(); } });
+      draw(); };
+    draw();
   });
-  return `<h1>Catalogo prodotti</h1><p class="muted">Dati dal catalogo/listino Nevada Vinum 2026-27. Cerca anche per codice parziale, senza trattini o con piccoli errori.</p>
-  <div class="row" style="margin:16px 4px"><button class="btn fbtn">${ic("filter", "sm")} Filtri</button><span id="count" class="muted small"></span></div>
-  <div class="cat-wrap"><aside class="filters" id="filtersWrap" aria-label="Filtri catalogo">
-    <div><label for="f-q">Codice modello</label><input id="f-q" type="search" placeholder="es. nnw8230 o 72 29 da" autocomplete="off"></div>
-    ${sel("f-cat", "Categoria", opt(usedCats))}${sel("f-inst", "Installazione", opt(Object.entries(DB.meta.installations)))}
-    ${sel("f-cap", "Capacità bottiglie", opt([["s", "fino a 24"], ["m", "25 – 60"], ["l", "oltre 60"]]))}${sel("f-z", "Temperature", opt([["1", "Singola"], ["2", "Doppia"], ["3", "Tripla"], ["4", "Quadrupla"]]))}
-    ${sel("f-se", "Gamma / serie", opt(series))}${sel("f-st", "Stato", opt(Object.entries(DB.meta.statuses)))}
-    <button class="btn" id="reset">Azzera filtri</button></aside>
-  <div class="grid g-prod" id="plist"></div></div>`;
+  return `<div id="catroot"><h1>Catalogo prodotti</h1><p class="muted">Dati dal catalogo Nevada Vinum 2026-27. Cerca per codice, anche parziale o con piccoli errori.</p>
+  <div class="ctool card"><label class="csearch">${ic("search")}<input id="f-q" type="search" placeholder="Codice modello, es. nnw8230 o 72 29 da" autocomplete="off" aria-label="Cerca codice modello"></label>
+    <button class="btn fbtn" id="fopen">${ic("filter", "sm")} Filtri <span class="badge wine" id="fcount"></span></button>
+    <label class="sortsel">${ic("layers", "sm")}<select id="f-sort" aria-label="Ordina">${Object.entries(SORTS).map(([v, l]) => `<option value="${v}">${l}</option>`).join("")}</select></label></div>
+  <div class="catrow" id="catrow" role="group" aria-label="Categorie"></div>
+  <div class="cat-wrap"><aside class="filters" aria-label="Filtri catalogo"><div class="fhead"><h3>Filtri</h3></div><div id="fpanel" class="fpanel"></div></aside>
+  <div><div class="row" style="margin:4px 2px 10px;justify-content:space-between"><span id="count" class="muted"></span></div><div class="row" id="active" style="margin:0 0 12px;gap:6px"></div><div class="grid g-prod" id="plist"></div></div></div></div>`;
 };
 
 /* ---------- SCHEDA MODELLO ---------- */
@@ -204,7 +244,7 @@ routes.modello = ([id, sub, key]) => {
   <button id="favBtn" class="icon-btn fav ${favs().includes(p.id) ? "on" : ""}" style="position:static" aria-label="Preferito">${ic("star")}</button></div>
   ${vars.length ? `<p class="small" style="margin:6px 0"><b>Varianti:</b> ${vars.map(esc).join(" · ")}</p>` : ""}
   <div class="kv" style="margin-top:14px">${kv.map(([k, v]) => `<div><small>${k}</small><b>${v ? esc(v) : TBD}</b></div>`).join("")}</div>
-  <div class="row" style="margin-top:16px"><a class="btn wine" href="#/supporto?model=${p.id}">${ic("phone", "sm")} Richiedi supporto</a><button class="btn" id="viewDoc" data-view="scheda">${ic("eye", "sm")} Apri pagina catalogo</button></div></div></div>
+  <div class="row" style="margin-top:16px"><a class="btn wine" href="#/supporto?model=${p.id}">${ic("phone", "sm")} Richiedi supporto</a><button class="btn" id="viewDoc" data-view="scheda">${ic("eye", "sm")} Apri scheda PDF</button><a class="btn" href="#/assistente-ai?model=${p.id}">${ic("bot", "sm")} Chiedi all'assistente</a></div></div></div>
   <div class="tabs" role="tablist">${tabs.map(([k, l]) => `<a href="#/modello/${p.id}/${k}" ${k === tab ? 'aria-current="true"' : ""}>${l}</a>`).join("")}</div>${body}`;
 };
 
@@ -365,7 +405,57 @@ routes.cronologia = () => { const h = store.get("hist", []); return `<h1>Cronolo
 routes.note = () => { const n = store.get("notes", {}), ks = Object.keys(n).filter(k => n[k]); return `<h1>Note di intervento</h1><div class="sec">${ks.length ? `<div class="card list">${ks.map(k => `<a class="li" href="#/modello/${k}/nota"><div class="grow"><b>${esc(byId(k)?.code || k)}</b><span class="small muted">${esc(n[k].slice(0, 120))}</span></div>${ic("chev")}</a>`).join("")}</div>` : empty("note", "Nessuna nota", `<p class="small">Aggiungi appunti dalla scheda di un modello (scheda “Note di intervento”).</p>`)}</div>`; };
 
 /* ---------- ASSISTENTE AI / ACCESSO / ADMIN (solo predisposizione) ---------- */
-routes["assistente-ai"] = () => `<h1>Assistente AI</h1><div class="sec">${empty("bot", "Funzione in preparazione", `<p class="small" style="max-width:520px;margin:0 auto">Sarà basata <b>solo</b> sulla documentazione tecnica autorizzata, con citazione precisa di documento e pagina, e rifiuterà di rispondere quando la fonte non c'è. Richiede backend con indicizzazione dei PDF (RAG). Non attiva nel prototipo.</p>`)}</div>`;
+/* ---------- ASSISTENTE AI ---------- */
+// Risponde solo dalla documentazione autorizzata del portale, con citazioni. Il server (/api/ask) tiene la chiave API;
+// senza server o senza chiave il portale ricade sulla ricerca documentale, senza generare testo.
+const mdLite = t => esc(t).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/`(.+?)`/g, "<code>$1</code>").replace(/^\s*[-•] (.+)$/gm, "<li>$1</li>").replace(/(<li>.*<\/li>\n?)+/g, m => `<ul>${m}</ul>`).replace(/\n/g, "<br>");
+routes["assistente-ai"] = (_, qp) => {
+  const model = qp.get("model") && byId(qp.get("model")) ? qp.get("model") : null;
+  const chat = []; let status = null;
+  const SUGG = model ? ["Quali sono le specifiche principali?", "Quali ricambi sono disponibili per questo modello?", "Qual è il codice del compressore?"] : ["Qual è il codice del compressore dell'NNW120-64DA-BFG-H?", "Quali cantine incasso hanno tripla temperatura?", "Come si apre un ticket di garanzia?"];
+  after(async () => {
+    const log = $("#chatlog"), form = $("#chatform"), inp = $("#chatq");
+    const bubble = (role, html) => { const d = document.createElement("div"); d.className = "msg " + role; d.innerHTML = html; log.appendChild(d); d.scrollIntoView({ block: "end", behavior: "smooth" }); return d; };
+    const sourcesHTML = (r) => {
+      const src = (r.sources || []).map(s => `<li id="s${s.n}"><a href="${esc(s.href)}"><b>[${s.n}]</b> ${esc(s.title)}</a>${s.quotes?.length ? `<div class="quote">“${esc(s.quotes[0])}”</div>` : ""}</li>`).join("");
+      const rest = (r.consulted || []).filter(c => !(r.sources || []).some(s => s.id === c.id));
+      return `${src ? `<div class="srcs"><small>Fonti citate</small><ul>${src}</ul></div>` : ""}${rest.length ? `<div class="srcs mute"><small>${r.mode === "retrieval" || r.mode === "local" ? "Documenti pertinenti" : "Altri documenti consultati"}</small><ul>${rest.map(c => `<li><a href="${esc(c.href)}">${esc(c.title)}</a>${c.excerpt ? `<div class="quote">${esc(c.excerpt)}…</div>` : ""}</li>`).join("")}</ul></div>` : ""}`;
+    };
+    const render = r => {
+      if (r.mode === "ai" || r.mode === "no-source" || r.mode === "refusal") return `<div class="txt">${r.answer.map(a => mdLite(a.text) + (a.cites || []).map(n => `<a class="cite" href="#s${n}" onclick="event.preventDefault();document.getElementById('s${n}')?.scrollIntoView({block:'center',behavior:'smooth'})">${n}</a>`).join("")).join("")}</div>${sourcesHTML(r)}${r.truncated ? `<p class="small muted">Risposta interrotta per lunghezza.</p>` : ""}${r.mode === "no-source" ? `<a class="btn sm" href="#/supporto${model ? "?model=" + model : ""}">${ic("phone", "sm")} Apri richiesta di supporto</a>` : ""}`;
+      return `<div class="txt"><span class="badge warn">Solo ricerca documentale</span><p>${r.consulted?.length ? "L'assistente AI non è attivo su questo server: ecco i documenti più pertinenti alla tua domanda." : "Nessun documento pertinente trovato."}</p></div>${sourcesHTML(r)}`;
+    };
+    const localFallback = q => {   // senza server: ricerca nel browser sui dati già caricati
+      const hits = searchAll(q).filter(h => ["Modelli", "Ricambi", "Articoli", "Codici errore"].includes(h.type)).slice(0, 6);
+      return { mode: "local", answer: [], sources: [], consulted: hits.map(h => ({ id: h.href, title: h.title, href: h.href, excerpt: h.sub })) };
+    };
+    const send = async q => {
+      q = q.trim(); if (!q) return;
+      bubble("user", esc(q)); inp.value = ""; $("#chatsend").disabled = true;
+      const wait = bubble("bot", `<div class="dots"><i></i><i></i><i></i></div>`);
+      let r;
+      try {
+        const res = await fetch(DB.config.aiEndpoint || "/api/ask", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ question: q, model, history: chat }) });
+        if (res.status === 404 || res.status === 405) r = localFallback(q);
+        else { const j = await res.json(); if (!res.ok) throw new Error(j.error || "Errore"); r = j; }
+      } catch (e) { r = navigator.onLine && e.message && !/fetch|network|Failed/i.test(e.message) ? { mode: "error", answer: [{ text: e.message }], sources: [] } : localFallback(q); }
+      wait.innerHTML = r.mode === "error" ? `<div class="txt">${esc(r.answer[0].text)}</div>` : render(r);
+      chat.push({ role: "user", text: q }); chat.push({ role: "assistant", text: (r.answer || []).map(a => a.text).join("") || "(nessuna risposta generata)" });
+      $("#chatsend").disabled = false; inp.focus();
+    };
+    form.onsubmit = e => { e.preventDefault(); send(inp.value); };
+    $$(".sugg-q").forEach(b => b.onclick = () => send(b.textContent));
+    try { const j = await (await fetch(DB.config.aiEndpoint || "/api/ask")).json(); status = j.ai ? "ai" : "off"; } catch { status = "none"; }
+    $("#aist").innerHTML = status === "ai" ? `<span class="badge ok">AI attiva</span>` : status === "off" ? `<span class="badge warn">Chiave API non configurata · solo ricerca</span>` : `<span class="badge warn">Server AI non raggiungibile · solo ricerca</span>`;
+  });
+  const m = model && byId(model);
+  return `<div class="aihead"><div><span class="eyebrow">${ic("bot", "sm")} Assistente tecnico</span><h1 style="margin-top:8px">Chiedi alla documentazione</h1>
+  <p class="muted" style="max-width:620px">Risponde solo con i documenti autorizzati del portale (schede, ricambi, FAQ) e cita sempre le fonti. Se l'informazione non c'è, lo dice: non inventa diagnosi, codici o compatibilità.</p></div><div id="aist"></div></div>
+  ${m ? `<div class="notice" style="margin:12px 0">${ic("grid", "sm")}<span>Contesto: <b>${esc(m.code)}</b> · <a href="#/assistente-ai"><u>rimuovi</u></a></span></div>` : ""}
+  <div class="card chat"><div id="chatlog" class="chatlog" aria-live="polite"><div class="msg bot"><div class="txt">Ciao! Chiedimi di un modello, di un ricambio o di una specifica. Indica il codice modello per risposte precise.</div><div class="sugg-row">${SUGG.map(s => `<button class="chip sugg-q">${esc(s)}</button>`).join("")}</div></div></div>
+  <form id="chatform" class="chatform"><input id="chatq" class="fld" maxlength="1000" autocomplete="off" placeholder="Scrivi una domanda tecnica…" aria-label="Domanda"><button class="btn wine" id="chatsend" type="submit">${ic("send", "sm")} Invia</button></form></div>
+  <p class="small muted" style="margin:10px 4px">Verifica sempre i codici ricambio sul documento citato. Gli interventi su impianto elettrico e circuito frigorifero sono riservati a personale qualificato.</p>`;
+};
 routes.accesso = () => `<h1>Accesso riservato</h1><div class="notice warn" style="margin:14px 0">${ic("lock", "sm")}<span>L'autenticazione <b>non è implementata</b> nel prototipo: un login solo JavaScript non sarebbe sicuro. Con il backend: SSO/OAuth2 o email + MFA, sessioni con cookie HttpOnly, ruoli Tecnico / Amministratore verificati lato server, PDF serviti con URL firmati a scadenza.</span></div>
   <form class="card pad form" style="max-width:420px" onsubmit="return false"><div><label>Email</label><input class="fld" disabled></div><div><label>Password</label><input class="fld" type="password" disabled></div><button class="btn primary" disabled>Accedi (non disponibile)</button></form>`;
 routes.admin = () => `<h1>Amministrazione</h1><div class="notice warn" style="margin:14px 0">${ic("lock", "sm")}<span>Il pannello amministrativo richiede backend e autenticazione lato server. Qui è mostrato lo stato dei dati e la possibilità di esportare il catalogo corrente.</span></div>

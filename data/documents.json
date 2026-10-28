@@ -1,115 +1,5 @@
 [
  {
-  "model": "nnw180-600t-b",
-  "type": "scheda",
-  "title": "Scheda tecnica (catalogo 2026-27)",
-  "file": "docs/catalogo/catalogo-2026-27-p15.pdf",
-  "page": null,
-  "revision": "Catalogo 2026-27",
-  "serial": null,
-  "demo": false,
-  "pdfPage": 15
- },
- {
-  "model": "nw24s-bfg-h",
-  "type": "scheda",
-  "title": "Scheda tecnica (catalogo 2026-27)",
-  "file": "docs/catalogo/catalogo-2026-27-p20.pdf",
-  "page": null,
-  "revision": "Catalogo 2026-27",
-  "serial": null,
-  "demo": false,
-  "pdfPage": 20
- },
- {
-  "model": "nw41d-bfg-h",
-  "type": "scheda",
-  "title": "Scheda tecnica (catalogo 2026-27)",
-  "file": "docs/catalogo/catalogo-2026-27-p20.pdf",
-  "page": null,
-  "revision": "Catalogo 2026-27",
-  "serial": null,
-  "demo": false,
-  "pdfPage": 20
- },
- {
-  "model": "nw41d-ss-h",
-  "type": "scheda",
-  "title": "Scheda tecnica (catalogo 2026-27)",
-  "file": "docs/catalogo/catalogo-2026-27-p20.pdf",
-  "page": null,
-  "revision": "Catalogo 2026-27",
-  "serial": null,
-  "demo": false,
-  "pdfPage": 20
- },
- {
-  "model": "nw25d-bfg-pr60",
-  "type": "scheda",
-  "title": "Scheda tecnica (catalogo 2026-27)",
-  "file": "docs/catalogo/catalogo-2026-27-p21.pdf",
-  "page": null,
-  "revision": "Catalogo 2026-27",
-  "serial": null,
-  "demo": false,
-  "pdfPage": 21
- },
- {
-  "model": "nnw60-25da-wp-pr",
-  "type": "scheda",
-  "title": "Scheda prodotto (IT-EN-DE-FR)",
-  "file": "docs/schede/nnw60-25da-wp-pr-pl.pdf",
-  "page": null,
-  "revision": "Scheda prodotto ufficiale",
-  "serial": null,
-  "demo": false,
-  "pdfPage": null
- },
- {
-  "model": "nnw72-30dsa-bfg-hr",
-  "type": "scheda",
-  "title": "Scheda tecnica (catalogo 2026-27)",
-  "file": "docs/catalogo/catalogo-2026-27-p21.pdf",
-  "page": null,
-  "revision": "Catalogo 2026-27",
-  "serial": null,
-  "demo": false,
-  "pdfPage": 21
- },
- {
-  "model": "nnw72-29da-bfg-pr",
-  "type": "scheda",
-  "title": "Scheda tecnica (catalogo 2026-27)",
-  "file": "docs/catalogo/catalogo-2026-27-p22.pdf",
-  "page": null,
-  "revision": "Catalogo 2026-27",
-  "serial": null,
-  "demo": false,
-  "pdfPage": 22
- },
- {
-  "model": "nnw72-29da-wp-pr",
-  "type": "scheda",
-  "title": "Scheda tecnica (catalogo 2026-27)",
-  "file": "docs/catalogo/catalogo-2026-27-p22.pdf",
-  "page": null,
-  "revision": "Catalogo 2026-27",
-  "serial": null,
-  "demo": false,
-  "pdfPage": 22
- },
- {
-  "model": "nw52d-bfg-h",
-  "type": "scheda",
-  "title": "Scheda tecnica (catalogo 2026-27)",
-  "file": "docs/catalogo/catalogo-2026-27-p22.pdf",
-  "page": null,
-  "revision": "Catalogo 2026-27",
-  "serial": null,
-  "demo": false,
-  "pdfPage": 22
- },
- {
   "model": "nnw88-47da-bfg-pr",
   "type": "scheda",
   "title": "Scheda tecnica (catalogo 2026-27)",
@@ -163,17 +53,6 @@
   "serial": null,
   "demo": false,
   "pdfPage": null
- },
- {
-  "model": "nw93t-bfg-h",
-  "type": "scheda",
-  "title": "Scheda tecnica (catalogo 2026-27)",
-  "file": "docs/catalogo/catalogo-2026-27-p25.pdf",
-  "page": null,
-  "revision": "Catalogo 2026-27",
-  "serial": null,
-  "demo": false,
-  "pdfPage": 25
  },
  {
   "model": "nnw180-92d-bfg-pr",
@@ -319,17 +198,6 @@
   "pdfPage": 43
  },
  {
-  "model": "nw180d-ss",
-  "type": "scheda",
-  "title": "Scheda tecnica (catalogo 2026-27)",
-  "file": "docs/catalogo/catalogo-2026-27-p44.pdf",
-  "page": null,
-  "revision": "Catalogo 2026-27",
-  "serial": null,
-  "demo": false,
-  "pdfPage": 44
- },
- {
   "model": "nnw180-hcd-bfg-nh",
   "type": "scheda",
   "title": "Scheda tecnica (catalogo 2026-27)",
@@ -440,50 +308,6 @@
   "pdfPage": 68
  },
  {
-  "model": "nvd83-12s-bfg",
-  "type": "scheda",
-  "title": "Scheda tecnica (catalogo 2026-27)",
-  "file": "docs/catalogo/catalogo-2026-27-p69.pdf",
-  "page": null,
-  "revision": "Catalogo 2026-27",
-  "serial": null,
-  "demo": false,
-  "pdfPage": 69
- },
- {
-  "model": "vd19smc2",
-  "type": "scheda",
-  "title": "Scheda tecnica (catalogo 2026-27)",
-  "file": "docs/catalogo/catalogo-2026-27-p70.pdf",
-  "page": null,
-  "revision": "Catalogo 2026-27",
-  "serial": null,
-  "demo": false,
-  "pdfPage": 70
- },
- {
-  "model": "vd40smcw",
-  "type": "scheda",
-  "title": "Scheda tecnica (catalogo 2026-27)",
-  "file": "docs/catalogo/catalogo-2026-27-p70.pdf",
-  "page": null,
-  "revision": "Catalogo 2026-27",
-  "serial": null,
-  "demo": false,
-  "pdfPage": 70
- },
- {
-  "model": "vd60scsw",
-  "type": "scheda",
-  "title": "Scheda tecnica (catalogo 2026-27)",
-  "file": "docs/catalogo/catalogo-2026-27-p70.pdf",
-  "page": null,
-  "revision": "Catalogo 2026-27",
-  "serial": null,
-  "demo": false,
-  "pdfPage": 70
- },
- {
   "model": "45-24b-rev",
   "type": "scheda",
   "title": "Scheda tecnica (catalogo 2026-27)",
@@ -546,6 +370,182 @@
   "pdfPage": null,
   "page": null,
   "revision": "v03 · 23/07/2025",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "nnw180-600t-b",
+  "type": "scheda",
+  "title": "Scheda prodotto (IT-EN-DE-FR)",
+  "file": "docs/schede/nnw180-600t-b.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "Scheda prodotto ufficiale",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "nnw60-25da-wp-pr",
+  "type": "scheda",
+  "title": "Scheda prodotto (IT-EN-DE-FR)",
+  "file": "docs/schede/nnw60-25da-wp-pr-pl.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "Scheda prodotto ufficiale",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "nnw72-29da-bfg-pr",
+  "type": "scheda",
+  "title": "Scheda prodotto (IT-EN-DE-FR)",
+  "file": "docs/schede/nnw72-29da-bfg-pr-pl.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "Scheda prodotto ufficiale",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "nnw72-29da-wp-pr",
+  "type": "scheda",
+  "title": "Scheda prodotto (IT-EN-DE-FR)",
+  "file": "docs/schede/nnw72-29da-wp-pr-pl.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "Scheda prodotto ufficiale",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "nnw72-30dsa-bfg-hr",
+  "type": "scheda",
+  "title": "Scheda prodotto (IT-EN-DE-FR)",
+  "file": "docs/schede/nnw72-30dsa-bfg-hr-hl.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "Scheda prodotto ufficiale",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "nvd83-12s-bfg",
+  "type": "scheda",
+  "title": "Scheda prodotto (IT-EN-DE-FR)",
+  "file": "docs/schede/nvd83-12s-bfg.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "Scheda prodotto ufficiale",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "nw180d-ss",
+  "type": "scheda",
+  "title": "Scheda prodotto (IT-EN-DE-FR)",
+  "file": "docs/schede/nw180d-ss.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "Scheda prodotto ufficiale",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "nw24s-bfg-h",
+  "type": "scheda",
+  "title": "Scheda prodotto (IT-EN-DE-FR)",
+  "file": "docs/schede/nw24s-bfg-h.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "Scheda prodotto ufficiale",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "nw25d-bfg-pr60",
+  "type": "scheda",
+  "title": "Scheda prodotto (IT-EN-DE-FR)",
+  "file": "docs/schede/nw25da-bfg-pr-pl.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "Scheda prodotto ufficiale",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "nw41d-bfg-h",
+  "type": "scheda",
+  "title": "Scheda prodotto (IT-EN-DE-FR)",
+  "file": "docs/schede/nw41d-bfg-h.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "Scheda prodotto ufficiale",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "nw41d-ss-h",
+  "type": "scheda",
+  "title": "Scheda prodotto (IT-EN-DE-FR)",
+  "file": "docs/schede/nw41d-ss-h.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "Scheda prodotto ufficiale",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "nw52d-bfg-h",
+  "type": "scheda",
+  "title": "Scheda prodotto (IT-EN-DE-FR)",
+  "file": "docs/schede/nw52d-bfg-h.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "Scheda prodotto ufficiale",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "nw93t-bfg-h",
+  "type": "scheda",
+  "title": "Scheda prodotto (IT-EN-DE-FR)",
+  "file": "docs/schede/nw93t-bfg-h.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "Scheda prodotto ufficiale",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "vd19smc2",
+  "type": "scheda",
+  "title": "Scheda prodotto (IT-EN-DE-FR)",
+  "file": "docs/schede/vd19smc2.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "Scheda prodotto ufficiale",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "vd40smcw",
+  "type": "scheda",
+  "title": "Scheda prodotto (IT-EN-DE-FR)",
+  "file": "docs/schede/vd40smcw.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "Scheda prodotto ufficiale",
+  "serial": null,
+  "demo": false
+ },
+ {
+  "model": "vd60scsw",
+  "type": "scheda",
+  "title": "Scheda prodotto (IT-EN-DE-FR)",
+  "file": "docs/schede/vd60scsw.pdf",
+  "pdfPage": null,
+  "page": null,
+  "revision": "Scheda prodotto ufficiale",
   "serial": null,
   "demo": false
  }
