@@ -21,7 +21,7 @@ Il router è a hash (`#/catalogo`, `#/modello/<id>/documenti`, `#/esplosi/<id>`,
 Il prezzo di listino è estratto in `listPrice` ma **non viene mostrato** nell'interfaccia.
 
 ## Cosa NON è ancora reale
-- 8 modelli senza foto (Teca Vino, 3 Quadro Vino, NNW180-600T-B, NW93T-BFG-H, 2 Vortex T Rock): placeholder.
+- Pochi modelli senza foto (NNW180-600T-B, NW93T-BFG-H, 2 Vortex T Rock): placeholder.
 - Non estratti: configurazioni composte (integrabili in accosto), accessori/optional, schede senza tabella.
 - Manuali d'uso, esplosi, ricambi, schemi, bollettini, codici errore, procedure diagnostiche: **da fornire** (le sezioni mostrano stati vuoti).
 - Autenticazione, invio ticket, ricerca per seriale, assistente AI, admin: solo predisposizione. Il modulo supporto salva una bozza locale finché `data/config.json → ticketEndpoint` è `null`.

@@ -8,10 +8,9 @@ os.makedirs(out_img, exist_ok=True)
 
 # pagina PDF (1-based) -> (categoria, installazione, gamma)
 SECTIONS = [
- (8, 9, "Teca Vino", "libera", "Della Marta for Nevada"), (11, 12, "Quadro Vino", "parete", "Della Marta for Nevada"),
- (14, 15, "Frigoriferi 4 porte con cantina", "libera", "4 Porte"),
+  (14, 15, "Frigoriferi 4 porte con cantina", "libera", "4 Porte"),
  (17, 32, "Cantine da incasso", "incasso", "Cantine Nevada"), (34, 38, "Cantine sottotop", "sottotop", "Cantine Nevada"),
- (40, 48, "Cantine integrabili", "integrabile", "Cantine Nevada"), (50, 54, "Thrill", "incasso", "Thrill"),
+ (40, 48, "Cantine integrabili", "integrabile", "Cantine Nevada"), 
  (58, 60, "VINUMdesign Big Size", "libera", "VINUMdesign"), (61, 62, "VINUMdesign Countertop", "libera", "VINUMdesign"),
  (65, 66, "VINUMdesign Vintage", "libera", "VINUMdesign"), (68, 71, "VINUMdesign Vinum", "libera", "VINUMdesign"), (72, 72, "Linea promo", "incasso", "Promo"),
 ]
@@ -154,7 +153,7 @@ def norm_product(p):
         status="attuale", image=p["image"], revisions=[], spec=spec, catalogPage=p["catalogPage"], demo=False, verified=True, source=p["source"])
 prods = [norm_product(p) for p in products]
 CATS = ["Cantine da incasso", "Cantine sottotop", "Cantine integrabili", "VINUMdesign Big Size", "VINUMdesign Countertop", "VINUMdesign Vintage", "VINUMdesign Vinum",
-        "Frigoriferi 4 porte con cantina", "Teca Vino", "Quadro Vino", "Thrill", "Linea promo"]
+        "Frigoriferi 4 porte con cantina", "Linea promo"]
 json.dump(dict(meta=dict(categories=CATS, installations={"incasso": "Incasso", "sottotop": "Sottotop", "integrabile": "Integrabile", "libera": "Libera installazione", "parete": "A parete"},
     statuses={"attuale": "Attuale", "fuori produzione": "Fuori produzione"}, source="Catalogo/Listino Nevada Vinum 2026-27"), products=prods),
     open(os.path.join(ROOT, "data", "products.json"), "w"), ensure_ascii=False, indent=1)
